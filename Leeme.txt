@@ -1,7 +1,7 @@
-
+﻿
 ==========================================
 Elaborado por:
-Miguel Ángel Salazar Castillo, 2016
+Miguel Ángel Salazar Castillo, 2016 DATOS DE ACCESO: User: miguel Passwd: miguelA1
 ==========================================
 ||      -----------------------         ||
 ||     | CONTENIDO DEL ARCHIVO |        ||
