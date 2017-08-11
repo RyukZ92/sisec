@@ -1,0 +1,81 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista para mostrar los datos de un ciclo de evaluación especifico,
+ * es decir, se muestra la información completa del registro
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Febrero, 2016
+ * @Version: 1
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * =============================================================================
+ * 
+ */
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+if($error):
+    echo $error;
+else:
+    if ($notificacion) {
+        echo $notificacion;
+    }
+    ?>
+    <div class="panel panel-default">
+        <div class="panel-heading">Datos del Cliclo de Evaluación
+        <!--<a style="float:right;" href="<?php echo URLBASE ?>usuario/actualizacion-de-mis-datos" class="fa fa-edit">-->
+            Actualizar Datos</a></div>
+        <input type="hidden" name="pagina_referencia" value="<?php echo $_POST["pagina_referencia"]; ?>">
+        <input type="hidden" name="id" value="<?php echo $_POST["id"]; ?>">
+
+        <table class="table table-bordered">
+            <tr>
+                <th>#</th>
+                <td><?php echo $_ciclo[0]["id"]; ?></td>
+            </tr>
+            <tr>
+                <th>Descripción</th>
+                <td><?php echo $_ciclo[0]["descripcion"]; ?></td>
+            </tr>
+            <tr>
+                <th>Pruebas</th>
+                <td><?php echo $_ciclo[0]["pruebas"]; ?></td>
+            </tr>
+	    <tr>
+                <th>Nombre del Producto Evaluado</th>
+                <td><?php echo $_ciclo[0]["pruebas"]; ?></td>
+            </tr>
+	    <tr>
+                <th>Versión del Producto Evaluado</th>
+                <td><?php echo $_ciclo[0]["pruebas"]; ?></td>
+            </tr>
+	   <tr>
+                <th>URL del Producto Evaluado</th>
+                <td><?php echo $_ciclo[0]["pruebas"]; ?></td>
+            </tr>       
+            <tr>
+                <th>Fecha de Creación</th>
+                <td><?php echo Helper::convertirFechaDdMmAaaa($_ciclo[0]["fecha_creacion"]); ?></td>
+            </tr>
+            <tr>
+                <th>Hora de Creación</th>
+                <td><?php echo Helper::convertirHoraA12H($_ciclo[0]["hora_creacion"]); ?></td>
+            </tr>
+            <tr>
+                <th>Fecha de Cierre</th>
+                <td><?php echo $fechaDeCierre; ?></td>
+            </tr>
+            <tr>
+                <th>Hora de Cierre</th>
+                <td>
+                    <?php echo $horaDeCierre ?>
+                </td>
+            </tr>
+            <tr>
+                <th>Estatus</th>
+                <td>
+                    <?php echo $estatus = ($_ciclo[0]["estatus"]) ? "Abierto":"Cerrado"; ?>
+                </td>
+            </tr>
+        </table>
+    </div>
+<?php endif;

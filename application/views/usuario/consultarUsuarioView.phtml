@@ -1,0 +1,94 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista para listar a los usuarios
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Febrero, 2016
+ * @Version: 1
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * =============================================================================
+ * 
+ */ 
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+
+if ($notificacion) {
+    echo $notificacion;
+}
+?>
+
+<div class="table-responsive">
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Correo Electrónico</th>
+            <th>Nivel del Usuario</th>
+            <th>Registro</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+<?php
+
+	foreach ($_usuario as $usuario):
+            $fechaRegistro = Helper::convertirFechaDdMmAaaa($usuario["fecha_creacion"])
+                            . " "  .Helper::convertirHoraA12H($usuario["hora_creacion"]);
+            $enlaceEditar = URLBASE . "usuario/actualizacion/" . $usuario["id"] . "/" . $params['actual'];
+            $enlaceEliminar = URLBASE . "usuario/eliminacion/" . $usuario["id"] . "/" . $params['actual'];
+            $enlaceDetalle = URLBASE . "usuario/detalle/" . $usuario["id"];
+            if ($_SESSION["id_usuario"] != $usuario["id"]) {
+                $iconoEditar = "<a title='Enviar a la Papelera' "
+                        . "href='#" . $usuario["id"] . "' data-toggle='modal' data-target='#" . $usuario["id"] . "' class='fa fa-times'></a>";
+                $iconoEliminar = "<a title='Editar' href='$enlaceEditar' class='fa fa-edit'></a>";
+            } else {
+                $iconoEditar = "<span title='No permitido' href='$enlaceEliminar' class='fa fa-times'></span>";
+                $iconoEliminar = "<span title='No permitido' href='$enlaceEditar' class='fa fa-edit'></span>";
+            }
+        echo "<tr>
+                <td title=' " . $usuario["nombre"] . "'> " . $usuario["nombre"] . "</td>
+                <td title='" . $usuario["email"] . "'>" . $usuario["email"] . "</td>
+                <td title='" . $usuario["nivel_usuario"] . "'>" . $usuario["nivel_usuario"] . "</td>
+                <td title='" . Helper::convertirFechaDdMmAaaa($usuario["fecha_creacion"]) . "'>" . $fechaRegistro . "</td>
+                <td title='Editar'>
+                    $iconoEliminar
+                    &nbsp;
+                    $iconoEditar
+                    &nbsp;
+                    <a title='Detalle' href='$enlaceDetalle' class='fa fa-search-plus'></a>
+                </td>  
+            </tr>";
+        ?>
+    <div id="<?php echo $usuario["id"] ?>" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title text-danger">Confirme la Eliminación del Usuario</h4>
+          </div>
+          <div class="modal-body">
+              <p class="text-info">¿Está seguro que desea enviar este usuario a la papelera de reciclaje?</p>
+            <p class="">Si confirma, pasará automáticamente a un estado inactivo.</p>
+          </div>
+          <div class="modal-footer">
+              <form method="POST">
+                  <input type="hidden" name="id" value="<?php echo $usuario["id"] ?>">                
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" name="confirmar" class="btn btn-success" >Confirmar</button>
+              </form>
+          </div>
+        </div>
+
+      </div>
+    </div>         
+<?php endforeach; ?>
+    </tbody>
+</table>
+</div>
+<?php
+    include dirname(__FILE__) . "/../paginador/paginadorView.phtml";
+?>

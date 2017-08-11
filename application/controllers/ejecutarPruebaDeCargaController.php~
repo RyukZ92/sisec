@@ -1,0 +1,57 @@
+<?php
+/* @Descripcion: Controlador para Inyectar SQL a sistemas web en el inicio de sesión
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Febrero, 2016
+ * @Version: 0.1 Beta
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * 
+ */
+$configSistemaEnEvaluacion = parse_ini_file("config/config.basica-del-sistema-en-evaluacion.ini", true);
+$configPruebaDeCarga = parse_ini_file("config/config.tests/config.prueba-de-carga.ini", true);
+//if(empty($_SESSION["resultados_de_prueba"])) {
+require "application/models/CargaDeDatosModel.php";   
+
+    $url = $configSistemaEnEvaluacion["url"];
+    $datos = $configSistemaEnEvaluacion["login"];    
+    $mensajeDeError = $configSistemaEnEvaluacion["cadena_valida"];
+    
+    $objCarga= new CargaDeDatos();  
+    
+    $objCarga->setDatosDeSesion($url, $datos, $mensajeDeError);
+
+    
+    if($sesion) {
+        $url = $configPruebaDeCarga["url"];
+        $totalCampos = $configPruebaDeCarga["total_campos"];
+        $mensajeDeExito = $configPruebaDeCarga["cadena_valida"];
+        for($i=0; $i<$totalCampos; $i++) {
+            foreach ($configPruebaDeCarga["campos_$i"] as $llave => $valor) {
+                    $datosDeCarga[$i][$llave] =  $valor;
+            }
+        }
+    }
+    $camposAdicionales = $configPruebaDeCarga["campo_adicional"];
+    $objCarga->setDatosDeCarga($url, $datosDeCarga, $camposAdicionales, $mensajeDeExito);      
+    $objCarga->CargarDatos($_SESSION["cantidad"]);
+    /*
+    
+    $url = $configPruebaDeCarga["url"];
+    $totalCampos = $configPruebaDeCarga["total_campos"];
+    for($i=0; $i<$totalCampos; $i++) {
+        foreach ($configPruebaDeCarga["campos_$i"] as $llave => $valor) {
+                $datos[$i][$llave] =  $valor;
+        }
+    }
+    $camposAdicionales = $configPruebaDeCarga["campo_adicional"];
+    foreach($camposAdicionales as $llave => $valor){
+       $campoAdicional .= $llave.'='.$valor . '&';            
+    } 
+        $objCarga->setDatos($url, $datos, $campoAdicional);      
+        $objCarga->CargarDatos($_SESSION["cantidad"]);
+      
+    */
+    
+    #$_SESSION["resultados_de_prueba"] = $objInyeccion->mostrar();
+//}
+//require "application/views/inyeccionSql/resultadosDeInyeccionSqlView.phtml";

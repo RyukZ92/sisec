@@ -1,0 +1,50 @@
+DETALLES DE LA PRUEBA DE ATAQUE DE FUERZA BRUTA: INICIO DE SESIÓN
+
+
+Fecha y Hora de Creación: 19/05/2016 03:12:44 PM
+Usuario: MIGUEL (Evaluador)
+
+URL Destino del Formulario: http://localhost/sirah/
+Mensaje de Exito: Usuario o contraseña incorrecto
+
+INTENTOS: 
+
+1 => Fallido: "CAMPO[username] = miguel", "CAMPO[password] = Archivo", "CAMPO[submit] = Iniciar Sesión", "CAMPO[enviar] = Iniciar Sesión"
+
+2 => Fallido: "CAMPO[username] = miguel", "CAMPO[password] = por", "CAMPO[submit] = Iniciar Sesión", "CAMPO[enviar] = Iniciar Sesión"
+
+3 => Fallido: "CAMPO[username] = miguel", "CAMPO[password] = defecto", "CAMPO[submit] = Iniciar Sesión", "CAMPO[enviar] = Iniciar Sesión"
+
+4 => Fallido: "CAMPO[username] = miguel", "CAMPO[password] = b2312", "CAMPO[submit] = Iniciar Sesión", "CAMPO[enviar] = Iniciar Sesión"
+
+5 => Fallido: "CAMPO[username] = miguel", "CAMPO[password] = cdasd", "CAMPO[submit] = Iniciar Sesión", "CAMPO[enviar] = Iniciar Sesión"
+
+6 => Fallido: "CAMPO[username] = miguel", "CAMPO[password] = 2192", "CAMPO[submit] = Iniciar Sesión", "CAMPO[enviar] = Iniciar Sesión"
+
+7 => Fallido: "CAMPO[username] = miguel", "CAMPO[password] = 11rfdfas", "CAMPO[submit] = Iniciar Sesión", "CAMPO[enviar] = Iniciar Sesión"
+
+8 => Fallido: "CAMPO[username] = miguel", "CAMPO[password] = miguelA1", "CAMPO[submit] = Iniciar Sesión", "CAMPO[enviar] = Iniciar Sesión"
+
+9 => Fallido: "CAMPO[username] = miguel", "CAMPO[password] = 21011911", "CAMPO[submit] = Iniciar Sesión", "CAMPO[enviar] = Iniciar Sesión"
+
+10 => Fallido: "CAMPO[username] = miguel", "CAMPO[password] = asda", "CAMPO[submit] = Iniciar Sesión", "CAMPO[enviar] = Iniciar Sesión"
+
+11 => Fallido: "CAMPO[username] = miguel", "CAMPO[password] = 123", "CAMPO[submit] = Iniciar Sesión", "CAMPO[enviar] = Iniciar Sesión"
+
+12 => Fallido: "CAMPO[username] = miguel", "CAMPO[password] = asd2", "CAMPO[submit] = Iniciar Sesión", "CAMPO[enviar] = Iniciar Sesión"
+
+13 => Fallido: "CAMPO[username] = miguel", "CAMPO[password] = 9984", "CAMPO[submit] = Iniciar Sesión", "CAMPO[enviar] = Iniciar Sesión"
+
+14 => Fallido: "CAMPO[username] = miguel", "CAMPO[password] = 9985", "CAMPO[submit] = Iniciar Sesión", "CAMPO[enviar] = Iniciar Sesión"
+
+15 => Exitoso: "CAMPO[username] = miguel", "CAMPO[password] = 21011917", "CAMPO[submit] = Iniciar Sesión", "CAMPO[enviar] = Iniciar Sesión"
+
+
+
+TOTAL DE INTENTOS: 15
+INTENTOS EXITOSOS: 1 (15)
+INTENTOS FALLIDOS: 14
+
+Tiempo de Ejecución: 0.5692 segundos
+
+RESULTADO: Se deben implementar restricciones o politicas de seguridad en cuanto a los ataques de fuerza bruta. Bloquear temporalmente más de 5 intentos (como máximo) de una misma Dirección IP, así como también incorporar códigos captchas para verificar que no sea un robot el que intenta acceder al software.

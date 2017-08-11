@@ -1,0 +1,337 @@
+
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 03/03/2016
+Hora: 12:15:44 PM
+IP Cliente: 190.206.236.166
+HOST Cliente: http://sirah.no-ip.org
+Navegador: Mozilla/5.0 (Windows NT 10.0; rv:44.0) Gecko/20100101 Firefox/44.0
+ISP: dbeceeca6.dslam-172-17-96-247-449-0027-anz-05.dsl.cantv.net
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: ujakca6b0p9d9eldhoucjdiab5
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 03/03/2016
+Hora: 12:21:45 PM
+IP Cliente: 190.206.236.166
+HOST Cliente: http://sirah.no-ip.org
+Navegador: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36
+ISP: dbeceeca6.dslam-172-17-96-247-449-0027-anz-05.dsl.cantv.net
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: 5rvcmq20bv8tvj7j0uuiapc413
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 03/03/2016
+Hora: 12:21:50 PM
+IP Cliente: 190.206.236.166
+HOST Cliente: http://sirah.no-ip.org
+Navegador: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36
+ISP: dbeceeca6.dslam-172-17-96-247-449-0027-anz-05.dsl.cantv.net
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: 5rvcmq20bv8tvj7j0uuiapc413
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 07/03/2016
+Hora: 09:21:21 AM
+IP Cliente: 192.168.1.15
+HOST Cliente: http://sirah.no-ip.org
+Navegador: Mozilla/5.0 (Windows NT 6.1; rv:44.0) Gecko/20100101 Firefox/44.0
+ISP: LasNoches
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: ll20kjhdi3m32qpbofdep7uu86
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 26/03/2016
+Hora: 06:08:28 PM
+IP Cliente: 127.0.0.1
+HOST Cliente: http://
+Navegador: Java/1.8.0_60
+ISP: miguel
+
+Cookies Substraidas:
+	N° 1 => Nombre: 
+	N° 1 => Valor: 
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 26/03/2016
+Hora: 06:18:39 PM
+IP Cliente: ::1
+HOST Cliente: http://localhost
+Navegador: Mozilla/5.0 (X11; Linux i686; rv:27.0) Gecko/20100101 Firefox/27.0 Cunaguaro/27.0
+ISP: localhost
+
+Cookies Substraidas:
+	N° 1 => Nombre: _js_datr
+	N° 1 => Valor: xlbnVgzum5FmZ1YAHE2rOjvs
+	N° 2 => Nombre: __utma
+	N° 2 => Valor: 111872281.646028397.1457987742.1457987742.1457987742.1
+	N° 3 => Nombre: __utmz
+	N° 3 => Valor: 111872281.1457987742.1.1.utmcsr
+	N° 4 => Nombre: _ga
+	N° 4 => Valor: GA1.1.646028397.1457987742
+	N° 5 => Nombre: PHPSESSID
+	N° 5 => Valor: qhvajip402b35h56urfd2nvcn3
+	N° 6 => Nombre: ebro_side_fixed_nav
+	N° 6 => Valor: {"text_nav_side_fixed":{}}
+	N° 7 => Nombre: PPA_ID
+	N° 7 => Valor: vqn1ngbfridq61bta6bjo1jh50
+	N° 8 => Nombre: webfx-tree-cookie-persistence
+	N° 8 => Valor: wfxt-4
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 26/03/2016
+Hora: 06:22:05 PM
+IP Cliente: ::1
+HOST Cliente: http://localhost/sirah/inicio
+Navegador: Mozilla/5.0 (X11; Linux i686; rv:27.0) Gecko/20100101 Firefox/27.0 Cunaguaro/27.0
+ISP: localhost
+
+Cookies Substraidas:
+	N° 1 => Nombre: _js_datr
+	N° 1 => Valor: xlbnVgzum5FmZ1YAHE2rOjvs
+	N° 2 => Nombre: __utma
+	N° 2 => Valor: 111872281.646028397.1457987742.1457987742.1457987742.1
+	N° 3 => Nombre: __utmz
+	N° 3 => Valor: 111872281.1457987742.1.1.utmcsr
+	N° 4 => Nombre: _ga
+	N° 4 => Valor: GA1.1.646028397.1457987742
+	N° 5 => Nombre: PHPSESSID
+	N° 5 => Valor: qhvajip402b35h56urfd2nvcn3
+	N° 6 => Nombre: ebro_side_fixed_nav
+	N° 6 => Valor: {"text_nav_side_fixed":{}}
+	N° 7 => Nombre: PPA_ID
+	N° 7 => Valor: vqn1ngbfridq61bta6bjo1jh50
+	N° 8 => Nombre: webfx-tree-cookie-persistence
+	N° 8 => Valor: wfxt-4
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 26/03/2016
+Hora: 06:28:28 PM
+IP Cliente: ::1
+HOST Cliente: http://localhost/sirah
+Navegador: Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36
+ISP: localhost
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: lvepfgrrl4somum365ermgqdh7
+	N° 2 => Nombre: ebro_side_fixed_nav
+	N° 2 => Valor: {"text_nav_side_fixed":{"0":1,"6":1}}
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 26/03/2016
+Hora: 07:41:02 PM
+IP Cliente: ::1
+HOST Cliente: http://localhost/sirah
+Navegador: Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36
+ISP: localhost
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: lvepfgrrl4somum365ermgqdh7
+	N° 2 => Nombre: ebro_side_fixed_nav
+	N° 2 => Valor: {"text_nav_side_fixed":{"0":1,"6":1}}
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 03/04/2016
+Hora: 10:01:12 AM
+IP Cliente: ::1
+HOST Cliente: http://localhost/sirah
+Navegador: Mozilla/5.0 (X11; Linux i686; rv:45.0) Gecko/20100101 Firefox/45.0
+ISP: localhost
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: 967ghied4epd5kialoupoo2o47
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 11/04/2016
+Hora: 03:32:54 PM
+IP Cliente: ::1
+HOST Cliente: http://localhost/sirah
+Navegador: Mozilla/5.0 (X11; Linux i686; rv:27.0) Gecko/20100101 Firefox/27.0 Cunaguaro/27.0
+ISP: localhost
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: si50cjlhvef2e1367gna8qalg2
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 19/05/2016
+Hora: 12:19:38 PM
+IP Cliente: ::1
+HOST Cliente: http://localhost/sirah
+Navegador: Mozilla/5.0 (X11; Linux i686; rv:45.0) Gecko/20100101 Firefox/45.0
+ISP: localhost
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: cg5sl9ptsp6td0ucu9ks8q5ie1
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 19/05/2016
+Hora: 12:21:33 PM
+IP Cliente: ::1
+HOST Cliente: http://localhost/sirah
+Navegador: Mozilla/5.0 (X11; Linux i686; rv:45.0) Gecko/20100101 Firefox/45.0
+ISP: localhost
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: cg5sl9ptsp6td0ucu9ks8q5ie1
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 19/05/2016
+Hora: 12:22:54 PM
+IP Cliente: ::1
+HOST Cliente: http://localhost/sirah
+Navegador: Mozilla/5.0 (X11; Linux i686; rv:45.0) Gecko/20100101 Firefox/45.0
+ISP: localhost
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: 51tfj32hvcl67sfkccn4d6u836
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 19/05/2016
+Hora: 12:24:09 PM
+IP Cliente: ::1
+HOST Cliente: http://localhost/sirah
+Navegador: Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36
+ISP: localhost
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: u7302h1kn9no2vq3jd99k0k7e1
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 19/05/2016
+Hora: 12:24:12 PM
+IP Cliente: ::1
+HOST Cliente: http://localhost/sirah
+Navegador: Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36
+ISP: localhost
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: u7302h1kn9no2vq3jd99k0k7e1
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 19/05/2016
+Hora: 12:25:16 PM
+IP Cliente: ::1
+HOST Cliente: http://localhost/sirah
+Navegador: Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36
+ISP: localhost
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: u7302h1kn9no2vq3jd99k0k7e1
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 19/05/2016
+Hora: 12:30:54 PM
+IP Cliente: ::1
+HOST Cliente: http://localhost/sirah
+Navegador: Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36
+ISP: localhost
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: u7302h1kn9no2vq3jd99k0k7e1
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 19/05/2016
+Hora: 12:32:01 PM
+IP Cliente: ::1
+HOST Cliente: http://localhost/sirah
+Navegador: Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36
+ISP: localhost
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: u7302h1kn9no2vq3jd99k0k7e1
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.

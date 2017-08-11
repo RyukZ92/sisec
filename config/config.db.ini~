@@ -1,0 +1,14 @@
+﻿## Configuraciones de conexión de la base de datos
+##
+## db.config.manager = El gestor de base de datos utilizado
+## db.config.host = url donde se conecta la base de datos
+## db.config.username = nombre de usurio para acceder de la base de datos
+## db.config.password = contraseña para acceder de la base de datos (si tiene)
+## db.config.dbname = nombre de la base de datos
+##
+##
+db.config.manager = "mysql"
+db.config.host = "127.0.0.1"
+db.config.username = "root"
+db.config.password = ""
+db.config.dbname = "bd_sisec"

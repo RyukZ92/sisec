@@ -1,0 +1,41 @@
+## Archivo de Configuración de Inyección XSS
+## Última actualización automática: 04/03/2016 12:28:29 PM
+## Usuario: MIGUEL (Evaluador)
+
+url = "http://sirah.no-ip.org/registrar-material"
+archivo = C:/xampp/htdocs/sisec/files/injections-xss/inyeccion-xss-personalizada.txt
+cadena_valida = "Registro exitoso"
+total_campos = "5"
+
+[campos_0]
+nombre = "codigo"
+tipo = "Letras/Números"
+longitud = "10"
+unico = "S"
+
+[campos_1]
+nombre = "descripcion"
+tipo = "Letras"
+longitud = "15"
+unico = "N"
+
+[campos_2]
+nombre = "cantidad_total"
+tipo = "Números"
+longitud = "2"
+unico = "N"
+
+[campos_3]
+nombre = "number"
+tipo = "Números"
+longitud = "2"
+unico = "N"
+
+[campos_4]
+nombre = "monto"
+tipo = "Números"
+longitud = "3"
+unico = "N"
+
+[campo_adicional]
+submit = "Registrar"

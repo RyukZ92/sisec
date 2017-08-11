@@ -1,0 +1,18 @@
+DETALLES DE LA PRUEBA DE INYECCIÓN SQL: INICIO DE SESIÓN
+
+
+Fecha y Hora de Creación: 11/05/2016 07:08:13 PM
+Usuario: RYUKZ (Administrador)
+
+URL Destino del Formulario: http://localhost/siscormab/InicioSesionController2.php
+Mensaje de Respuesta Invalido: Usuario O Contraseña Incorrecta
+
+INTENTOS: 
+
+
+
+TOTAL DE INTENTOS: 0
+INTENTOS EXITOSOS: 0 ()
+INTENTOS FALLIDOS: 0
+
+Tiempo de Ejecución: 0.0007 segundos

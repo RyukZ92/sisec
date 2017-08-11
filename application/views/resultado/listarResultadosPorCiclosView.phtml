@@ -1,0 +1,54 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista para mostrar el listado de los ciclos de evaluaciones
+ * @Author: Miguel Salazar
+ * @Fecha: Abril, 2016
+ * @Version: 1.0
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguelangel.bux@gmail.com
+ * =============================================================================
+ * 
+ */ 
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+if ($notificacion) {
+    echo $notificacion;
+}
+?>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Descripcion</th>
+            <th>Creación</th>
+            <th>Imprimir</th>
+        </tr>
+    </thead>
+
+    <tbody>
+<?php 
+        $totalCiclos = count($_ciclo);
+	for ($i=0; $i<count($_ciclo); $i++):        
+       
+            $fechaDeCreacion[$i] = Helper::convertirFechaDdMmAaaa($_ciclo[$i]["fecha_creacion"]);
+            $horaDeCreacion[$i] = Helper::convertirHoraA12H($_ciclo[$i]["hora_creacion"]);
+            $descripcion[$i] = $_ciclo[$i]["descripcion"];
+            $estatus[$i] = $_ciclo[$i]["estatus"];
+            $id = $_ciclo[$i]["id"];            
+            $modal[$i] = $id;
+            $urlPag = URLBASE . "resultado/informe-de-calidad/$id";
+            $prueba = $_prueba[$i][0]["pruebas"] ? $_prueba[$i][0]["pruebas"] : 0;           
+        echo "<tr>
+                <td title='".$id."'>".$id."</td>
+                <td title='" . $descripcion[$i] . "'>" . $descripcion[$i] . " </td>  "
+                . "<td title='" . $fechaDeCreacion[$i] . " " . $horaDeCreacion[$i] 
+                . "'>" . $fechaDeCreacion[$i] . " " . $horaDeCreacion[$i] . "</td>
+                <td title='Imprimir Informe de Calidad'><a target='_blank' href='$urlPag' class='fa fa-print'></a></td>
+            </tr>";
+	endfor; ?>
+    </tbody>
+</table>
+<?php
+include dirname(__FILE__) . "/../paginador/paginadorView.phtml";
+?>

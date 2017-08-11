@@ -1,0 +1,26 @@
+DETALLES DE LA PRUEBA DE CARGA DE DATOS
+
+
+Fecha y Hora de Creación: 03-04-2016 04:13:22 PM
+Usuario: MIGUEL (Evaluador)
+
+URL de la carga de datos: http://localhost/sirah/registrar-material
+Cargas totales: 100
+Cargas exitosas: 100
+Cargas fallidas: 0
+
+Tiempos Referenciales para la Medición (por cada carga): 
+
+Tiempo Óptimo: 0.1 segundos.
+Tiempo Intermedio: 0.2 segundos.
+Tiempo Mínimo: 0.25 segundos.
+
+Tiempo de Ejecución: 6.9134 segundos.
+
+
+RESULTADO: "Rendimiento Óptimo".
+¡Enhorabuena!, el software ha alcanzado y/o sobrepasado los tiempos de medición óptimos por lo tanto puede considerarse como un software de alto rendimiento en carga de datos..
+
+NOTA: El resultado no es absoluto, porque depente del ambiente donde se ejecuta la prueba
+puesto que éste debe estar previamente establecidos por el evaluador. 
+Por ejemplo: La velocidad de subida del servidor y velocidad de baja del cliente.

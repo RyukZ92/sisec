@@ -1,0 +1,69 @@
+<?php
+/**
+ * =================================================
+ * @Descripción: Vista de inicio para la prueba de
+ * inyección sql, permite cargar las inyecciones que
+ * se van a probar
+ * @Autor: Miguel Salazar
+ * @Fecha: Febrero, 2016
+ * @Version: 1.1
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguelangel.bux@gmail.com
+ * ==================================================
+ * 
+ */ 
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+?>
+
+<?php
+if ($notificacion) {
+    echo $notificacion;
+}
+if ($error):
+    echo $error;
+else:
+?>
+<div class="panel panel-default">
+  <div class="panel-heading">Archivo de Texto con las Inyecciones SQL</div>
+  <div class="panel-body"><br>
+            <div class="col-lg-12">
+                <form class="form-horizontal" role="form" method="post" id="form" enctype="multipart/form-data">
+                 <input type="hidden" name="MAX_FILE_SIZE" value="51200">
+                  <div class="form-group">
+                    <label for="contrasenia" class="col-lg-3 control-label">Inyeccciones SQL</label>
+                    <div class="col-lg-5">
+                      <input type="file" name="archivo_sql" 
+                             placeholder="Inyecciones SQL"  class="filestyle">  
+                        <p class="help-block text-primary"><i class="fa fa-info-circle text-primary"></i> 
+                          <small class="text-primary">
+                            Si no selecciona un archivo, 
+                            el sistema ajuntará uno por defecto (RECOMENDADO)
+                          </small>
+                        </p>
+                    </div> 
+                    <div class="col-md-4">
+                        <a class="fa fa-question-circle" href="#" title="<?php echo $popoverTituloSql; ?>" 
+                           data-toggle="popover" data-placement="right" 
+                           data-content="<?php echo $popoverContenidoSql; ?>">
+                        </a>
+                    </div>
+                  </div>                   
+                  <div class="form-group">                      
+                    <div class="col-lg-offset-4 col-lg-8 ">
+                      <button type="submit" name="continuar" class="btn btn-default">Continuar</button>
+                    </div>
+                  </div>
+                </form>
+            </div>
+            
+      </div>
+</div>
+
+<!-- 
+Mensaje de Ayuda
+-->
+<?php
+endif;
+    include dirname (__FILE__) . '/ayuda/ayuda.html';
+?>

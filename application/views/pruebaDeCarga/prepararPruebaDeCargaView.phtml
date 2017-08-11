@@ -1,0 +1,117 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista para preparar los datos de la
+ * prueba de carga
+ * @Author: Miguel Salazar
+ * @Fecha: Marzo, 2016
+ * @Version: 1.3
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * =============================================================================
+ * 
+ */ 
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+
+if ($notificacion) {
+    echo $notificacion;
+}
+if ($error):
+    echo $error;
+else:
+?>
+<div class="panel panel-default" >
+    <div class="panel-heading">Datos para Realizar la Prueba de Carga</div>
+        <div class="panel-body">
+            <div class="col-lg-12" >
+                <form class="form-horizontal" role="form" method="post" id="form">
+                  <div class="form-group">
+                    <label for="usuario" class="col-lg-3 control-label">Cantidad de Cargas a Realizar</label>
+                    <div class="col-lg-5">
+                      <input autocomplete="off" type="text" class="form-control solo-numero-entero" id="cantidad"
+                             placeholder="Cantidad de Cargar a Realizar" name="cantidad"
+                             value="10">
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="fa fa-question-circle" href="#" title="<?php echo $popoverTituloPeticiones; ?>" 
+                           data-toggle="popover" data-placement="right" 
+                           data-content="<?php echo $popoverContenidoPeticiones; ?>">
+                        </a>
+                    </div>        
+
+                  </div>
+
+                  <div class="form-group">
+                    <label for="contrasenia_actual" class="col-lg-3 control-label">Personalizar Tiempos</label>
+                    <div class="col-lg-1">
+                        <input autocomplete="off" style="position:relative;top:-3px;left:-15px;"  type="checkbox" class="form-control" id="personalizar" 
+                              name="personalizar" <?php if (!empty($_POST["personalizar"]) 
+                                                            || $_POST["personalizar"] =! "on") 
+                                                            {echo "checked";} ?>>                       
+                    </div>
+                    <div class="col-lg-5">
+                         <p style="position:relative;top:5px;" class="help-block text-primary"><i class="fa fa-info-circle text-primary"></i> 
+                          <small class="text-primary">Marque esta opción para personalizar los tiempos de medición</small>
+                        </p>
+                    </div>                    
+                  </div>
+                    <div class="form-group">
+                        
+                    </div>
+                  <div class="form-group">
+                    <label for="contrasenia2" class="col-lg-3 control-label">Óptimo (segs.)</label>
+                    <div class="col-lg-5">
+                      <input autocomplete="off" <?php echo $disabled; ?>  type="text" class="form-control numero-entero-y-punto"  id="optimo"
+                             placeholder="Tiempo Óptimo en Segundos" name="optimo"
+                             value="<?php if (!empty($_SESSION["tiempos_personalizados"])) {echo $_SESSION["optimo"];}?>">
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="fa fa-question-circle" href="#" 
+                           title="<?php echo $popoverTituloOptimo; ?>" data-toggle="popover" 
+                           data-placement="right" data-content="<?php echo $popoverContenidoOptimo; ?>">
+                        </a>
+                    </div>  
+                  </div> 
+
+                  <div class="form-group">
+                    <label for="email" class="col-lg-3 control-label">Intermedio (segs.)</label>
+                    <div class="col-lg-5">
+                      <input autocomplete="off" <?php echo $disabled; ?>  type="text" class="form-control numero-entero-y-punto" id="intermedio" 
+                             placeholder="Tiempo Intermedio en Segundos" name="intermedio"
+                             value="<?php if (!empty($_SESSION["tiempos_personalizados"])) {echo $_SESSION["intermedio"];}?>"
+                             >
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="fa fa-question-circle" href="#" 
+                           title="<?php echo $popoverTituloIntermedio; ?>" data-toggle="popover" 
+                           data-placement="right" data-content="<?php echo $popoverContenidoIntermedio; ?>">
+                        </a>
+                    </div>  
+                  </div>  
+
+                  <div class="form-group">
+                    <label for="email" class="col-lg-3 control-label">Mínimo Aceptable (segs.)</label>
+                    <div class="col-lg-5">
+                      <input autocomplete="off" <?php echo $disabled; ?>  type="text" class="form-control numero-entero-y-punto" id="minimo"
+                             placeholder="Tiempo Mínimo en Segundos" name="minimo"
+                             value="<?php if (!empty($_SESSION["tiempos_personalizados"])) {echo $_SESSION["minimo"];}?>">
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="fa fa-question-circle" href="#" 
+                           title="<?php echo $popoverTituloMinimo; ?>" data-toggle="popover" 
+                           data-placement="right" data-content="<?php echo $popoverContenidoMinimo; ?>">
+                        </a>
+                    </div>  
+                  </div> 
+                   
+                  <div class="form-group">                      
+                    <div class="col-lg-offset-3 col-lg-9 ">        
+                      <button type="submit" name="continuar" class="btn btn-default">Continuar</button>
+                    </div>
+                  </div>
+                </form>
+            </div>            
+      </div>
+</div>
+<?php endif; ?>

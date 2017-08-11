@@ -1,0 +1,61 @@
+<?php
+/**
+ * =================================================
+ * @Descripcion: Vista para mostrar los datos personales del usuario
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Febrero, 2016
+ * @Version: 2.0
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * ==================================================
+ * 
+ */
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+
+if ($notificacion) {
+    echo $notificacion;
+}
+?>
+<div class="panel panel-default">
+    <div class="panel-heading">Datos de Usuario
+    <a style="float:right;" href="<?php echo URLBASE ?>usuario/actualizacion-de-mis-datos" class="fa fa-edit">
+        Actualizar Datos</a></div>
+    <input type="hidden" name="pagina_referencia" value="<?php echo $_POST["pagina_referencia"]; ?>">
+    <input type="hidden" name="id_user" value="<?php echo $_POST["id_user"]; ?>">
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Nombre Completo</th>
+            <td><?php echo $_usuario[0]["nombre_completo"]; ?></td>
+        </tr>
+        <tr>
+            <th>Nombre de Usuario</th>
+            <td><?php echo $_usuario[0]["nombre"]; ?></td>
+        </tr>
+        <tr>
+            <th>Nivel de Usuario</th>
+            <td><?php echo $_usuario[0]["nivel_usuario"]; ?></td>
+        </tr>
+        <tr>
+            <th>Correo Electrónico</th>
+            <td><?php echo $_usuario[0]["email"]; ?></td>
+        </tr>
+        <tr>
+            <th>Teléfono de Contacto</th>
+            <td><?php echo $_usuario[0]["telefono"]; ?></td>
+        </tr>
+        <tr>
+            <th>Pregunta Secreta</th>
+            <td>
+                <?php echo Helper::decrypt($_usuario[0]["pregunta_secreta"], $_SESSION["id_usuario"]); ?>
+            </td>
+        </tr>
+        <tr>
+            <th>Respuesta Secreta</th>
+            <td>
+                <?php echo Helper::decrypt($_usuario[0]["respuesta_secreta"], $_SESSION["id_usuario"]); ?>
+            </td>
+        </tr>
+    </table>
+</div>

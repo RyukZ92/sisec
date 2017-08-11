@@ -1,0 +1,180 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista que permite configurar los datos de la prueba de fuerza bruta
+ * o el sistema evaluado
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Marzo, 2016
+ * @Version: 1.0
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * ============================================================================
+ * 
+ */
+
+include dirname(__FILE__) . "/../../navegacion/navegacionView.phtml";
+if ($notificacion) {
+    echo $notificacion;
+}
+?>
+<form class="pure-form pure-form-aligned" method="POST" enctype="multipart/form-data">
+    <fieldset>        
+        <table class="pure-table pure-table-bordered" id="formulario">
+            <thead>
+                <tr>
+                    <th colspan="2">Configuración de Fuerza Bruta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>  
+                    <td class="td-right">
+                        <label for="url">URL Destino</label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="<?php $sistemaEvaluado["url"]; ?>" 
+                               maxlength="150" 
+                               name="url" 
+                               value="<?php if(empty($_POST["url"])) {echo $configFuerzaBruta["url"];} else {echo $_POST["url"];} ?>" class="solo-albabeto-espaniol-sin-espacio">
+                        <a href="#" 
+                           title="<?php echo $popoverTituloUrl; ?>" 
+                           data-toggle="popover" data-placement="right" 
+                           data-content="<?php echo $popoverContenidoUrl; ?>"  class="fa fa-question-circle"></a>
+                    </td>
+                </tr>
+                <tr>     
+                    <td class="td-right">
+                        <label for="password">Mensaje de Error</label>
+                    </td>
+                    <td>
+                        <textarea placeholder="Usuario o contraseña incorrecto" 
+                                  maxlength="150" name="cadena_invalida" ><?php if(empty($_POST["cadena_invalida"])) {echo $configFuerzaBruta["cadena_invalida"];} else {echo $_POST["cadena_invalida"];} ?></textarea>
+                        <a href="#" title="<?php echo $popoverTituloError; ?>" 
+                           data-toggle="popover" data-placement="right" 
+                           data-content="<?php echo $popoverContenidoError; ?>"  class="fa fa-question-circle"></a>                     
+                    </td>                    
+                </tr> 
+                <tr>     
+                    <td class="td-right">
+                        <label for="password">Nombre del Campo Contraseña</label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Nombre del Campo Contraseña" 
+                               maxlength="150" name="campo_contrasenia" 
+                               value="<?php if(empty($_POST["campo_contrasenia"])) {echo $configFuerzaBruta["campo_contrasenia"];} else {echo $_POST["campo_contrasenia"];} ?>" class="solo-albabeto-espaniol-sin-espacio">
+                        <a href="#" title="<?php echo $popoverTituloCampoContrasenia; ?>" 
+                           data-toggle="popover" data-placement="right" 
+                           data-content="<?php echo $popoverContenidoCampoContrasenia; ?>"  class="fa fa-question-circle"></a>
+                    </td>                    
+                </tr> 
+                <tr class="tr-center">         
+                    <td colspan="2">                        
+                        <b>Campo N° 1, Usuario, E-Mail o Código de Acceso</b>
+                        <a href="#" title="<?php echo $popoverTituloCampoUsuario; ?>" 
+                           data-toggle="popover" data-placement="right" 
+                           data-content="<?php echo $popoverContenidoCampoUsuario; ?>"  class="fa fa-question-circle"></a>
+                    </td>
+                </tr>
+                
+                    <tr class="tr-center">
+                        <td colspan="2">
+                            <?php
+                            if(count($configFuerzaBruta["campo"]) > 0):
+                                foreach($configFuerzaBruta["campo"] as $llave => $valor):
+                        ?>
+                                    <div style="margin-top:1%;">                                    
+                                    <input class="campos-config" value="<?php echo $llave; ?>" 
+                                           type="text" name="nombre_campo[]" 
+                                           id="campo_1" placeholder="Nombre del Campo N° 1"/>
+                                    <input class="campos-config" value="<?php echo $valor; ?>" 
+                                           type="text" name="valor_campo[]" 
+                                           id="campo_1" placeholder="Valor del Campo N° 1"/>
+                            <?php 
+                                endforeach; 
+                            elseif(count($_POST["nombre_campo"])>0||count($_POST["valor_campo"])>0):
+                                $nombre_adicional = $_POST["nombre_campo"];
+                                $valor_adicional = $_POST["valor_campo"];
+                                if(count($nombre_adicional)):
+                                    $total_campos = count($nombre_adicional);
+                                else:
+                                    $total_campos = count($valor_adicional);
+                                endif;
+                                    for($i=0; $i < $total_campos; $i++): 
+                                        $nombre = $nombre_campo[$i];
+                                        $valor = $valor_campo[$i];
+                            ?>
+                                    <input value="<?php echo $nombre; ?>" type="text" name="nombre_campo[]" id="campo_1" placeholder="Nombre del Campo N° 1"/>
+                                    <input value="<?php echo $valor; ?>" type="text" name="valor_campo[]" id="campo_1" placeholder="Valor del Campo N° 1"/>
+                            <?php
+                                    endfor;
+                            else: 
+                            ?>
+                                <input type="text" name="nombre_campo[]" id="campo_1" placeholder="Nombre del Campo N° 1"/>
+                                <input type="text" name="valor_campo[]" id="campo_1" placeholder="Valor del Campo N° 1"/>
+                            <?php        
+                            endif;
+                            ?>
+                                <!--</div>-->
+                            </div>
+                        </td>
+                    </tr>                
+                </tr>
+                <tr class="tr-center">         
+                    <td colspan="2">
+                        <a id="agregarCampo" class="btn btn-info" href="#">Agregar Campo Adicional</a>
+                        <a href="#" title="<?php echo $popoverTituloCampoAdicional; ?>" 
+                           data-toggle="popover" data-placement="right" data-content="<?php echo $popoverContenidoCampoAdicional; ?>"  class="fa fa-question-circle"></a> 
+                    </td>
+                </tr>               
+                    
+                
+                <tr class="tr-center">
+                    <td colspan="2">
+                        <div id="contenedor">
+                            <div class="added">
+                        <?php
+                            if(count($configFuerzaBruta["campo_adicional"]) > 0):
+                                foreach($configFuerzaBruta["campo_adicional"] as $nombre => $valor):
+                                ?>
+                                    <div style="margin-top:1%;">
+                                    <input class="campos-config" type="text" value="<?php echo $nombre; ?>" name="nombre_campo_adicional[]" id="campo_1" placeholder="Nombre del Campo N° '+ FieldCount +'" /> 
+                                    <input class="campos-config" type="text" value="<?php echo $valor; ?>" name="valor_campo_adicional[]" id="campo_2" placeholder="Valor del Campo N° '+ FieldCount +'"/>
+                                    <a title="Eliminar" href="#" class="glyphicon glyphicon-remove" id="eliminar-campo"></a>
+                                    </div>
+                                <?php 
+                                endforeach;
+                            else:
+                                $nombre_adicional = $_POST["nombre_campo_adicional"];
+                                $valor_adicional = $_POST["valor_campo_adicional"];
+                                if(count($nombre_adicional)):
+                                    $total_campos = count($nombre_adicional);
+                                else:
+                                    $total_campos = count($valor_adicional);  
+                                endif;
+                                    for($i=0; $i < $total_campos; $i++): 
+                                        $nombre = $nombre_campo[$i];
+                                        $valor = $valor_campo[$i];                                 
+                                
+?>
+                                
+                                    <input type="text" value="<?php echo $nombre; ?>" name="nombre_campo_adicional[]" id="campo_1" placeholder="Nombre del Campo N° '+ FieldCount +'" /> 
+                                    <input type="text" value="<?php echo $valor; ?>" name="valor_campo_adicional[]" id="campo_2" placeholder="Valor del Campo N° '+ FieldCount +'"/>
+                                    <a title="Eliminar" href="#" class="glyphicon glyphicon-remove" id="eliminar-campo"></a>
+                            <?php
+                                    endfor;
+                            endif;
+                                ?>
+                            </div>
+                        </div>
+                    </td>
+                </tr>          
+                <tr class="tr-center">
+                    <td  colspan="2">
+                        <input type="button" class="btn btn-default" value="Cancelar" onClick="window.location='<?php echo URLBASE; ?>configurar/evaluacion'">
+                        <input type="submit" class="btn btn-default" value="Guardar" name="guardar" id="continuar">
+                    </td>                   
+                </tr>                 
+                </tr>
+            </tbody>  
+        </table>
+    </fieldset>
+</form>

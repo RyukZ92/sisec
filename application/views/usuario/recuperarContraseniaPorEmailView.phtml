@@ -1,0 +1,70 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista para recuperar/crear nuevar contraseña por E-Mail
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Marzo, 2016
+ * @Version: 1
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguelangel.bux@gmail.com
+ * =============================================================================
+ * 
+ */ 
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+
+if($notificacion) {
+    echo $notificacion;
+}
+if ($recuperacion == 1) {
+    echo '<div class="alert alert-success" role="alert" id="alertas-sesion">
+          <strong>¡Muy bien!</strong> Su nueva contraseña fue enviada a su correo electrónico
+          <a style="float:right;"href="' . URLBASE . '" title="Iniciar Sesión"><i class="glyphicon glyphicon-log-in"></i> Iniciar Sesión</a>
+                  
+</div>';
+$disabled = "disabled"; 
+           
+}
+
+
+?>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Datos de la Recuperación de Contraseña</div>
+  <div class="panel-body"><br>
+            <div class="col-lg-8">
+                <form class="form-horizontal" role="form" method="post" id="form">
+                  <div class="form-group">
+                    <label for="usuario" class="col-lg-4 control-label">Usuario</label>
+                    <div class="col-lg-7 ">
+                      <input type="text" class="form-control" id="email" 
+                             placeholder="Correo Electrónico" name="email"
+                             value="<?php echo $_POST["usuario"] ?>"
+                             maxlength="50" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="email" class="control-label text-danger" id="user_requerido">Requerido</label>
+                    </div>  
+                  </div>  
+
+                  <div class="form-group">
+                    <label for="captcha" class="col-lg-4 control-label"><img style="border: 1px solid #F0F0F0;" src="<?php echo $urlCaptcha; ?>" id="captcha" /></label>
+                    <div class="col-lg-7 ">
+                        <input style="margin-top:6%;" placeholder="Código de Verificación" type="text" class="form-control" name="captcha" autocomplete="off" />                        
+                    </div>
+                    <div class="col-lg-1 ">
+                      <img src="public/img/refresh.png" style="cursor: pointer; height: 24px; width: 24px; margin-left: 1%; margin-top:80%;" onClick="document.getElementById('captcha').src='<?php echo $urlCaptcha; ?>?'+Math.random();">
+                    </div>  
+                  </div>   
+                    
+                  <div class="form-group">                      
+                    <div class="col-lg-offset-4 col-lg-8 ">                        
+                      <button type="reset" class="btn btn-default" onClick="window.location='<?php echo URLBASE; ?>'">Cancelar</button>
+                      &nbsp;
+                      &nbsp;
+                      <button type="submit" name="enviar" class="btn btn-default">Enviar</button>
+                    </div>
+                  </div>
+                </form>
+            </div>            
+      </div>
+</div>

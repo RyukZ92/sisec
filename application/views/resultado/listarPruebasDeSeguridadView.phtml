@@ -1,0 +1,64 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista mostrar listado de los resultados de las pruebas de seguridad
+ * permitiendo descargarlos en archivo de texto plano ".txt"
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Febrero, 2016
+ * @Version: 1
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguelangel.bux@gmail.com.com
+ * =============================================================================
+ * 
+ */ 
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+?>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Tipo de Prueba</th>
+            <th>Nombre de la Prueba</th>
+            <th>Evaluador</th>
+            <th>Fecha y Hora</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+
+    <tbody>
+<?php 
+	for ($i=0; $i<count($_resultado); $i++):
+            $id = $_resultado[$i]["id"];
+            $fecha = Helper::convertirFechaDdMmAaaa($_resultado[$i]["fecha"]);
+            $hora = Helper::convertirHoraA12H($_resultado[$i]["hora"]);
+            $evaluador = $_resultado[$i]["nombre"];
+            if ($_resultado[$i]["tipo"] == "Fuerza Bruta"
+                or $_resultado[$i]["tipo"] == "Inyección SQL"
+                or $_resultado[$i]["tipo"] == "Inyección XSS"
+                ) {
+                    $tipoDePrueba = "Seguridad";
+                } else {
+                    $tipoDePrueba = "Rendimiento";
+                }
+        echo "<tr>
+                <td>$id</td>
+                <td>$tipoDePrueba</td>
+                <td><a href='".$_resultado[$i]["ruta_de_archivo"]."'"
+                . "download='Resultado de ".$_resultado[$i]["tipo"].".log'>" 
+                . $_resultado[$i]["tipo"] 
+                . "</a></td>
+                <td>$evaluador</td>
+                <td>$fecha $hora</td>                    
+                <td title='Descargar'>
+                    <a href='".$_resultado[$i]["ruta_de_archivo"]."' 
+                       download='Resultado de ".$_resultado[$i]["tipo"].".log' class='fa fa-download'>
+                    </a>
+                </td>  
+            </tr>";
+	endfor; ?>
+    </tbody>
+</table>
+<?php
+include dirname(__FILE__) . "/../paginador/paginadorView.phtml";
+?>

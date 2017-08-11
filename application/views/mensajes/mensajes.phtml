@@ -1,0 +1,124 @@
+<?php
+
+/**
+ * @Descripción: Contiene la mayoría de los mensajes y/o alertas que el sistema brinda.
+ * @version 2.0
+ * @Autor: Miguel Salazar, 2015
+ */
+##Notificaciones exitosas
+$alerta["registro_exitoso"] = '<div class="alert alert-success" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/success.png" class="img-success"> 
+                                 Registro realizado con éxito.
+                            </div>';
+
+$alerta["actualizacion_exitosa"] = '<div class="alert alert-success" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/success.png" class="img-success"> Actualización realizada con éxito.
+                            </div>';
+$alerta["enviado_a_la_papalera"] = '<div class="alert alert-success" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/success.png" class="img-success"> Se envió a la papelera de forma exitosa.
+                            </div>';
+$alerta["eliminacion_exitosa"] = '<div class="alert alert-success" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/success.png" class="img-success"> Eliminación realizada con éxito.
+                            </div>';
+
+$alerta["restauracion_exitosa"] = '<div class="alert alert-success" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/success.png" class="img-success"> Restauración realizada con éxito.
+                            </div>';
+$alerta["ciclo_cerrado_con_exito"] = '<div class="alert alert-success" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/success.png" class="img-success"> Ciclo de Evaluación Cerrado con Éxito.
+                            </div>';
+
+
+$alerta["actualizacion_de_configuracion_exitosa"] = '<div class="alert alert-success" role="alert" id="alertas" style="width:98%">
+                                <img src="' . URLBASE . 'public/img/success.png" class="img-success"> Configuración actualiada con éxito.
+                            </div>';
+##Notificaciones de información
+$alerta["informacion_espere"] = '<div class="alert alert-info" role="alert" id="alertas">
+                                <strong>¡Información!</strong> Espere un momento, redireccionando la página.
+                            </div>';
+$alerta["hora_pre_asignada_exitosamente"] = '<div class="alert alert-info" role="alert" id="alertas">
+                                <strong>¡Información!</strong> Registro pre-cargado con éxito.
+                            </div>';
+##Notificaciones de error
+
+ $alerta["usuario_existe"] = '<div class="alert alert-danger" role="alert" id="alertas">                                
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> EL usuario introducido ya se encuentra registrado.
+                           </div>';
+  $alerta["email_existe"] = '<div class="alert alert-danger" role="alert" id="alertas">                                
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> El correo electrónico introducido ya se encuentra registrado.
+                           </div>';
+ $alerta["registro_error"] = '<div class="alert alert-danger" role="alert" id="alertas">                                
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Problemas al intenter realizar el registro.
+                           </div>';
+$alerta["actualizacion_error"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Problemas al intenter realizar la edición.
+                           </div>';
+$alerta["eliminacion_error"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Problemas al intenter realizar la eliminación.
+                           </div>';
+$alerta["restauracion_error"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Problemas al intenter realizar la eliminación.
+                           </div>';
+$alerta["registro_no_existe"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Registro no encontrado.
+                           </div>';
+$alerta["respuesta_secreta_incorrecta"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Respuesta secreta incorrecta.
+                           </div>';    
+$alerta["campos_vacios"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong>  Complete los campos obligatorios.
+                           </div>';
+$alerta["contrasenia_incorrecta"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Ajuste la nueva contraseña al formato solicitado.
+                           </div>';
+$alerta["contrasenias_no_coinciden"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Las contraseñas no coinciden.
+                           </div>';
+$alerta["contrasenia_actual_incorrecta"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> La contraseña actual es incorrecta.
+                           </div>';
+$alerta["rellene_pregunta_secreta"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Rellene la pregunta secreta.
+                           </div>';
+$alerta["rellene_respuesta_secreta"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Rellene la respuesta secreta.
+                           </div>';
+$alerta["emails_nos_coinciden"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Los correos electrónicos no coinciden.
+                           </div>';
+$alerta["email_no_existe"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> El correo electrónico es incorrecto.
+                           </div>';
+$alerta["registro_existente"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Registro existente.
+                           </div>';
+$alerta["captcha_incorrecta"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Código de verificación de usuario incorrecto.
+                           </div>';
+$alerta["intervalo_incorrecto"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Inconsistencia en los intervalos de tiempo.
+                           </div>'; 
+$alerta["formato_archivo_invalido"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Formato de archivo invalido.
+                           </div>'; 
+$alerta["archivo_pesado"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Archivo muy pesado.
+                           </div>'; 
+$alerta["ruta_invalida"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ERROR!</strong> Rutas de conexión o acceso invalidas.
+                           </div>';
+$alerta["cierre_de_prueba_denegada"] = '<div class="alert alert-danger" role="alert" id="alertas">
+                                <img src="' . URLBASE . 'public/img/error.png" class="img-danger"> <strong>¡ACCIÓN DENEGADA!</strong> Este ciclo de evaluación unicamente lo puede cerrar el usuario creador.
+                           </div>';
+
+#Otros mensaje de errores
+$alerta["sesion_ingrese_credenciales"] = "<span class='text-danger'><center><b>¡ERROR!</b> Ingrese sus credenciales de acceso por favor</center></span>";
+$alerta["sesion_credenciales_ivalidas"] = "<span class='text-danger'><center><b>¡ERROR!</b> Sus credenciales de acceso son incorrectas</center></span>";
+$alerta["sesion_captcha_incorreta"] = "<span class='text-danger'><center><b>¡ERROR!</b> Código de verificación incorrecto</center></span>";
+
+$alerta["ciclo_abierto"] = "<span class='text-danger'><center><b>¡ACCESO DENEGADO!</b> No puede crear un nuevo ciclo de evaluación, porque aún se encuentra uno abierto.</center></span>";
+$alerta["prueba_realizada"] = "<span class='text-danger'><center><b>¡ACCESO DENEGADO!</b> No puede realizar esta prueba, porque ya una ha sido realizada en este ciclo de evaluación.</center></span>";
+$alerta["no_hay_ciclo_abierto"] = "<span class='text-danger'><center><b>¡ACCESO DENEGADO!</b> No puede realizar esta prueba, porque no se ha abierto un ciclo de evaluación.</center></span>";
+$alerta["no_acceso_de_usuario_prueba"] = "<span class='text-danger'><center><b>¡ACCESO DENEGADO!</b> No puede realizar esta prueba, unicamente la puede llevar a cavo el usuario responsable de crear el ciclo de evaluación actual.</center></span>";
+$alerta["sin_registro"] = "<span class='text-danger'><center><b>¡LO SENTIMOS!</b> El registro solicitado no existe.</center></span>";
+$alerta["no_acceso_a_la_configuracion"] = "<span class='text-danger'><center><b>¡ACCESO DENEGADO!</b> No puede configurar las prueas porque se encuentra un ciclo de evaluación abierto.</center></span>";

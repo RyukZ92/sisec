@@ -1,0 +1,21 @@
+
+ul#lista_dni {
+	width: 222px;
+	border: 1px solid #eaeaea;
+	position: absolute;
+	z-index: 10;
+	background: #f3f3f3;
+	list-style: none;
+        
+}
+ul#lista_dni  li {
+	padding: 5px;
+}
+.input_container ul li:hover {
+	background: #eaeaea;
+}
+ul#lista_dni {
+    display: none;
+}
+
+

@@ -1,0 +1,138 @@
+DETALLES DE LA PRUEBA DE INYECCIÓN SQL: INICIO DE SESIÓN
+
+
+Fecha y Hora de Creación: 11/05/2016 07:02:00 PM
+Usuario: RYUKZ (Administrador)
+
+URL Destino del Formulario: http://localhost/siscormab/InicioSesionController2.php
+Mensaje de Respuesta Invalido: Usuario O Contraseña Incorrecta
+
+INTENTOS: 
+
+1 => Fallido: [nombre=m1' or 1=1 ORDER BY estatus DESC; -- ][clave=' or 1=1 -- ][]
+
+2 => Fallido: [nombre=or 1=1 -- ][clave=or 1=1 #][]
+
+3 => Fallido: [nombre=' OR '1'='1][clave=' OR '1'='1 ][]
+
+4 => Fallido: [nombre=' OR '1'='1 ][clave=m2' OR '1'='1 ][]
+
+5 => Fallido: [nombre=AND user is TRUE; -- ][clave=AND user is TRUE; -- ][]
+
+6 => Fallido: [nombre=' OR user LIKE '%a%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM user); -- ][]
+
+7 => Fallido: [nombre=' OR user LIKE '%e%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM user); -- ][]
+
+8 => Fallido: [nombre=' OR user LIKE '%i%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM user); -- ][]
+
+9 => Fallido: [nombre=' OR user LIKE '%o%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM user); -- ][]
+
+10 => Fallido: [nombre=' OR user LIKE '%u%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM user); -- ][]
+
+11 => Fallido: [nombre=' OR usuario LIKE '%a%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][]
+
+12 => Fallido: [nombre=' OR usuario LIKE '%e%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][]
+
+13 => Fallido: [nombre=' OR usuario LIKE '%i%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][]
+
+14 => Fallido: [nombre=' OR usuario LIKE '%o%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][]
+
+15 => Fallido: [nombre=' OR usuario LIKE '%u%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][]
+
+16 => Fallido: [nombre=' OR nombre LIKE '%a%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM nombre); -- ][]
+
+17 => Fallido: [nombre=' OR nombre LIKE '%e%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM nombre); -- ][]
+
+18 => Fallido: [nombre=' OR nombre LIKE '%i%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM nombre); -- ][]
+
+19 => Fallido: [nombre=' OR nombre LIKE '%o%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM nombre); -- ][]
+
+20 => Fallido: [nombre=' OR nombre LIKE '%u%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM nombre); -- ][]
+
+21 => Fallido: [nombre=' OR name LIKE '%a%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM name); -- ][]
+
+22 => Fallido: [nombre=' OR name LIKE '%e%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM name); -- ][]
+
+23 => Fallido: [nombre=' OR name LIKE '%i%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM name); -- ][]
+
+24 => Fallido: [nombre=' OR name LIKE '%o%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM name); -- ][]
+
+25 => Fallido: [nombre=' OR name LIKE '%u%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM name); -- ][]
+
+26 => Fallido: [nombre=' OR 1>=(SELECT COUNT(*) FROM nombre); -- ][clave=' OR 1>=(SELECT COUNT(*) FROM nombre); -- ][]
+
+27 => Fallido: [nombre=' OR 1>=(SELECT COUNT(*) FROM nombre); #  ][clave=' OR 1>=(SELECT COUNT(*) FROM nombre); # ][]
+
+28 => Fallido: [nombre=' or 1=1;][clave=' or 1=1;][]
+
+29 => Fallido: [nombre= ' or ''='][clave= ' or ''='][]
+
+30 => Fallido: [nombre= ' or ' '='][clave= ' or ' '='][]
+
+31 => Fallido: [nombre= ' or true--][clave= ' or true--][]
+
+32 => Fallido: [nombre= " or true-- ][clave= " or true-- ][]
+
+33 => Fallido: [nombre= " or ""="][clave= " or ""="][]
+
+34 => Fallido: [nombre= " or 1-- ][clave= " or 1-- ][]
+
+35 => Fallido: [nombre=' or 'x'='x][clave=' or 'x'='x][]
+
+36 => Fallido: [nombre=' or 0=0 -- ][clave=' or 0=0 -- ][]
+
+37 => Fallido: [nombre=" or 0=0 -- ][clave=or 0=0 -- ][]
+
+38 => Fallido: [nombre=or 0=0 -- ][clave=' or 0=0 # ][]
+
+39 => Fallido: [nombre=][clave=" or 0=0 # ][]
+
+40 => Fallido: [nombre=][clave=or 0=0 # ][]
+
+41 => Fallido: [nombre=][clave=" or "x"="x][]
+
+42 => Fallido: [nombre=][clave=') or ('x'='x][]
+
+43 => Fallido: [nombre=' or 1=1-- ][clave=" or 1=1-- ][]
+
+44 => Fallido: [nombre=or 1=1-- ][clave=or 1=1-- ][]
+
+45 => Fallido: [nombre=' or a=a--][clave=" or "a"="a][]
+
+46 => Fallido: [nombre=hi" or "a"="a][clave=hi" or 1=1 --][]
+
+47 => Fallido: [nombre=hi' or 1=1 --][clave='or'1=1'][]
+
+48 => Fallido: [nombre=and 1=1--][clave=and 1=1][]
+
+49 => Fallido: [nombre=' or 'one'='one][clave=' and 'one'='one][]
+
+50 => Fallido: [nombre=' or 'one'='one--][clave=' and 'one'='one--][]
+
+51 => Fallido: [nombre=admin' --][clave=admin' # ][]
+
+52 => Fallido: [nombre=or 1=1--][clave=or 1=1 # ][]
+
+53 => Fallido: [nombre=' or '1'='1][clave=' or 'x'='x][]
+
+54 => Fallido: [nombre=' or 0=0 --][clave=" or 0=0 --][]
+
+55 => Fallido: [nombre=' or 0=0 #][clave=" or 0=0 #][]
+
+56 => Fallido: [nombre=or 0=0 #][clave=or 0=0 #][]
+
+57 => Fallido: [nombre=' or 'x'='x][clave=" or "x"="x][]
+
+58 => Fallido: [nombre=' or a=a--][clave=" or "a"="a][]
+
+59 => Fallido: [nombre=hi" or "a"="a][clave=hi" or "a"="a][]
+
+60 => Fallido: [nombre='or' 1=1'][clave='or' 1=1'][]
+
+
+
+TOTAL DE INTENTOS: 60
+INTENTOS EXITOSOS: 0 ()
+INTENTOS FALLIDOS: 60
+
+Tiempo de Ejecución: 2.485 segundos

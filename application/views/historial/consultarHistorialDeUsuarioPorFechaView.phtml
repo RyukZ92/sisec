@@ -1,0 +1,63 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista mostrar el historial del usuario
+ * que tiene una sesión iniciadda (por range de fecha)
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Febrero, 2016
+ * @Version: 1
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguelangel.bux@gmail.com.com
+ * =============================================================================
+ * 
+ */ 
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+?>
+
+
+<div class="row">
+    <form class="form-horizontal" role="form" method="post" id="form" 
+          action="<?php echo URLBASE; ?>historial/usuarios-por-fecha">
+        <div class="col-xs-2">
+            <label class="control-label">Filtrar Listado:</label>
+        </div>
+        <div class="col-md-3">
+            <input title="Fecha inicial de la búsqueda" class="form-control" id="fecha_desde" type="text" placeholder="Fecha Inicial" maxlength="10" name="fecha_desde"  autocomplete="off">
+        </div>
+        
+        <div class="col-md-3">
+            <input title="Fecha final de la búsqueda" class="form-control" id="fecha_hasta" type="text" placeholder="Fecha Final" maxlength="10" name="fecha_hasta"  autocomplete="off">
+        </div>
+        <div class="col-md-1">
+            <input type="submit" value="Buscar" title="Buscar" class="btn btn-default">
+        </div>
+    </form>
+</div> 
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Fecha y Hora</th>
+            <th>Usuario</th>                      
+            <th>IP Cliente</th>
+            <th>Actividad</th>
+            <th>Detalle</th>
+        </tr>
+    </thead>
+
+    <tbody>
+<?php 
+	for ($i=0; $i<count($_historial); $i++):
+        echo "<tr>
+                <td align=center>" . $fecha[$i] . " " . $hora[$i] . "</td>
+                <td>" . $usuario[$i] . "</td>
+                <td>" . $ipCliente[$i] . "</td>
+                <td>" . $accion[$i] . "</td>
+                <td title='Detalle'><a href='$urlPag#$id' class='fa fa-search'></a></td>  
+            </tr>";
+	endfor; ?>
+    </tbody>
+</table>
+<?php
+include dirname(__FILE__) . "/../paginador/paginadorView.phtml";
+?>

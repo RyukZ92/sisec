@@ -1,0 +1,112 @@
+
+==========================================
+Elaborado por:
+Miguel Ángel Salazar Castillo, 2016
+==========================================
+||      -----------------------         ||
+||     | CONTENIDO DEL ARCHIVO |        ||
+||      ----------------------          ||
+||  1 - REQUERIMIENTOS TÉNCNICOS        ||
+||  2 - REQUERIMIENTOS DE INSTALACIÓN   ||
+||  3 - CÓMO INSTALAR EL SERVIDOR       ||
+||  4 - CONFIGURACIONES ADICIONALES     ||
+==========================================
+    
+
+====================================
+1 - REQUERIMIENTOS TÉNCNICOS     ***
+====================================
+***HARDWARE***
+
+     => Computadora:
+        - Procesador: Inter Celerom 3GHZ.
+        - RAM: 1 GB.
+        - Almacanamiento: 3GB.
+        - Gráficos: Resolución 1204x728
+        - 
+		
+***SOFTWARE***
+	
+    => Servidor:
+        - Sistema Operativo: Canaima v4.1 >> RECOMENDADO <<, Ubuntu 10.04, Debian u otras versiones equivalente.
+        - Navegador Web: Firefox 30, Cunaguaro 27, Chromium.
+        - Servidor Web: Apache2.
+        - Gestor de Base de Datos. MariaDB o MySQL como su equivalente.
+        - Lenguaje de Programación: PHP5(incluyendo librerías CURL, PDO y URL amigables).		
+        - 
+		
+=====================================
+2 - REQUERIMIENTOS DE INSTALACIÓN ***
+=====================================
+
+    => Básicos:
+        - Internet.
+        - Teclado.
+		
+===================================
+3 - CÓMO INSTALAR EL SERVIDOR   ***
+===================================
+    0 - Accesar como super usuario (root) en la terminal:
+        $ Abrir terminal, escribir "su" e ingresar la contraseña root.
+        
+		## Ruta de repositorios /etc/apt/sources.list
+		# Agregar al final de la lína las siguientes dis líneas:
+		deb http://packages.dotdeb.org wheezy-php56 all
+		deb-src http://packages.dotdeb.org wheezy-php56 all
+		
+    1 - Actualizar repositorios:
+        sudo apt-get install python-software-properties
+        sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
+        sudo add-apt-repository 'deb http://mirror.timeweb.ru/mariadb/repo/10.0/debian wheezy main'
+        sudo apt-get update
+
+        Más información sobre los repositorios que deba utilizar aquí: 
+        https://downloads.mariadb.org/mariadb/repositories/#mirror=timeweb&distro=Debian&distro_release=wheezy&version=10.0
+
+    2 - Instalar Servidor Web.
+        sudo apt-get install apache2
+
+    3 - Instalar Gestor de Base de Datos
+        sudo apt-get install mariadb-server
+
+        NOTA: En este paso se debe configurar una contraseña de acceso a MariaDB mientras se realiza la instalación.
+
+    4 - Instalar Lenguaje de Programación
+        sudo apt-get install php5 php5-mysql php5-curl php5-gd libapache2-mod-php5
+        sudo apt-get install phpmyadmin
+        service apache2 restart
+
+    5 - Instalación del Sistema Web 
+        sudo chmod 777 -R /var/www/
+        Copie la carpeta sisec y sirah a la ruta /var/www/
+
+        > Importar Base Datos
+            - Abrir un navegador web y escribir en la URL: http://127.0.0.1/phpmyadmin/
+                Usuario por defecto: root
+                Contraseña: la que definió previamente en en paso 3.
+
+            - Después de acceder, debe seleccionar la opción (1)IMPORTAR (menú superior), (2)EXAMINAR y seleccionar en la ruta /var/www/sisec/db el archivo bd_sisec.sql.
+                Repetir proceso para la otra base de datos, (1)IMPORTAR (menú superior), (2)EXAMINAR y seleccionar en la ruta /var/www/sirah/db el archivo bd_sirah.sql.
+
+        > Configurar Contraseña de la Base de Datos
+            Para sisec:
+                - Editar contraseña en la archivo config.db.ini que se ubica en la ruta /var/www/sisec/config/
+
+            Para sirah:
+                - Editar contraseña en el archivo db.php que se ubica en la ruta /var/www/sirah/db/
+
+======================================
+4 - CONFIGURACIONES ADICIONALES    ***
+======================================	
+    => Instalar Curl:
+        # sudo apt-get install php5-curl
+        # sudo apt-get install curl php5-cli
+        # service apache2 restart
+	
+    => Activar PDO:
+        Abrir archivo php.ini (ruta: /etc/php5/apache2/) y descomentar la siguiente línea: extension=php_pdo_mysql.dll y [Pdo_mysql]
+	
+    => Activar URL amigables.
+		
+	
+			

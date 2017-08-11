@@ -1,0 +1,56 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista para mostrar los datos de un ciclo de evaluación especifico,
+ * es decir, se muestra la información completa del registro
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Febrero, 2016
+ * @Version: 1
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * =============================================================================
+ * 
+ */
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+if($error):
+    echo $error;
+else:
+?>
+    <div class="panel panel-default">
+        <div class="panel-heading">Datos del Usuario
+        <a style="float:right;" 
+           href="<?php echo URLBASE ?>usuario/actualizacion/<?php echo $_GET["id"] . "/" . $_GET['pagina']; ?>" class="fa fa-edit">
+            Actualizar Datos</a></div>
+        <input type="hidden" name="pagina_referencia" value="<?php echo $_POST["pagina_referencia"]; ?>">
+        <input type="hidden" name="id" value="<?php echo $_POST["id"]; ?>">
+
+        <table class="table table-bordered">
+            <tr>
+                <th>Nombre Completo</th>
+                <td><?php echo $_usuario[0]["nombre_completo"]; ?></td>
+            </tr>
+            <tr>
+                <th>Nombre de Usuario</th>
+                <td><?php echo $_usuario[0]["nombre"]; ?></td>
+            </tr>
+            <tr>
+                <th>Correo Electrónico</th>
+                <td><?php echo $_usuario[0]["email"]; ?></td>
+            </tr>
+            <tr>
+                <th>Teléfono de Contacto</th>
+                <td><?php echo $_usuario[0]["telefono"]; ?></td>
+            </tr>
+            <tr>
+                <th>Nivel del Usuario</th>
+                <td><?php echo $_usuario[0]["nivel_usuario"]; ?></td>
+            </tr>
+            <tr>
+                <th>Fecha de Registro</th>
+                <td><?php echo Helper::convertirFechaDdMmAaaa($_usuario[0]["fecha_creacion"]); ?></td>
+            </tr>
+
+        </table>
+    </div>
+<?php endif;?>

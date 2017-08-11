@@ -1,0 +1,105 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista para mostrar los usuarios eliminados
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Abril, 2016
+ * @Version: 1.1
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * =============================================================================
+ * 
+ */ 
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+
+if ($notificacion) {
+    echo $notificacion;
+}
+?>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Correo Electrónico</th>
+            <th>Nivel del Usuario</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+<?php 
+	foreach ($_usuario as $usuario):
+            $enlaceRestaurar = URLBASE . "usuario/restauracion/" . $usuario["id"] . "/" . $params['actual'];
+        echo "<tr>
+                <td title='" . $usuario["nombre"] . "'>" . $usuario["nombre"] . "</td>
+                <td title='" . $usuario["email"] . "'>" . $usuario["email"] . "</td>
+                <td title='" . $usuario["nivel_usuario"] . "'>" . $usuario["nivel_usuario"] . "</td>
+                <td title='Restaurar'>
+                    <a title='Restaurar' 
+                    href='$enlaceRestaurar' class='fa fa-rotate-left'>
+                    &nbsp;
+                    <a title='Eliminar Permanentemente' href='#" . $usuario["id"] . "' data-toggle='modal' data-target='#" . $usuario["id"] . "'
+                        class='fa fa-times-circle'>
+                </td>  
+            </tr>";
+?>
+    <div id="<?php echo $usuario["id"] ?>" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title text-danger">Confirme la Eliminación Permanente del Usuario</h4>
+          </div>
+          <div class="modal-body">
+              <p class="text-info">¿Está seguro que desea eliminar este usuario?</p>
+            <p class="">Se le notitifica que si acepta la operación, no se podrán revertir los cambios.</p>
+          </div>
+          <div class="modal-footer">
+              <form method="POST">
+                  <input type="hidden" name="id" value="<?php echo $usuario["id"] ?>">                
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" name="confirmar" class="btn btn-success" >Confirmar</button>
+              </form>
+          </div>
+        </div>
+
+      </div>
+    </div>  
+    <div id="<?php echo $usuario["id"] ?>" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title text-danger">Confirme la Restauración del Usuario</h4>
+          </div>
+          <div class="modal-body">
+              <p class="text-info">¿Está seguro que desea restaurar este usuario?</p>
+            <p class="">Si confirma,  el usuario volvelverá a estar activo.</p>
+          </div>
+          <div class="modal-footer">
+              <form method="POST">
+                  <input type="hidden" name="id" value="<?php echo $usuario["id"] ?>">                
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" name="confirmar_restaurarcion" class="btn btn-success" >Confirmar</button>
+              </form>
+          </div>
+        </div>
+
+      </div>
+    </div>     
+<?php         
+	endforeach; ?>
+    </tbody>
+</table>
+
+
+
+<?php
+    include dirname(__FILE__) . "/../paginador/paginadorView.phtml";
+?>

@@ -1,0 +1,32 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripción: Vista que muestra una vista de error
+ * @Autor: Miguel Salazar
+ * @Fecha:  Abril, 2016
+ * @Version: 1.0
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguelangel.bux@gmail.com
+ * ============================================================================= * 
+ * 
+ */
+#include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+?>
+<br clear="all">
+<br clear="all">
+<div class="row center">
+    <div class="col-sm-offset-2 col-sm-2 ">
+        <img class="center img-responsive" src="<?php echo URLBASE ?>public/img/warning_256.png">
+    </div>
+    <div class="col-sm-5 text-left">
+        <h3>¡La Página Solicitada No Existe!</h3>
+        <p>Esto puede deberse a una de las siguientes causas:</p>
+        <div class="container">
+                <ul>
+                    <li>El contenido de la página ha sido eliminado</li>
+                    <li>Escribió mal la dirección url</li>
+                    <li>Ocurrió un error al procesar el contenido</li>
+                </ul>
+            </div>
+    </div>
+</div>

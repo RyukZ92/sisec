@@ -1,0 +1,120 @@
+<?php
+/**
+ * =================================================
+ * @Descripcion: Vista que permite confirmar la
+ * prueba de inyección xss
+ * @Author: Miguel Salazar
+ * @Fecha: Febrero, 2016
+ * @Version: 1.2
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguelangel.bux@gmail.com
+ * ==================================================
+ * 
+ */ 
+
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+?>
+
+
+<div id="dialogo-espera" class="ventana">
+    <img src="<?php echo URLBASE; ?>/public/img/preload.gif" alt="jquery">
+    <h3>Por favor espere...</h3>
+</div>
+<?php
+if ($notificacion) {
+    echo $notificacion;
+}
+?>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Datos para la la prueba de inyección xss
+    <a style="float:right;" href="<?php echo URLBASE ?>configurar/inyeccion-xss" class="fa fa-edit"> Actualizar Datos</a></div>
+    <form method="POST">    
+        <table class="table table-bordered">
+            <tr>
+                <th>URL Destino</th>
+                <td><?php echo $configXSS["url"]; ?> </td>
+            </tr>
+            <tr>
+                <th>Mensaje de Error</th>
+                <td><?php echo $configXSS["cadena_invalida"]; ?> </td>
+            </tr>
+            <tr>
+                <th>Campo Usuario</th>
+                <td>
+                    <?php                                
+                        foreach($configXSS["campo"] as $llave => $valor):
+                    ?>
+                            <div style="margin-top:1%;">                                    
+                            <?php echo $llave; ?>
+                            </div>
+                    <?php 
+                        endforeach;                              
+                    ?>
+
+                </td>
+            </tr>
+            <tr>
+                <th>Campos Adicionales</th>
+                <td>
+                    <?php                           
+                    foreach($configXSS["campo_adicional"] as $nombre => $valor):
+                    ?>
+                        <div style="margin-top:1%;">
+                        <?php echo $nombre . " = " . $valor; ?>
+                        </div>
+                    <?php 
+                    endforeach;                            
+                    ?>
+
+                </td>
+            </tr>
+            <tr>
+                <td class="active" colspan="2">Confirmación de la Prueba</td>       
+            </tr>
+            <tr>
+                <th>Archivo con las Contraseñas</th>
+                <td>
+                    <?php if(empty($nombreArchivo["codigos_xss"])):
+                            echo "<span class='text-danger'>No se seleccionó ningún archivo</span>";
+                        else:
+                            echo $nombreArchivo["codigos_xss"];
+                        endif;                            
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <?php
+                    if(empty($nombreArchivo["codigos_xss"])):
+                        $mensaje = 1;
+                    endif;
+
+                    if($mensaje == 1): 
+                    ?>
+                       <span><b>Nota:</b> Si no seleccionó ningún archivo, el sistema adjuntará uno por defecto</span>                
+                    <?php 
+                    endif;
+                    ?>
+                </td>
+            </tr>
+            <tr class="tr tr-bordered center">
+                <td colspan="2">
+                    <span class="text-warning bg-warning">
+                        <span class="fa fa-warning"></span>
+                        ¿Está seguro que desea realizar esta prueba?
+                        <!--<br>
+                        Se le notifica que esta prueba se realiza sólo una vez por cada ciclo de evaluaión-->
+                    </span>
+                </td>
+            </tr>
+            </table>
+        <div class="panel-body center">
+            <button type="button" class="btn btn-default" onClick="window.location.href='<?php echo URLBASE?>seguridad/inyeccion-xss'">Cancelar</button>
+            &nbsp;
+            &nbsp;
+            <button type="submit" name="confirmar" class="btn btn-default" id="confirmar">Confirmar</button>
+        </div>
+    </form>
+</div>

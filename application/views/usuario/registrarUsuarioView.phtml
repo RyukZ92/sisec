@@ -1,0 +1,123 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista para registrar un nuevo usuario
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Febrero, 2016
+ * @Version: 1
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * =============================================================================
+ * 
+ */ 
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+include dirname(__FILE__) . "/../helper/mensajes.phtml";
+?>
+<div class="panel panel-default">
+  <div class="panel-heading">Datos del Nuevo Usuario</div>
+  <div class="panel-body"><br>
+            <div class="col-lg-8">
+                <form class="form-horizontal" role="form" method="post" id="form">
+                  <div class="form-group">
+                    <label for="nombre" class="col-lg-4 control-label">Nombre Completo</label>
+                    <div class="col-lg-7 ">
+                      <input type="text" class="form-control solo-albabeto-espaniol-con-espacio" id="nombre"
+                             placeholder="Nombre Completo" name="nombre"
+                             value="<?php echo $_POST["nombre"] ?>"
+                             maxlength="80" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger">Requerido</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="usuario" class="col-lg-4 control-label">Nombre de Usuario</label>
+                    <div class="col-lg-7 ">
+                      <input type="text" class="form-control alfanumerico-sin-espacio" id="usuario"
+                             placeholder="Nombre de Usuario" name="usuario"
+                             value="<?php echo $_POST["usuario"] ?>"
+                             maxlength="40" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger">Requerido</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="contrasenia" class="col-lg-4 control-label">Contraseña</label>
+                    <div class="col-lg-7">
+                      <input type="password" class="form-control" id="contrasenia" 
+                             placeholder="Contraseña" name="contrasenia">  
+                      <p class="help-block text-primary"><i class="fa fa-info-circle text-primary"></i> 
+                          <small class="text-primary">Mímimo 8 caráteres con mayúsculas, minúsculas y números</small>
+                      </p>
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger">Requerido</label>
+                    </div>  
+                    
+                  </div>
+
+                  <div class="form-group">
+                    <label for="contrasenia2" class="col-lg-4 control-label">Repite la Contraseña</label>
+                    <div class="col-lg-7 ">
+                      <input type="password" class="form-control" id="contrasenia2" 
+                             placeholder="Repita la Contraseña" name="contrasenia2">
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="ontrol-label text-danger">Requerido</label>
+                    </div>  
+                  </div> 
+
+                  <div class="form-group">
+                    <label for="email" class="col-lg-4 control-label">Correo Electrónico</label>
+                    <div class="col-lg-7 ">
+                      <input type="text" class="form-control" id="email" 
+                             placeholder="Correo Electrónico" name="email"
+                             value="<?php echo $_POST["email"] ?>"
+                             maxlength="50" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger">Requerido</label>
+                    </div>  
+                  </div>  
+                  <div class="form-group">
+                    <label for="usuario" class="col-lg-4 control-label">Teléfono de Contacto</label>
+                    <div class="col-lg-7 ">
+                      <input type="text" class="form-control solo-numero-entero" id="telefono"
+                             placeholder="Teléfono de Contacto" name="telefono"
+                             value="<?php echo $_POST["telefono"] ?>"
+                             maxlength="12" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger">   </label>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email" class="col-lg-4 control-label">Nivel del Usuario</label>
+                    <div class="col-lg-7 ">
+                        <select name="nivel_usuario" class="form-control" id="nivel_usuario">
+                            <option value="">Seleccione</option>
+                            <option value="Administrador" <?php if ($_POST["nivel_usuario"] == "Administrador") { echo "selected"; }?>>Administrador</option>
+                            <option value="Evaluador" <?php if ($_POST["nivel_usuario"] == "Evaluador") { echo "selected"; }?>>Evaluador</option>                      
+                        </select>
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger">Requerido</label>
+                    </div>  
+                  </div>
+                    
+                  <div class="form-group">                      
+                    <div class="col-lg-offset-4 col-lg-8 ">                        
+                      <button type="reset" class="btn btn-default">Restaurar</button>
+                      &nbsp;
+                      &nbsp;
+                      <button type="submit" name="registrar" class="btn btn-default">Registrar</button>
+                    </div>
+                  </div>
+                </form>
+            </div>            
+      </div>
+</div>

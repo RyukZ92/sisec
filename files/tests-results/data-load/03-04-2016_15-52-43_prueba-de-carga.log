@@ -1,0 +1,26 @@
+DETALLES DE LA PRUEBA DE CARGA DE DATOS
+
+
+Fecha y Hora de Creación: 03-04-2016 03:52:43 PM
+Usuario: MIGUEL (Evaluador)
+
+URL de la carga de datos: http://localhost/sirah/registrar-material
+Cargas totales: 1
+Cargas exitosas: 1
+Cargas fallidas: 0
+
+Tiempos Referenciales para la Medición (por cada carga): 
+
+Tiempo Óptimo: 0.15 segundos.
+Tiempo Intermedio: 0.25 segundos.
+Tiempo Mínimo: 0.35 segundos.
+
+Tiempo de Ejecución: 0.218 segundos.
+
+
+RESULTADO: Rendimiento Intermedio.
+¡Muy bien!, de acuerdo a los tiempos definidos, el software tiene un rendimiento en carga de datos bueno,  es decir, no es de tan alto, pero tampoco bajo y se considera en un rendimiento normal y bastante aceptable..
+
+NOTA: El resultado no es absoluto, porque depente del ambiente donde se ejecuta la prueba
+puesto que éste debe estar previamente establecidos por el evaluador. 
+Por ejemplo: La velocidad de subida del servidor y velocidad de baja del cliente.

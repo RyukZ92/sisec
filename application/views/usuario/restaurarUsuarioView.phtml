@@ -1,0 +1,61 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista para restaurar un nuevo usuario
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Marzo, 2016
+ * @Version: 1.0
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguelangel.bux@gmail.com
+ * =============================================================================
+ * 
+ */
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+
+if ($notificacion) {
+    echo $notificacion;
+}
+?>
+<!--<div class="formulario" align="center">-->
+<form class="pure-form pure-form-aligned" method="POST">
+    <input type="hidden" name="pagina_referencia" value="<?php echo $_POST["pagina_referencia"]; ?>">
+    <input type="hidden" name="id_usuario" value="<?php echo $_POST["id_usuario"]; ?>">    
+    <input type="hidden" name="usuario" value="<?php echo $_usuario[0]["nombre"]; ?>">    
+    <fieldset>
+        <table class="pure-table pure-table-bordered" id="formulario">  
+            <thead>
+                <tr>
+                    <th style="text-align: center; color:red;" colspan="2">Confirmar la Restauración del Usuario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+          
+                    <td class="td-right">
+                        <label for="email">Usuario</label>
+                    </td>
+                    <td>
+                        <span><?php echo $_usuario[0]["nombre"]; ?></span>
+                    </td>
+                    
+                 </tr>            
+                <tr class="submit">
+                    <td colspan="2">
+                        <span style="color:blue;">¿Está seguro que desea restaurar al usuario?<br></span>
+                    </td> 
+                </tr>
+
+                <tr class="submit">  
+
+                    <td  colspan="2" align="center">
+                        <input type="button" class="btn btn-danger" value="Cancelar" onClick="history.back();">  
+
+                        <input type="submit" class="btn btn-danger" value="Confirmar" name="confirmar">
+                    </td>
+
+                </tr>
+            </tbody>
+        </table> 
+    </fieldset>    
+</form>

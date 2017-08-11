@@ -1,0 +1,69 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista que permite seleccionar que módulo se va a configurar ṕara
+ * la evaluación
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Marzo, 2016
+ * @Version: 1.0
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * ============================================================================
+ * 
+ */
+
+include dirname(__FILE__) . "/../../navegacion/navegacionView.phtml";
+
+if ($notificacion) {
+    echo $notificacion;
+}
+$error = null; //
+if ($error):
+    echo $error;
+else:
+?>
+<div class="panel panel-default">
+  <div class="panel-heading">Datos de la Configuración</div>
+  <div class="panel-body"><br>
+            <div class="col-lg-8">
+                <form class="form-horizontal" role="form" method="post" id="form">
+                  <div class="form-group">
+                    <label for="tipo_evaluacion" class="col-lg-4 control-label">Seleccione Opción</label>
+                    <div class="col-lg-7 ">
+                        <select id="tipo_evaluacion" name="tipo_evaluacion" class="form-control">
+                            <option value="0">Seleccione</option>
+                            <option value="basico" <?php if ($_POST["tipo_evaluacion"] == "basico") { echo "selected"; }?>>Datos Básicos</option>
+                            <option value="seguridad" <?php if ($_POST["tipo_evaluacion"] == "seguridad") { echo "selected"; }?>>Evaluación de Seguridad</option>
+                            <option value="rendimiento" <?php if ($_POST["tipo_evaluacion"] == "rendimiento") { echo "selected"; }?>>Evaluación de Rendimiento</option>                      
+                        </select>
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger">Requerido</label>
+                    </div>
+                  </div>
+                  <div class="form-group" style="display:none;" id="tipo_opcion">
+                    <label for="opcion" class="col-lg-4 control-label">Especificar Opción</label>
+                    <div class="col-lg-7 ">
+                        <select id="opcion" name="opcion" class="form-control"> 
+                            <option value="0">Esperando selección...</option>
+                       </select>
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger">Requerido</label>
+                    </div>
+                  </div>
+                  <div class="form-group">                      
+                    <div class="col-lg-offset-4 col-lg-8 ">                        
+                      <button type="reset" class="btn btn-default">Restaurar</button>
+                      &nbsp;
+                      &nbsp;
+                      <button type="submit" name="continuar" class="btn btn-default">Continuar</button>
+                    </div>
+                  </div>
+                </form>
+            </div>            
+      </div>
+</div>
+<?php 
+ endif;
+ ?>

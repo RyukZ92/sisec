@@ -1,0 +1,60 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripción: Vista que permite mostrar el formulario para abrir un nuevo
+ * ciclo de evaluación
+ * @Autor: Miguel Salazar
+ * @Fecha:  Febrero-Marzo, 2016
+ * @Version: 1.1
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguelangel.bux@gmail.com
+ * =============================================================================
+ * 
+ */ 
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+include dirname(__FILE__) . "/../helper/mensajes.phtml";
+if ($error):
+    echo $error;
+else:
+?>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Datos de la Configuración</div>
+  <div class="panel-body"><br>
+            <div class="col-lg-8">
+                <form class="form-horizontal" role="form" method="post" id="form">
+                  <div class="form-group">
+                    <label for="tipo_evaluacion" class="col-lg-4 control-label">Seleccione Opción</label>
+                    <div class="col-lg-7 ">
+                        <select id="estatus" name="estatus" class="form-control">                            
+                            <option value="1" <?php if ($_POST["estatus"] == "1") { echo "selected"; }?>>Abrir Nuevo Ciclo de Evaluación</option>                         
+                        </select>
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger">Requerido</label>
+                    </div>
+                  </div>
+                  <div class="form-group" >
+                    <label class="col-lg-4 control-label">Breve Descripción</label>
+                    <div class="col-lg-7 ">
+                        <textarea id="_descripcion" name="descripcion" placeholder="Breve descripción del nuevo ciclo de evaluación" maxlength="100" class="form-control solo-albabeto-espaniol-con-espacio"><?php echo $_POST["descripcion"]; ?></textarea>
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="descripcion" class="control-label text-danger">Requerido</label>
+                    </div>
+                  </div>
+                  <div class="form-group">                      
+                    <div class="col-lg-offset-4 col-lg-8 ">                        
+                      <button type="reset" class="btn btn-default">Restaurar</button>
+                      &nbsp;
+                      &nbsp;
+                      <button type="submit" name="crear" class="btn btn-default">Crear</button>
+                    </div>
+                  </div>
+                </form>
+            </div>            
+      </div>
+</div>
+
+<?php endif; ?>

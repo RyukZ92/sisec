@@ -1,0 +1,125 @@
+<?php include dirname(__FILE__) . '/css/informeDeCalidadEstyle.phtml' ?>
+
+<page backtop="15mm" backbottom="20mm" backleft="15mm" backright="15mm">
+    <page_header>
+        <div class="banner">
+            <img src="<?php echo URLBASE ?>public/img/banner-pdf.png">
+        </div>
+    </page_header>
+    <page_footer>
+        <div id="footer">
+            <div id="pagina">Página [[page_cu]]/[[page_nb]]</div>
+            <div id="datos-emision">Emitido por <?php echo $_SESSION["usuario"];  ?> a las <?php echo date('h:i:s A'); ?></div> 
+        </div>
+    </page_footer>    
+    
+    <div class="titulo">INFORME DE CALIDAD CONSOLIDADO<hr></div>
+    <div class="subtitulo">Datos Básicos de Evaluación</div>
+    <div class="contenido">
+        <table id="resultados-generales">
+            <tr>
+                <th class="titulo-tabla">Producto Evaluado:</th>
+                <td><?php echo $sistemaEvaluado["nombre"] ?></td>
+            </tr>
+            <tr>
+                <th class="titulo-tabla">Versión del Producto:</th>
+                <td><?php echo $sistemaEvaluado["version"] ?></td>
+            </tr>
+            <tr>
+                <th class="titulo-tabla">Dirección URL:</th>
+                <td><?php echo $sistemaEvaluado["url"] ?></td>
+            </tr>
+            <tr>
+                <th class="titulo-tabla">Evaluador:</th>
+                <td><?php echo $_ciclo[0]["nombre_completo"]. " (" . $_ciclo[0]["nombre"] . ")"; ?></td>
+            </tr>
+            <tr>
+                <th class="titulo-tabla">Descripción:</th>
+                <td><?php echo $_ciclo[0]["descripcion"]; ?></td>
+            </tr>
+            <tr>
+                <th class="titulo-tabla">Inicio del Ciclo de Evaluación:</th>
+                <td><?php echo $fechaYHoraDeCreacion; ?></td>
+            </tr>
+            <tr>
+                <th class="titulo-tabla">Cierre del Ciclo de Evaluación:</th>
+                <td><?php echo $fechaYHoraDeCierre; ?></td>
+            </tr>
+        </table>
+    
+        <div class="subtitulo">Resumen de Resultado de las Pruebas</div>
+    
+        <table id="resultados-generales">
+            <tr>
+                <th colspan="2" class="titulo-tabla">Pruebas de Seguridad</th>
+            </tr>
+            <?php if($resultFuerzaBruta): ?>
+            <tr>
+                <th>Fuerza Bruta:</th>
+                <td><?php echo $resultFuerzaBruta ?></td>
+            </tr>
+            <?php endif; ?>
+            <?php if($resultFuerzaBruta): ?>            
+            <tr>
+                <th>Inyección SQL:</th>
+                <td><?php echo $resultInyeccionSQL ?></td>
+            </tr>
+            <?php endif; ?>
+            <?php if($resultInyeccionSQL): ?>                        
+            <tr>
+                <th>Inyección XSS:</th>
+                <td><?php echo $resultInyeccionXSS ?></td>
+            </tr>
+            <?php endif; ?>
+            <?php if($resultInyeccionXSS): ?>                        
+            <tr>
+                <td colspan="2"><strong>Observaciones:</strong>
+                    <ul>
+                        <?php echo $observSeguridad; ?>
+                    </ul>
+                </td>
+            </tr>
+            <?php endif; ?>
+        </table>
+        <table id="resultados-generales">
+            <tr>
+                <th colspan="2" class="titulo-tabla">Pruebas de Rendimiento</th>
+            </tr>
+            <?php if($resultCargaDeDatos): ?>
+            <tr>
+                <th>Carga de Datos:</th>
+                <td><?php echo $resultCargaDeDatos ?></td>
+            </tr>
+            <?php endif; ?>
+            <?php if($resultCargaDeSesiones): ?>
+            <tr>
+                <th>Carga de Sesiones:</th>
+                <td><?php echo $resultCargaDeSesiones ?></td>
+            </tr>
+            <?php endif; ?>
+            <?php if($resultEstres): ?>            
+            <!--<tr>
+                <th>Estrés:</th>
+                <td><?php echo $resultEstres ?></td>
+            </tr>-->
+            <?php endif ?>
+            <tr>
+                <td colspan="2"><strong>Observaciones:</strong>
+                    <ul>                        
+                        <?php foreach ($observCarga as $observacion): ?>
+                            <?php echo "<li>" . $observacion . "</li>"; ?>
+                        <?php endforeach; ?>
+                    </ul>
+                    <p><b>Nota:</b> Los resultados de la carga de datos son de acuerdo a los tiempos de medición utilizados en la prueba</p>
+                </td>
+            </tr>
+        </table>
+        <div class="subtitulo">Recomendaciones:</div>
+        <ol>
+            <?php foreach ($recomendaciones as $recomendacion): ?>
+                <?php echo "<li>" . $recomendacion . "</li>"; ?>
+            <?php endforeach; ?>
+        </ol>
+    </div>
+</page>
+    

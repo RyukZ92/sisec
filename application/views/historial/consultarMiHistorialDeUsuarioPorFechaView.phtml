@@ -1,0 +1,99 @@
+ 
+<?php
+/**
+ * =================================================
+ * @Descripcion: Vista mostrar el historial de los
+ * usuarios por range de fecha
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Febrero, 2016
+ * @Version: 1
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * ==================================================
+ * 
+ */ 
+
+?>
+<div class="row">
+    <div class="col-lg-12">
+        <h2>
+            <small><?php echo $tema["vista"]; ?></small>
+        </h2>
+        <ol class="breadcrumb">
+            <li class="active">
+                <a title="Ir al Inicio" href="<?php echo  URLBASE ?>inicio" <i class="fa fa-home"></i> Inicio </a>
+            </li>
+            <li class="active">
+                <i class="fa fa-<?php echo $tema["icono"]; ?>"></i> <?php echo $tema["actual"]; ?>
+            </li>   
+        
+            <a title="Ir a la página anterior" href="javascript:;" onClick="history.back();">                    
+               <img class="btn-volver" src="<?php echo  URLBASE ?>public/img/Button_Back.png">
+            </a>
+        </ol>
+    </div>            
+</div>
+
+<div class="row">
+    <form class="form-horizontal" role="form" method="post" id="form" 
+          action="<?php echo URLBASE; ?>historial/usuarios-por-fecha">
+        <div class="col-xs-2">
+            <label class="control-label">Filtrar Listado:</label>
+        </div>
+        <div class="col-md-3">
+            <input title="Fecha inicial de la búsqueda" class="form-control" id="fecha_desde" type="text" placeholder="Fecha Inicial" maxlength="10" name="fecha_desde"  autocomplete="off">
+        </div>
+        
+        <div class="col-md-3">
+            <input title="Fecha final de la búsqueda" class="form-control" id="fecha_hasta" type="text" placeholder="Fecha Final" maxlength="10" name="fecha_hasta"  autocomplete="off">
+        </div>
+        <div class="col-md-1">
+            <input type="submit" value="Buscar" title="Buscar" class="btn btn-default">
+        </div>
+    </form>
+</div> 
+<hr>
+        <table>
+            <tr>
+                <td> 
+                    <form class="pure-form pure-form-aligned" method="POST" onSubmit="return validarRangodeFecha('fecha_desde', 'fecha_hasta');">
+                        <input id="fecha_desde" type="text" placeholder="Desde" maxlength="10" name="fecha_desde"  autocomplete="off">
+                        -
+                        <input id="fecha_hasta" type="text" placeholder="Hasta" maxlength="10" name="fecha_hasta"  autocomplete="off">
+                        <input type="submit" value="Buscar" class="btn btn-default">
+                     </form>
+                        <ul id="lista_dni"></ul>
+                </td>
+            </tr>
+        </table>    
+<br>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Fecha y Hora</th>
+            <th>Actividad</th>
+            <th>IP Cliente</th>
+            <th>Navegador</th>
+            <th>SO</th>
+        </tr>
+    </thead>
+
+    <tbody>
+<?php 
+	for ($i=0; $i<count($_historial); $i++):
+        echo "<tr>
+                <td title='" . Helper::convertirFechaDdMmAaaa($_historial[$i]["fecha"])
+                . " " . Helper::convertirHoraA12H($_historial[$i]["hora"]) . "'>"
+                . Helper::convertirFechaDdMmAaaa($_historial[$i]["fecha"])
+                . " " . Helper::convertirHoraA12H($_historial[$i]["hora"]) . "</td>   
+                <td title='" . $_historial[$i]["accion"] . "'>" . $_historial[$i]["accion"] . "</td>
+                <td title='" . $_historial[$i]["ip_cliente"] . "'>" . $_historial[$i]["ip_cliente"] . "</td>                
+                <td title='" . $_historial[$i]["navegador"] . "'>" . $_historial[$i]["navegador"] . "</td>
+                <td title='" . $_historial[$i]["so"] . "'>" . $_historial[$i]["so"] . "</td> 
+            </tr>";
+	endfor; ?>
+    </tbody>
+</table>
+<?php
+include dirname(__FILE__) . "/../paginador/paginadorView.phtml";
+?>

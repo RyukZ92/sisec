@@ -1,0 +1,65 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripción: Vista que muestra las preguntas y respuestas secretas del software
+ * @Autor: Miguel Salazar
+ * @Fecha:  Abril, 2016
+ * @Version: 1.0
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguelangel.bux@gmail.com
+ * ============================================================================= * 
+ * 
+ */
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+?>
+<ul class="list-group">
+  <li class="list-group-item">
+        <label>¿Qué es SISEC?</label>
+        <p class="help-block text-primary">Es un Sistema de Evaluación de Calidad de Software enmarcado en la ISO/14598, destinado a medir 
+        los atributos de seguridad y rendimiento de un producto software, mediante una serie de pruebas que tienen como
+        propósito brindar un informe final que sirva de apoyo para el mejoramiento del producto evaluado.</p>  
+  </li>
+  <li class="list-group-item">
+        <label>¿Qué debo saber antes de comenzar?</label>
+        <p class="help-block text-primary">Se requiere conocimientos básicos de sistemas web y primordialmente de HTML.</p>  
+  </li>
+  <li class="list-group-item">
+        <label>¿Cómo empiezo una evaluación de software?</label>
+        <p class="help-block text-primary">Debe ir al menú principal, Ciclo de Evaluación y crear un nuevo ciclo,
+            de esta manera ya se podrá comenzar a realizar las pruebas.
+        </p>    
+  </li>
+  <li class="list-group-item">
+        <label>¿Debo hacer alguna configuración antes de hacer las pruebas?</label>
+        <p class="help-block text-primary">Si, se debe ir al menú principal, Configuraciones/Pruebas y configurar los parametros
+         de las pruebas en relación al software que se evaluará.
+        </p>    
+  </li>
+  <li class="list-group-item">
+        <label>¿No puedo realizar una prueba?</label>
+        <p class="help-block text-primary">Es muy probable que ya se haya realizado la prueba en el ciclo de evaluación actual.
+            Otra razón puede ser que no se tenga un ciclo de evaluación activo o abierto.
+        </p>    
+  </li>
+  <li class="list-group-item">
+        <label>¿Cómo veo los resultados de las prueba?</label>
+        <p class="help-block text-primary">Al realizar la prueba, saldrá una pantalla mostrado un resumen de esto, lo que se debe hacer
+            es darle clic al ícono de descargar <i class="fa fa-download"></i> y podrás bajar un un archivo texto plano con los detalles de la prueba.
+            <BR>Otro modo es ir al menú prinicipal en Resultados/Ver Listado y buscar la prueba mediante su nombre y fecha para descargarla.
+        </p>    
+  </li>
+  <li class="list-group-item">
+        <label>¿Qué son las Herramientas Extras?</label>
+        <p class="help-block text-primary">Es un componente adicional (un BOT) que permite y facilita la creación de usuarios o contraseñas
+            aleratoriamente y de forma automática que luego puedrán ser utilizados para pruebas posteriores.
+        </p>    
+  </li>
+  <li class="list-group-item">
+        <label>¿No tengo acceso a todos los módulos?</label>
+        <p class="help-block text-primary">Esto sucede porque existen dos niveles de usuarios, que son el Administrador y el Evaluador. El primero
+            es el usuario que tiene todos los permisos para el uso de SISEC,
+            miestras que el usuario con nivel de Evaluador sólo tiene permitido realizar todas las operaciones referentes a las pruebas, es decir no dispone privilegio para administrar los usuarios.
+            
+        </p>    
+  </li>
+</ul>

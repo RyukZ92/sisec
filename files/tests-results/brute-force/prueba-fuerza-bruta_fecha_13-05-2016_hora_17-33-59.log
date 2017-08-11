@@ -1,0 +1,1584 @@
+DETALLES DE LA PRUEBA DE ATAQUE DE FUERZA BRUTA: INICIO DE SESIÓN
+
+
+Fecha y Hora de Creación: 13/05/2016 05:00:36 PM
+Usuario: MIGUEL (Evaluador)
+
+URL Destino del Formulario: http://opendace.uptparia.edu.ve/Politecnico_CEYE/autenticar_est.php
+Mensaje de Exito: Acceso Denegado Temporalmente
+
+INTENTOS: 
+
+1 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0000", "CAMPO[ingresar] = Ingresar"
+
+2 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0001", "CAMPO[ingresar] = Ingresar"
+
+3 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0002", "CAMPO[ingresar] = Ingresar"
+
+4 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0003", "CAMPO[ingresar] = Ingresar"
+
+5 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0004", "CAMPO[ingresar] = Ingresar"
+
+6 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0005", "CAMPO[ingresar] = Ingresar"
+
+7 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0006", "CAMPO[ingresar] = Ingresar"
+
+8 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0007", "CAMPO[ingresar] = Ingresar"
+
+9 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0008", "CAMPO[ingresar] = Ingresar"
+
+10 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0009", "CAMPO[ingresar] = Ingresar"
+
+11 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0010", "CAMPO[ingresar] = Ingresar"
+
+12 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0011", "CAMPO[ingresar] = Ingresar"
+
+13 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0012", "CAMPO[ingresar] = Ingresar"
+
+14 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0013", "CAMPO[ingresar] = Ingresar"
+
+15 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0014", "CAMPO[ingresar] = Ingresar"
+
+16 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0015", "CAMPO[ingresar] = Ingresar"
+
+17 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0016", "CAMPO[ingresar] = Ingresar"
+
+18 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0017", "CAMPO[ingresar] = Ingresar"
+
+19 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0018", "CAMPO[ingresar] = Ingresar"
+
+20 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0019", "CAMPO[ingresar] = Ingresar"
+
+21 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0020", "CAMPO[ingresar] = Ingresar"
+
+22 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0021", "CAMPO[ingresar] = Ingresar"
+
+23 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0022", "CAMPO[ingresar] = Ingresar"
+
+24 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0023", "CAMPO[ingresar] = Ingresar"
+
+25 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0024", "CAMPO[ingresar] = Ingresar"
+
+26 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0025", "CAMPO[ingresar] = Ingresar"
+
+27 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0026", "CAMPO[ingresar] = Ingresar"
+
+28 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0027", "CAMPO[ingresar] = Ingresar"
+
+29 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0028", "CAMPO[ingresar] = Ingresar"
+
+30 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0029", "CAMPO[ingresar] = Ingresar"
+
+31 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0030", "CAMPO[ingresar] = Ingresar"
+
+32 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0031", "CAMPO[ingresar] = Ingresar"
+
+33 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0032", "CAMPO[ingresar] = Ingresar"
+
+34 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0033", "CAMPO[ingresar] = Ingresar"
+
+35 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0034", "CAMPO[ingresar] = Ingresar"
+
+36 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0035", "CAMPO[ingresar] = Ingresar"
+
+37 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0036", "CAMPO[ingresar] = Ingresar"
+
+38 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0037", "CAMPO[ingresar] = Ingresar"
+
+39 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0038", "CAMPO[ingresar] = Ingresar"
+
+40 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0039", "CAMPO[ingresar] = Ingresar"
+
+41 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0040", "CAMPO[ingresar] = Ingresar"
+
+42 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0041", "CAMPO[ingresar] = Ingresar"
+
+43 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0042", "CAMPO[ingresar] = Ingresar"
+
+44 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0043", "CAMPO[ingresar] = Ingresar"
+
+45 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0044", "CAMPO[ingresar] = Ingresar"
+
+46 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0045", "CAMPO[ingresar] = Ingresar"
+
+47 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0046", "CAMPO[ingresar] = Ingresar"
+
+48 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0047", "CAMPO[ingresar] = Ingresar"
+
+49 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0048", "CAMPO[ingresar] = Ingresar"
+
+50 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0049", "CAMPO[ingresar] = Ingresar"
+
+51 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0050", "CAMPO[ingresar] = Ingresar"
+
+52 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0051", "CAMPO[ingresar] = Ingresar"
+
+53 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0052", "CAMPO[ingresar] = Ingresar"
+
+54 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0053", "CAMPO[ingresar] = Ingresar"
+
+55 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0054", "CAMPO[ingresar] = Ingresar"
+
+56 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0055", "CAMPO[ingresar] = Ingresar"
+
+57 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0056", "CAMPO[ingresar] = Ingresar"
+
+58 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0057", "CAMPO[ingresar] = Ingresar"
+
+59 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0058", "CAMPO[ingresar] = Ingresar"
+
+60 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0059", "CAMPO[ingresar] = Ingresar"
+
+61 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0060", "CAMPO[ingresar] = Ingresar"
+
+62 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0061", "CAMPO[ingresar] = Ingresar"
+
+63 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0062", "CAMPO[ingresar] = Ingresar"
+
+64 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0063", "CAMPO[ingresar] = Ingresar"
+
+65 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0064", "CAMPO[ingresar] = Ingresar"
+
+66 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0065", "CAMPO[ingresar] = Ingresar"
+
+67 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0066", "CAMPO[ingresar] = Ingresar"
+
+68 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0067", "CAMPO[ingresar] = Ingresar"
+
+69 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0068", "CAMPO[ingresar] = Ingresar"
+
+70 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0069", "CAMPO[ingresar] = Ingresar"
+
+71 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0070", "CAMPO[ingresar] = Ingresar"
+
+72 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0071", "CAMPO[ingresar] = Ingresar"
+
+73 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0072", "CAMPO[ingresar] = Ingresar"
+
+74 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0073", "CAMPO[ingresar] = Ingresar"
+
+75 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0074", "CAMPO[ingresar] = Ingresar"
+
+76 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0075", "CAMPO[ingresar] = Ingresar"
+
+77 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0076", "CAMPO[ingresar] = Ingresar"
+
+78 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0077", "CAMPO[ingresar] = Ingresar"
+
+79 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0078", "CAMPO[ingresar] = Ingresar"
+
+80 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0079", "CAMPO[ingresar] = Ingresar"
+
+81 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0080", "CAMPO[ingresar] = Ingresar"
+
+82 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0081", "CAMPO[ingresar] = Ingresar"
+
+83 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0082", "CAMPO[ingresar] = Ingresar"
+
+84 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0083", "CAMPO[ingresar] = Ingresar"
+
+85 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0084", "CAMPO[ingresar] = Ingresar"
+
+86 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0085", "CAMPO[ingresar] = Ingresar"
+
+87 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0086", "CAMPO[ingresar] = Ingresar"
+
+88 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0087", "CAMPO[ingresar] = Ingresar"
+
+89 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0088", "CAMPO[ingresar] = Ingresar"
+
+90 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0089", "CAMPO[ingresar] = Ingresar"
+
+91 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0090", "CAMPO[ingresar] = Ingresar"
+
+92 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0091", "CAMPO[ingresar] = Ingresar"
+
+93 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0092", "CAMPO[ingresar] = Ingresar"
+
+94 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0093", "CAMPO[ingresar] = Ingresar"
+
+95 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0094", "CAMPO[ingresar] = Ingresar"
+
+96 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0095", "CAMPO[ingresar] = Ingresar"
+
+97 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0096", "CAMPO[ingresar] = Ingresar"
+
+98 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0097", "CAMPO[ingresar] = Ingresar"
+
+99 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0098", "CAMPO[ingresar] = Ingresar"
+
+100 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0099", "CAMPO[ingresar] = Ingresar"
+
+101 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0100", "CAMPO[ingresar] = Ingresar"
+
+102 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0101", "CAMPO[ingresar] = Ingresar"
+
+103 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0102", "CAMPO[ingresar] = Ingresar"
+
+104 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0103", "CAMPO[ingresar] = Ingresar"
+
+105 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0104", "CAMPO[ingresar] = Ingresar"
+
+106 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0105", "CAMPO[ingresar] = Ingresar"
+
+107 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0106", "CAMPO[ingresar] = Ingresar"
+
+108 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0107", "CAMPO[ingresar] = Ingresar"
+
+109 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0108", "CAMPO[ingresar] = Ingresar"
+
+110 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0109", "CAMPO[ingresar] = Ingresar"
+
+111 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0110", "CAMPO[ingresar] = Ingresar"
+
+112 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0111", "CAMPO[ingresar] = Ingresar"
+
+113 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0112", "CAMPO[ingresar] = Ingresar"
+
+114 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0113", "CAMPO[ingresar] = Ingresar"
+
+115 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0114", "CAMPO[ingresar] = Ingresar"
+
+116 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0115", "CAMPO[ingresar] = Ingresar"
+
+117 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0116", "CAMPO[ingresar] = Ingresar"
+
+118 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0117", "CAMPO[ingresar] = Ingresar"
+
+119 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0118", "CAMPO[ingresar] = Ingresar"
+
+120 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0119", "CAMPO[ingresar] = Ingresar"
+
+121 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0120", "CAMPO[ingresar] = Ingresar"
+
+122 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0121", "CAMPO[ingresar] = Ingresar"
+
+123 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0122", "CAMPO[ingresar] = Ingresar"
+
+124 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0123", "CAMPO[ingresar] = Ingresar"
+
+125 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0124", "CAMPO[ingresar] = Ingresar"
+
+126 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0125", "CAMPO[ingresar] = Ingresar"
+
+127 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0126", "CAMPO[ingresar] = Ingresar"
+
+128 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0127", "CAMPO[ingresar] = Ingresar"
+
+129 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0128", "CAMPO[ingresar] = Ingresar"
+
+130 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0129", "CAMPO[ingresar] = Ingresar"
+
+131 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0130", "CAMPO[ingresar] = Ingresar"
+
+132 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0131", "CAMPO[ingresar] = Ingresar"
+
+133 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0132", "CAMPO[ingresar] = Ingresar"
+
+134 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0133", "CAMPO[ingresar] = Ingresar"
+
+135 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0134", "CAMPO[ingresar] = Ingresar"
+
+136 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0135", "CAMPO[ingresar] = Ingresar"
+
+137 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0136", "CAMPO[ingresar] = Ingresar"
+
+138 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0137", "CAMPO[ingresar] = Ingresar"
+
+139 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0138", "CAMPO[ingresar] = Ingresar"
+
+140 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0139", "CAMPO[ingresar] = Ingresar"
+
+141 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0140", "CAMPO[ingresar] = Ingresar"
+
+142 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0141", "CAMPO[ingresar] = Ingresar"
+
+143 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0142", "CAMPO[ingresar] = Ingresar"
+
+144 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0143", "CAMPO[ingresar] = Ingresar"
+
+145 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0144", "CAMPO[ingresar] = Ingresar"
+
+146 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0145", "CAMPO[ingresar] = Ingresar"
+
+147 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0146", "CAMPO[ingresar] = Ingresar"
+
+148 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0147", "CAMPO[ingresar] = Ingresar"
+
+149 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0148", "CAMPO[ingresar] = Ingresar"
+
+150 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0149", "CAMPO[ingresar] = Ingresar"
+
+151 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0150", "CAMPO[ingresar] = Ingresar"
+
+152 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0151", "CAMPO[ingresar] = Ingresar"
+
+153 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0152", "CAMPO[ingresar] = Ingresar"
+
+154 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0153", "CAMPO[ingresar] = Ingresar"
+
+155 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0154", "CAMPO[ingresar] = Ingresar"
+
+156 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0155", "CAMPO[ingresar] = Ingresar"
+
+157 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0156", "CAMPO[ingresar] = Ingresar"
+
+158 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0157", "CAMPO[ingresar] = Ingresar"
+
+159 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0158", "CAMPO[ingresar] = Ingresar"
+
+160 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0159", "CAMPO[ingresar] = Ingresar"
+
+161 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0160", "CAMPO[ingresar] = Ingresar"
+
+162 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0161", "CAMPO[ingresar] = Ingresar"
+
+163 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0162", "CAMPO[ingresar] = Ingresar"
+
+164 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0163", "CAMPO[ingresar] = Ingresar"
+
+165 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0164", "CAMPO[ingresar] = Ingresar"
+
+166 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0165", "CAMPO[ingresar] = Ingresar"
+
+167 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0166", "CAMPO[ingresar] = Ingresar"
+
+168 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0167", "CAMPO[ingresar] = Ingresar"
+
+169 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0168", "CAMPO[ingresar] = Ingresar"
+
+170 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0169", "CAMPO[ingresar] = Ingresar"
+
+171 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0170", "CAMPO[ingresar] = Ingresar"
+
+172 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0171", "CAMPO[ingresar] = Ingresar"
+
+173 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0172", "CAMPO[ingresar] = Ingresar"
+
+174 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0173", "CAMPO[ingresar] = Ingresar"
+
+175 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0174", "CAMPO[ingresar] = Ingresar"
+
+176 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0175", "CAMPO[ingresar] = Ingresar"
+
+177 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0176", "CAMPO[ingresar] = Ingresar"
+
+178 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0177", "CAMPO[ingresar] = Ingresar"
+
+179 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0178", "CAMPO[ingresar] = Ingresar"
+
+180 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0179", "CAMPO[ingresar] = Ingresar"
+
+181 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0180", "CAMPO[ingresar] = Ingresar"
+
+182 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0181", "CAMPO[ingresar] = Ingresar"
+
+183 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0182", "CAMPO[ingresar] = Ingresar"
+
+184 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0183", "CAMPO[ingresar] = Ingresar"
+
+185 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0184", "CAMPO[ingresar] = Ingresar"
+
+186 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0185", "CAMPO[ingresar] = Ingresar"
+
+187 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0186", "CAMPO[ingresar] = Ingresar"
+
+188 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0187", "CAMPO[ingresar] = Ingresar"
+
+189 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0188", "CAMPO[ingresar] = Ingresar"
+
+190 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0189", "CAMPO[ingresar] = Ingresar"
+
+191 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0190", "CAMPO[ingresar] = Ingresar"
+
+192 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0191", "CAMPO[ingresar] = Ingresar"
+
+193 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0192", "CAMPO[ingresar] = Ingresar"
+
+194 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0193", "CAMPO[ingresar] = Ingresar"
+
+195 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0194", "CAMPO[ingresar] = Ingresar"
+
+196 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0195", "CAMPO[ingresar] = Ingresar"
+
+197 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0196", "CAMPO[ingresar] = Ingresar"
+
+198 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0197", "CAMPO[ingresar] = Ingresar"
+
+199 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0198", "CAMPO[ingresar] = Ingresar"
+
+200 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0199", "CAMPO[ingresar] = Ingresar"
+
+201 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0200", "CAMPO[ingresar] = Ingresar"
+
+202 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0201", "CAMPO[ingresar] = Ingresar"
+
+203 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0202", "CAMPO[ingresar] = Ingresar"
+
+204 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0203", "CAMPO[ingresar] = Ingresar"
+
+205 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0204", "CAMPO[ingresar] = Ingresar"
+
+206 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0205", "CAMPO[ingresar] = Ingresar"
+
+207 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0206", "CAMPO[ingresar] = Ingresar"
+
+208 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0207", "CAMPO[ingresar] = Ingresar"
+
+209 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0208", "CAMPO[ingresar] = Ingresar"
+
+210 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0209", "CAMPO[ingresar] = Ingresar"
+
+211 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0210", "CAMPO[ingresar] = Ingresar"
+
+212 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0211", "CAMPO[ingresar] = Ingresar"
+
+213 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0212", "CAMPO[ingresar] = Ingresar"
+
+214 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0213", "CAMPO[ingresar] = Ingresar"
+
+215 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0214", "CAMPO[ingresar] = Ingresar"
+
+216 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0215", "CAMPO[ingresar] = Ingresar"
+
+217 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0216", "CAMPO[ingresar] = Ingresar"
+
+218 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0217", "CAMPO[ingresar] = Ingresar"
+
+219 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0218", "CAMPO[ingresar] = Ingresar"
+
+220 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0219", "CAMPO[ingresar] = Ingresar"
+
+221 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0220", "CAMPO[ingresar] = Ingresar"
+
+222 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0221", "CAMPO[ingresar] = Ingresar"
+
+223 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0222", "CAMPO[ingresar] = Ingresar"
+
+224 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0223", "CAMPO[ingresar] = Ingresar"
+
+225 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0224", "CAMPO[ingresar] = Ingresar"
+
+226 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0225", "CAMPO[ingresar] = Ingresar"
+
+227 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0226", "CAMPO[ingresar] = Ingresar"
+
+228 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0227", "CAMPO[ingresar] = Ingresar"
+
+229 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0228", "CAMPO[ingresar] = Ingresar"
+
+230 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0229", "CAMPO[ingresar] = Ingresar"
+
+231 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0230", "CAMPO[ingresar] = Ingresar"
+
+232 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0231", "CAMPO[ingresar] = Ingresar"
+
+233 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0232", "CAMPO[ingresar] = Ingresar"
+
+234 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0233", "CAMPO[ingresar] = Ingresar"
+
+235 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0234", "CAMPO[ingresar] = Ingresar"
+
+236 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0235", "CAMPO[ingresar] = Ingresar"
+
+237 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0236", "CAMPO[ingresar] = Ingresar"
+
+238 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0237", "CAMPO[ingresar] = Ingresar"
+
+239 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0238", "CAMPO[ingresar] = Ingresar"
+
+240 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0239", "CAMPO[ingresar] = Ingresar"
+
+241 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0240", "CAMPO[ingresar] = Ingresar"
+
+242 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0241", "CAMPO[ingresar] = Ingresar"
+
+243 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0242", "CAMPO[ingresar] = Ingresar"
+
+244 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0243", "CAMPO[ingresar] = Ingresar"
+
+245 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0244", "CAMPO[ingresar] = Ingresar"
+
+246 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0245", "CAMPO[ingresar] = Ingresar"
+
+247 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0246", "CAMPO[ingresar] = Ingresar"
+
+248 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0247", "CAMPO[ingresar] = Ingresar"
+
+249 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0248", "CAMPO[ingresar] = Ingresar"
+
+250 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0249", "CAMPO[ingresar] = Ingresar"
+
+251 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0250", "CAMPO[ingresar] = Ingresar"
+
+252 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0251", "CAMPO[ingresar] = Ingresar"
+
+253 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0252", "CAMPO[ingresar] = Ingresar"
+
+254 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0253", "CAMPO[ingresar] = Ingresar"
+
+255 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0254", "CAMPO[ingresar] = Ingresar"
+
+256 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0255", "CAMPO[ingresar] = Ingresar"
+
+257 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0256", "CAMPO[ingresar] = Ingresar"
+
+258 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0257", "CAMPO[ingresar] = Ingresar"
+
+259 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0258", "CAMPO[ingresar] = Ingresar"
+
+260 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0259", "CAMPO[ingresar] = Ingresar"
+
+261 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0260", "CAMPO[ingresar] = Ingresar"
+
+262 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0261", "CAMPO[ingresar] = Ingresar"
+
+263 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0262", "CAMPO[ingresar] = Ingresar"
+
+264 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0263", "CAMPO[ingresar] = Ingresar"
+
+265 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0264", "CAMPO[ingresar] = Ingresar"
+
+266 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0265", "CAMPO[ingresar] = Ingresar"
+
+267 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0266", "CAMPO[ingresar] = Ingresar"
+
+268 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0267", "CAMPO[ingresar] = Ingresar"
+
+269 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0268", "CAMPO[ingresar] = Ingresar"
+
+270 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0269", "CAMPO[ingresar] = Ingresar"
+
+271 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0270", "CAMPO[ingresar] = Ingresar"
+
+272 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0271", "CAMPO[ingresar] = Ingresar"
+
+273 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0272", "CAMPO[ingresar] = Ingresar"
+
+274 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0273", "CAMPO[ingresar] = Ingresar"
+
+275 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0274", "CAMPO[ingresar] = Ingresar"
+
+276 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0275", "CAMPO[ingresar] = Ingresar"
+
+277 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0276", "CAMPO[ingresar] = Ingresar"
+
+278 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0277", "CAMPO[ingresar] = Ingresar"
+
+279 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0278", "CAMPO[ingresar] = Ingresar"
+
+280 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0279", "CAMPO[ingresar] = Ingresar"
+
+281 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0280", "CAMPO[ingresar] = Ingresar"
+
+282 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0281", "CAMPO[ingresar] = Ingresar"
+
+283 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0282", "CAMPO[ingresar] = Ingresar"
+
+284 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0283", "CAMPO[ingresar] = Ingresar"
+
+285 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0284", "CAMPO[ingresar] = Ingresar"
+
+286 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0285", "CAMPO[ingresar] = Ingresar"
+
+287 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0286", "CAMPO[ingresar] = Ingresar"
+
+288 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0287", "CAMPO[ingresar] = Ingresar"
+
+289 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0288", "CAMPO[ingresar] = Ingresar"
+
+290 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0289", "CAMPO[ingresar] = Ingresar"
+
+291 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0290", "CAMPO[ingresar] = Ingresar"
+
+292 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0291", "CAMPO[ingresar] = Ingresar"
+
+293 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0292", "CAMPO[ingresar] = Ingresar"
+
+294 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0293", "CAMPO[ingresar] = Ingresar"
+
+295 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0294", "CAMPO[ingresar] = Ingresar"
+
+296 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0295", "CAMPO[ingresar] = Ingresar"
+
+297 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0296", "CAMPO[ingresar] = Ingresar"
+
+298 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0297", "CAMPO[ingresar] = Ingresar"
+
+299 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0298", "CAMPO[ingresar] = Ingresar"
+
+300 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0299", "CAMPO[ingresar] = Ingresar"
+
+301 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0300", "CAMPO[ingresar] = Ingresar"
+
+302 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0301", "CAMPO[ingresar] = Ingresar"
+
+303 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0302", "CAMPO[ingresar] = Ingresar"
+
+304 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0303", "CAMPO[ingresar] = Ingresar"
+
+305 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0304", "CAMPO[ingresar] = Ingresar"
+
+306 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0305", "CAMPO[ingresar] = Ingresar"
+
+307 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0306", "CAMPO[ingresar] = Ingresar"
+
+308 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0307", "CAMPO[ingresar] = Ingresar"
+
+309 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0308", "CAMPO[ingresar] = Ingresar"
+
+310 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0309", "CAMPO[ingresar] = Ingresar"
+
+311 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0310", "CAMPO[ingresar] = Ingresar"
+
+312 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0311", "CAMPO[ingresar] = Ingresar"
+
+313 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0312", "CAMPO[ingresar] = Ingresar"
+
+314 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0313", "CAMPO[ingresar] = Ingresar"
+
+315 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0314", "CAMPO[ingresar] = Ingresar"
+
+316 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0315", "CAMPO[ingresar] = Ingresar"
+
+317 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0316", "CAMPO[ingresar] = Ingresar"
+
+318 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0317", "CAMPO[ingresar] = Ingresar"
+
+319 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0318", "CAMPO[ingresar] = Ingresar"
+
+320 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0319", "CAMPO[ingresar] = Ingresar"
+
+321 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0320", "CAMPO[ingresar] = Ingresar"
+
+322 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0321", "CAMPO[ingresar] = Ingresar"
+
+323 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0322", "CAMPO[ingresar] = Ingresar"
+
+324 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0323", "CAMPO[ingresar] = Ingresar"
+
+325 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0324", "CAMPO[ingresar] = Ingresar"
+
+326 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0325", "CAMPO[ingresar] = Ingresar"
+
+327 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0326", "CAMPO[ingresar] = Ingresar"
+
+328 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0327", "CAMPO[ingresar] = Ingresar"
+
+329 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0328", "CAMPO[ingresar] = Ingresar"
+
+330 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0329", "CAMPO[ingresar] = Ingresar"
+
+331 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0330", "CAMPO[ingresar] = Ingresar"
+
+332 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0331", "CAMPO[ingresar] = Ingresar"
+
+333 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0332", "CAMPO[ingresar] = Ingresar"
+
+334 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0333", "CAMPO[ingresar] = Ingresar"
+
+335 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0334", "CAMPO[ingresar] = Ingresar"
+
+336 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0335", "CAMPO[ingresar] = Ingresar"
+
+337 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0336", "CAMPO[ingresar] = Ingresar"
+
+338 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0337", "CAMPO[ingresar] = Ingresar"
+
+339 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0338", "CAMPO[ingresar] = Ingresar"
+
+340 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0339", "CAMPO[ingresar] = Ingresar"
+
+341 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0340", "CAMPO[ingresar] = Ingresar"
+
+342 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0341", "CAMPO[ingresar] = Ingresar"
+
+343 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0342", "CAMPO[ingresar] = Ingresar"
+
+344 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0343", "CAMPO[ingresar] = Ingresar"
+
+345 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0344", "CAMPO[ingresar] = Ingresar"
+
+346 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0345", "CAMPO[ingresar] = Ingresar"
+
+347 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0346", "CAMPO[ingresar] = Ingresar"
+
+348 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0347", "CAMPO[ingresar] = Ingresar"
+
+349 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0348", "CAMPO[ingresar] = Ingresar"
+
+350 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0349", "CAMPO[ingresar] = Ingresar"
+
+351 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0350", "CAMPO[ingresar] = Ingresar"
+
+352 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0351", "CAMPO[ingresar] = Ingresar"
+
+353 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0352", "CAMPO[ingresar] = Ingresar"
+
+354 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0353", "CAMPO[ingresar] = Ingresar"
+
+355 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0354", "CAMPO[ingresar] = Ingresar"
+
+356 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0355", "CAMPO[ingresar] = Ingresar"
+
+357 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0356", "CAMPO[ingresar] = Ingresar"
+
+358 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0357", "CAMPO[ingresar] = Ingresar"
+
+359 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0358", "CAMPO[ingresar] = Ingresar"
+
+360 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0359", "CAMPO[ingresar] = Ingresar"
+
+361 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0360", "CAMPO[ingresar] = Ingresar"
+
+362 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0361", "CAMPO[ingresar] = Ingresar"
+
+363 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0362", "CAMPO[ingresar] = Ingresar"
+
+364 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0363", "CAMPO[ingresar] = Ingresar"
+
+365 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0364", "CAMPO[ingresar] = Ingresar"
+
+366 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0365", "CAMPO[ingresar] = Ingresar"
+
+367 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0366", "CAMPO[ingresar] = Ingresar"
+
+368 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0367", "CAMPO[ingresar] = Ingresar"
+
+369 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0368", "CAMPO[ingresar] = Ingresar"
+
+370 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0369", "CAMPO[ingresar] = Ingresar"
+
+371 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0370", "CAMPO[ingresar] = Ingresar"
+
+372 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0371", "CAMPO[ingresar] = Ingresar"
+
+373 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0372", "CAMPO[ingresar] = Ingresar"
+
+374 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0373", "CAMPO[ingresar] = Ingresar"
+
+375 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0374", "CAMPO[ingresar] = Ingresar"
+
+376 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0375", "CAMPO[ingresar] = Ingresar"
+
+377 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0376", "CAMPO[ingresar] = Ingresar"
+
+378 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0377", "CAMPO[ingresar] = Ingresar"
+
+379 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0378", "CAMPO[ingresar] = Ingresar"
+
+380 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0379", "CAMPO[ingresar] = Ingresar"
+
+381 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0380", "CAMPO[ingresar] = Ingresar"
+
+382 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0381", "CAMPO[ingresar] = Ingresar"
+
+383 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0382", "CAMPO[ingresar] = Ingresar"
+
+384 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0383", "CAMPO[ingresar] = Ingresar"
+
+385 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0384", "CAMPO[ingresar] = Ingresar"
+
+386 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0385", "CAMPO[ingresar] = Ingresar"
+
+387 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0386", "CAMPO[ingresar] = Ingresar"
+
+388 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0387", "CAMPO[ingresar] = Ingresar"
+
+389 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0388", "CAMPO[ingresar] = Ingresar"
+
+390 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0389", "CAMPO[ingresar] = Ingresar"
+
+391 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0390", "CAMPO[ingresar] = Ingresar"
+
+392 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0391", "CAMPO[ingresar] = Ingresar"
+
+393 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0392", "CAMPO[ingresar] = Ingresar"
+
+394 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0393", "CAMPO[ingresar] = Ingresar"
+
+395 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0394", "CAMPO[ingresar] = Ingresar"
+
+396 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0395", "CAMPO[ingresar] = Ingresar"
+
+397 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0396", "CAMPO[ingresar] = Ingresar"
+
+398 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0397", "CAMPO[ingresar] = Ingresar"
+
+399 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0398", "CAMPO[ingresar] = Ingresar"
+
+400 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0399", "CAMPO[ingresar] = Ingresar"
+
+401 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0400", "CAMPO[ingresar] = Ingresar"
+
+402 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0401", "CAMPO[ingresar] = Ingresar"
+
+403 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0402", "CAMPO[ingresar] = Ingresar"
+
+404 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0403", "CAMPO[ingresar] = Ingresar"
+
+405 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0404", "CAMPO[ingresar] = Ingresar"
+
+406 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0405", "CAMPO[ingresar] = Ingresar"
+
+407 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0406", "CAMPO[ingresar] = Ingresar"
+
+408 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0407", "CAMPO[ingresar] = Ingresar"
+
+409 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0408", "CAMPO[ingresar] = Ingresar"
+
+410 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0409", "CAMPO[ingresar] = Ingresar"
+
+411 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0410", "CAMPO[ingresar] = Ingresar"
+
+412 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0411", "CAMPO[ingresar] = Ingresar"
+
+413 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0412", "CAMPO[ingresar] = Ingresar"
+
+414 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0413", "CAMPO[ingresar] = Ingresar"
+
+415 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0414", "CAMPO[ingresar] = Ingresar"
+
+416 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0415", "CAMPO[ingresar] = Ingresar"
+
+417 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0416", "CAMPO[ingresar] = Ingresar"
+
+418 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0417", "CAMPO[ingresar] = Ingresar"
+
+419 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0418", "CAMPO[ingresar] = Ingresar"
+
+420 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0419", "CAMPO[ingresar] = Ingresar"
+
+421 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0420", "CAMPO[ingresar] = Ingresar"
+
+422 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0421", "CAMPO[ingresar] = Ingresar"
+
+423 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0422", "CAMPO[ingresar] = Ingresar"
+
+424 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0423", "CAMPO[ingresar] = Ingresar"
+
+425 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0424", "CAMPO[ingresar] = Ingresar"
+
+426 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0425", "CAMPO[ingresar] = Ingresar"
+
+427 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0426", "CAMPO[ingresar] = Ingresar"
+
+428 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0427", "CAMPO[ingresar] = Ingresar"
+
+429 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0428", "CAMPO[ingresar] = Ingresar"
+
+430 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0429", "CAMPO[ingresar] = Ingresar"
+
+431 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0430", "CAMPO[ingresar] = Ingresar"
+
+432 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0431", "CAMPO[ingresar] = Ingresar"
+
+433 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0432", "CAMPO[ingresar] = Ingresar"
+
+434 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0433", "CAMPO[ingresar] = Ingresar"
+
+435 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0434", "CAMPO[ingresar] = Ingresar"
+
+436 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0435", "CAMPO[ingresar] = Ingresar"
+
+437 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0436", "CAMPO[ingresar] = Ingresar"
+
+438 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0437", "CAMPO[ingresar] = Ingresar"
+
+439 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0438", "CAMPO[ingresar] = Ingresar"
+
+440 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0439", "CAMPO[ingresar] = Ingresar"
+
+441 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0440", "CAMPO[ingresar] = Ingresar"
+
+442 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0441", "CAMPO[ingresar] = Ingresar"
+
+443 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0442", "CAMPO[ingresar] = Ingresar"
+
+444 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0443", "CAMPO[ingresar] = Ingresar"
+
+445 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0444", "CAMPO[ingresar] = Ingresar"
+
+446 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0445", "CAMPO[ingresar] = Ingresar"
+
+447 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0446", "CAMPO[ingresar] = Ingresar"
+
+448 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0447", "CAMPO[ingresar] = Ingresar"
+
+449 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0448", "CAMPO[ingresar] = Ingresar"
+
+450 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0449", "CAMPO[ingresar] = Ingresar"
+
+451 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0450", "CAMPO[ingresar] = Ingresar"
+
+452 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0451", "CAMPO[ingresar] = Ingresar"
+
+453 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0452", "CAMPO[ingresar] = Ingresar"
+
+454 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0453", "CAMPO[ingresar] = Ingresar"
+
+455 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0454", "CAMPO[ingresar] = Ingresar"
+
+456 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0455", "CAMPO[ingresar] = Ingresar"
+
+457 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0456", "CAMPO[ingresar] = Ingresar"
+
+458 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0457", "CAMPO[ingresar] = Ingresar"
+
+459 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0458", "CAMPO[ingresar] = Ingresar"
+
+460 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0459", "CAMPO[ingresar] = Ingresar"
+
+461 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0460", "CAMPO[ingresar] = Ingresar"
+
+462 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0461", "CAMPO[ingresar] = Ingresar"
+
+463 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0462", "CAMPO[ingresar] = Ingresar"
+
+464 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0463", "CAMPO[ingresar] = Ingresar"
+
+465 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0464", "CAMPO[ingresar] = Ingresar"
+
+466 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0465", "CAMPO[ingresar] = Ingresar"
+
+467 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0466", "CAMPO[ingresar] = Ingresar"
+
+468 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0467", "CAMPO[ingresar] = Ingresar"
+
+469 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0468", "CAMPO[ingresar] = Ingresar"
+
+470 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0469", "CAMPO[ingresar] = Ingresar"
+
+471 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0470", "CAMPO[ingresar] = Ingresar"
+
+472 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0471", "CAMPO[ingresar] = Ingresar"
+
+473 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0472", "CAMPO[ingresar] = Ingresar"
+
+474 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0473", "CAMPO[ingresar] = Ingresar"
+
+475 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0474", "CAMPO[ingresar] = Ingresar"
+
+476 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0475", "CAMPO[ingresar] = Ingresar"
+
+477 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0476", "CAMPO[ingresar] = Ingresar"
+
+478 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0477", "CAMPO[ingresar] = Ingresar"
+
+479 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0478", "CAMPO[ingresar] = Ingresar"
+
+480 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0479", "CAMPO[ingresar] = Ingresar"
+
+481 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0480", "CAMPO[ingresar] = Ingresar"
+
+482 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0481", "CAMPO[ingresar] = Ingresar"
+
+483 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0482", "CAMPO[ingresar] = Ingresar"
+
+484 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0483", "CAMPO[ingresar] = Ingresar"
+
+485 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0484", "CAMPO[ingresar] = Ingresar"
+
+486 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0485", "CAMPO[ingresar] = Ingresar"
+
+487 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0486", "CAMPO[ingresar] = Ingresar"
+
+488 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0487", "CAMPO[ingresar] = Ingresar"
+
+489 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0488", "CAMPO[ingresar] = Ingresar"
+
+490 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0489", "CAMPO[ingresar] = Ingresar"
+
+491 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0490", "CAMPO[ingresar] = Ingresar"
+
+492 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0491", "CAMPO[ingresar] = Ingresar"
+
+493 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0492", "CAMPO[ingresar] = Ingresar"
+
+494 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0493", "CAMPO[ingresar] = Ingresar"
+
+495 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0494", "CAMPO[ingresar] = Ingresar"
+
+496 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0495", "CAMPO[ingresar] = Ingresar"
+
+497 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0496", "CAMPO[ingresar] = Ingresar"
+
+498 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0497", "CAMPO[ingresar] = Ingresar"
+
+499 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0498", "CAMPO[ingresar] = Ingresar"
+
+500 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0499", "CAMPO[ingresar] = Ingresar"
+
+501 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0500", "CAMPO[ingresar] = Ingresar"
+
+502 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0501", "CAMPO[ingresar] = Ingresar"
+
+503 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0502", "CAMPO[ingresar] = Ingresar"
+
+504 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0503", "CAMPO[ingresar] = Ingresar"
+
+505 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0504", "CAMPO[ingresar] = Ingresar"
+
+506 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0505", "CAMPO[ingresar] = Ingresar"
+
+507 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0506", "CAMPO[ingresar] = Ingresar"
+
+508 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0507", "CAMPO[ingresar] = Ingresar"
+
+509 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0508", "CAMPO[ingresar] = Ingresar"
+
+510 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0509", "CAMPO[ingresar] = Ingresar"
+
+511 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0510", "CAMPO[ingresar] = Ingresar"
+
+512 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0511", "CAMPO[ingresar] = Ingresar"
+
+513 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0512", "CAMPO[ingresar] = Ingresar"
+
+514 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0513", "CAMPO[ingresar] = Ingresar"
+
+515 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0514", "CAMPO[ingresar] = Ingresar"
+
+516 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0515", "CAMPO[ingresar] = Ingresar"
+
+517 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0516", "CAMPO[ingresar] = Ingresar"
+
+518 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0517", "CAMPO[ingresar] = Ingresar"
+
+519 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0518", "CAMPO[ingresar] = Ingresar"
+
+520 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0519", "CAMPO[ingresar] = Ingresar"
+
+521 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0520", "CAMPO[ingresar] = Ingresar"
+
+522 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0521", "CAMPO[ingresar] = Ingresar"
+
+523 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0522", "CAMPO[ingresar] = Ingresar"
+
+524 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0523", "CAMPO[ingresar] = Ingresar"
+
+525 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0524", "CAMPO[ingresar] = Ingresar"
+
+526 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0525", "CAMPO[ingresar] = Ingresar"
+
+527 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0526", "CAMPO[ingresar] = Ingresar"
+
+528 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0527", "CAMPO[ingresar] = Ingresar"
+
+529 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0528", "CAMPO[ingresar] = Ingresar"
+
+530 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0529", "CAMPO[ingresar] = Ingresar"
+
+531 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0530", "CAMPO[ingresar] = Ingresar"
+
+532 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0531", "CAMPO[ingresar] = Ingresar"
+
+533 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0532", "CAMPO[ingresar] = Ingresar"
+
+534 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0533", "CAMPO[ingresar] = Ingresar"
+
+535 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0534", "CAMPO[ingresar] = Ingresar"
+
+536 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0535", "CAMPO[ingresar] = Ingresar"
+
+537 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0536", "CAMPO[ingresar] = Ingresar"
+
+538 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0537", "CAMPO[ingresar] = Ingresar"
+
+539 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0538", "CAMPO[ingresar] = Ingresar"
+
+540 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0539", "CAMPO[ingresar] = Ingresar"
+
+541 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0540", "CAMPO[ingresar] = Ingresar"
+
+542 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0541", "CAMPO[ingresar] = Ingresar"
+
+543 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0542", "CAMPO[ingresar] = Ingresar"
+
+544 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0543", "CAMPO[ingresar] = Ingresar"
+
+545 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0544", "CAMPO[ingresar] = Ingresar"
+
+546 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0545", "CAMPO[ingresar] = Ingresar"
+
+547 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0546", "CAMPO[ingresar] = Ingresar"
+
+548 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0547", "CAMPO[ingresar] = Ingresar"
+
+549 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0548", "CAMPO[ingresar] = Ingresar"
+
+550 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0549", "CAMPO[ingresar] = Ingresar"
+
+551 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0550", "CAMPO[ingresar] = Ingresar"
+
+552 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0551", "CAMPO[ingresar] = Ingresar"
+
+553 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0552", "CAMPO[ingresar] = Ingresar"
+
+554 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0553", "CAMPO[ingresar] = Ingresar"
+
+555 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0554", "CAMPO[ingresar] = Ingresar"
+
+556 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0555", "CAMPO[ingresar] = Ingresar"
+
+557 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0556", "CAMPO[ingresar] = Ingresar"
+
+558 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0557", "CAMPO[ingresar] = Ingresar"
+
+559 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0558", "CAMPO[ingresar] = Ingresar"
+
+560 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0559", "CAMPO[ingresar] = Ingresar"
+
+561 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0560", "CAMPO[ingresar] = Ingresar"
+
+562 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0561", "CAMPO[ingresar] = Ingresar"
+
+563 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0562", "CAMPO[ingresar] = Ingresar"
+
+564 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0563", "CAMPO[ingresar] = Ingresar"
+
+565 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0564", "CAMPO[ingresar] = Ingresar"
+
+566 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0565", "CAMPO[ingresar] = Ingresar"
+
+567 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0566", "CAMPO[ingresar] = Ingresar"
+
+568 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0567", "CAMPO[ingresar] = Ingresar"
+
+569 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0568", "CAMPO[ingresar] = Ingresar"
+
+570 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0569", "CAMPO[ingresar] = Ingresar"
+
+571 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0570", "CAMPO[ingresar] = Ingresar"
+
+572 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0571", "CAMPO[ingresar] = Ingresar"
+
+573 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0572", "CAMPO[ingresar] = Ingresar"
+
+574 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0573", "CAMPO[ingresar] = Ingresar"
+
+575 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0574", "CAMPO[ingresar] = Ingresar"
+
+576 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0575", "CAMPO[ingresar] = Ingresar"
+
+577 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0576", "CAMPO[ingresar] = Ingresar"
+
+578 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0577", "CAMPO[ingresar] = Ingresar"
+
+579 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0578", "CAMPO[ingresar] = Ingresar"
+
+580 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0579", "CAMPO[ingresar] = Ingresar"
+
+581 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0580", "CAMPO[ingresar] = Ingresar"
+
+582 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0581", "CAMPO[ingresar] = Ingresar"
+
+583 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0582", "CAMPO[ingresar] = Ingresar"
+
+584 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0583", "CAMPO[ingresar] = Ingresar"
+
+585 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0584", "CAMPO[ingresar] = Ingresar"
+
+586 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0585", "CAMPO[ingresar] = Ingresar"
+
+587 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0586", "CAMPO[ingresar] = Ingresar"
+
+588 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0587", "CAMPO[ingresar] = Ingresar"
+
+589 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0588", "CAMPO[ingresar] = Ingresar"
+
+590 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0589", "CAMPO[ingresar] = Ingresar"
+
+591 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0590", "CAMPO[ingresar] = Ingresar"
+
+592 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0591", "CAMPO[ingresar] = Ingresar"
+
+593 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0592", "CAMPO[ingresar] = Ingresar"
+
+594 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0593", "CAMPO[ingresar] = Ingresar"
+
+595 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0594", "CAMPO[ingresar] = Ingresar"
+
+596 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0595", "CAMPO[ingresar] = Ingresar"
+
+597 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0596", "CAMPO[ingresar] = Ingresar"
+
+598 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0597", "CAMPO[ingresar] = Ingresar"
+
+599 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0598", "CAMPO[ingresar] = Ingresar"
+
+600 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0599", "CAMPO[ingresar] = Ingresar"
+
+601 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0600", "CAMPO[ingresar] = Ingresar"
+
+602 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0601", "CAMPO[ingresar] = Ingresar"
+
+603 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0602", "CAMPO[ingresar] = Ingresar"
+
+604 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0603", "CAMPO[ingresar] = Ingresar"
+
+605 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0604", "CAMPO[ingresar] = Ingresar"
+
+606 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0605", "CAMPO[ingresar] = Ingresar"
+
+607 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0606", "CAMPO[ingresar] = Ingresar"
+
+608 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0607", "CAMPO[ingresar] = Ingresar"
+
+609 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0608", "CAMPO[ingresar] = Ingresar"
+
+610 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0609", "CAMPO[ingresar] = Ingresar"
+
+611 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0610", "CAMPO[ingresar] = Ingresar"
+
+612 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0611", "CAMPO[ingresar] = Ingresar"
+
+613 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0612", "CAMPO[ingresar] = Ingresar"
+
+614 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0613", "CAMPO[ingresar] = Ingresar"
+
+615 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0614", "CAMPO[ingresar] = Ingresar"
+
+616 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0615", "CAMPO[ingresar] = Ingresar"
+
+617 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0616", "CAMPO[ingresar] = Ingresar"
+
+618 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0617", "CAMPO[ingresar] = Ingresar"
+
+619 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0618", "CAMPO[ingresar] = Ingresar"
+
+620 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0619", "CAMPO[ingresar] = Ingresar"
+
+621 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0620", "CAMPO[ingresar] = Ingresar"
+
+622 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0621", "CAMPO[ingresar] = Ingresar"
+
+623 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0622", "CAMPO[ingresar] = Ingresar"
+
+624 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0623", "CAMPO[ingresar] = Ingresar"
+
+625 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0624", "CAMPO[ingresar] = Ingresar"
+
+626 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0625", "CAMPO[ingresar] = Ingresar"
+
+627 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0626", "CAMPO[ingresar] = Ingresar"
+
+628 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0627", "CAMPO[ingresar] = Ingresar"
+
+629 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0628", "CAMPO[ingresar] = Ingresar"
+
+630 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0629", "CAMPO[ingresar] = Ingresar"
+
+631 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0630", "CAMPO[ingresar] = Ingresar"
+
+632 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0631", "CAMPO[ingresar] = Ingresar"
+
+633 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0632", "CAMPO[ingresar] = Ingresar"
+
+634 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0633", "CAMPO[ingresar] = Ingresar"
+
+635 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0634", "CAMPO[ingresar] = Ingresar"
+
+636 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0635", "CAMPO[ingresar] = Ingresar"
+
+637 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0636", "CAMPO[ingresar] = Ingresar"
+
+638 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0637", "CAMPO[ingresar] = Ingresar"
+
+639 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0638", "CAMPO[ingresar] = Ingresar"
+
+640 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0639", "CAMPO[ingresar] = Ingresar"
+
+641 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0640", "CAMPO[ingresar] = Ingresar"
+
+642 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0641", "CAMPO[ingresar] = Ingresar"
+
+643 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0642", "CAMPO[ingresar] = Ingresar"
+
+644 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0643", "CAMPO[ingresar] = Ingresar"
+
+645 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0644", "CAMPO[ingresar] = Ingresar"
+
+646 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0645", "CAMPO[ingresar] = Ingresar"
+
+647 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0646", "CAMPO[ingresar] = Ingresar"
+
+648 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0647", "CAMPO[ingresar] = Ingresar"
+
+649 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0648", "CAMPO[ingresar] = Ingresar"
+
+650 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0649", "CAMPO[ingresar] = Ingresar"
+
+651 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0650", "CAMPO[ingresar] = Ingresar"
+
+652 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0651", "CAMPO[ingresar] = Ingresar"
+
+653 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0652", "CAMPO[ingresar] = Ingresar"
+
+654 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0653", "CAMPO[ingresar] = Ingresar"
+
+655 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0654", "CAMPO[ingresar] = Ingresar"
+
+656 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0655", "CAMPO[ingresar] = Ingresar"
+
+657 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0656", "CAMPO[ingresar] = Ingresar"
+
+658 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0657", "CAMPO[ingresar] = Ingresar"
+
+659 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0658", "CAMPO[ingresar] = Ingresar"
+
+660 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0659", "CAMPO[ingresar] = Ingresar"
+
+661 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0660", "CAMPO[ingresar] = Ingresar"
+
+662 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0661", "CAMPO[ingresar] = Ingresar"
+
+663 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0662", "CAMPO[ingresar] = Ingresar"
+
+664 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0663", "CAMPO[ingresar] = Ingresar"
+
+665 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0664", "CAMPO[ingresar] = Ingresar"
+
+666 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0665", "CAMPO[ingresar] = Ingresar"
+
+667 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0666", "CAMPO[ingresar] = Ingresar"
+
+668 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0667", "CAMPO[ingresar] = Ingresar"
+
+669 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0668", "CAMPO[ingresar] = Ingresar"
+
+670 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0669", "CAMPO[ingresar] = Ingresar"
+
+671 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0670", "CAMPO[ingresar] = Ingresar"
+
+672 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0671", "CAMPO[ingresar] = Ingresar"
+
+673 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0672", "CAMPO[ingresar] = Ingresar"
+
+674 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0673", "CAMPO[ingresar] = Ingresar"
+
+675 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0674", "CAMPO[ingresar] = Ingresar"
+
+676 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0675", "CAMPO[ingresar] = Ingresar"
+
+677 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0676", "CAMPO[ingresar] = Ingresar"
+
+678 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0677", "CAMPO[ingresar] = Ingresar"
+
+679 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0678", "CAMPO[ingresar] = Ingresar"
+
+680 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0679", "CAMPO[ingresar] = Ingresar"
+
+681 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0680", "CAMPO[ingresar] = Ingresar"
+
+682 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0681", "CAMPO[ingresar] = Ingresar"
+
+683 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0682", "CAMPO[ingresar] = Ingresar"
+
+684 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0683", "CAMPO[ingresar] = Ingresar"
+
+685 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0684", "CAMPO[ingresar] = Ingresar"
+
+686 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0685", "CAMPO[ingresar] = Ingresar"
+
+687 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0686", "CAMPO[ingresar] = Ingresar"
+
+688 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0687", "CAMPO[ingresar] = Ingresar"
+
+689 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0688", "CAMPO[ingresar] = Ingresar"
+
+690 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0689", "CAMPO[ingresar] = Ingresar"
+
+691 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0690", "CAMPO[ingresar] = Ingresar"
+
+692 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0691", "CAMPO[ingresar] = Ingresar"
+
+693 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0692", "CAMPO[ingresar] = Ingresar"
+
+694 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0693", "CAMPO[ingresar] = Ingresar"
+
+695 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0694", "CAMPO[ingresar] = Ingresar"
+
+696 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0695", "CAMPO[ingresar] = Ingresar"
+
+697 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0696", "CAMPO[ingresar] = Ingresar"
+
+698 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0697", "CAMPO[ingresar] = Ingresar"
+
+699 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0698", "CAMPO[ingresar] = Ingresar"
+
+700 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0699", "CAMPO[ingresar] = Ingresar"
+
+701 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0700", "CAMPO[ingresar] = Ingresar"
+
+702 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0701", "CAMPO[ingresar] = Ingresar"
+
+703 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0702", "CAMPO[ingresar] = Ingresar"
+
+704 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0703", "CAMPO[ingresar] = Ingresar"
+
+705 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0704", "CAMPO[ingresar] = Ingresar"
+
+706 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0705", "CAMPO[ingresar] = Ingresar"
+
+707 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0706", "CAMPO[ingresar] = Ingresar"
+
+708 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0707", "CAMPO[ingresar] = Ingresar"
+
+709 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0708", "CAMPO[ingresar] = Ingresar"
+
+710 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0709", "CAMPO[ingresar] = Ingresar"
+
+711 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0710", "CAMPO[ingresar] = Ingresar"
+
+712 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0711", "CAMPO[ingresar] = Ingresar"
+
+713 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0712", "CAMPO[ingresar] = Ingresar"
+
+714 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0713", "CAMPO[ingresar] = Ingresar"
+
+715 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0714", "CAMPO[ingresar] = Ingresar"
+
+716 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0715", "CAMPO[ingresar] = Ingresar"
+
+717 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0716", "CAMPO[ingresar] = Ingresar"
+
+718 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0717", "CAMPO[ingresar] = Ingresar"
+
+719 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0718", "CAMPO[ingresar] = Ingresar"
+
+720 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0719", "CAMPO[ingresar] = Ingresar"
+
+721 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0720", "CAMPO[ingresar] = Ingresar"
+
+722 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0721", "CAMPO[ingresar] = Ingresar"
+
+723 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0722", "CAMPO[ingresar] = Ingresar"
+
+724 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0723", "CAMPO[ingresar] = Ingresar"
+
+725 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0724", "CAMPO[ingresar] = Ingresar"
+
+726 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0725", "CAMPO[ingresar] = Ingresar"
+
+727 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0726", "CAMPO[ingresar] = Ingresar"
+
+728 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0727", "CAMPO[ingresar] = Ingresar"
+
+729 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0728", "CAMPO[ingresar] = Ingresar"
+
+730 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0729", "CAMPO[ingresar] = Ingresar"
+
+731 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0730", "CAMPO[ingresar] = Ingresar"
+
+732 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0731", "CAMPO[ingresar] = Ingresar"
+
+733 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0732", "CAMPO[ingresar] = Ingresar"
+
+734 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0733", "CAMPO[ingresar] = Ingresar"
+
+735 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0734", "CAMPO[ingresar] = Ingresar"
+
+736 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0735", "CAMPO[ingresar] = Ingresar"
+
+737 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0736", "CAMPO[ingresar] = Ingresar"
+
+738 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0737", "CAMPO[ingresar] = Ingresar"
+
+739 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0738", "CAMPO[ingresar] = Ingresar"
+
+740 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0739", "CAMPO[ingresar] = Ingresar"
+
+741 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0740", "CAMPO[ingresar] = Ingresar"
+
+742 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0741", "CAMPO[ingresar] = Ingresar"
+
+743 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0742", "CAMPO[ingresar] = Ingresar"
+
+744 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0743", "CAMPO[ingresar] = Ingresar"
+
+745 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0744", "CAMPO[ingresar] = Ingresar"
+
+746 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0745", "CAMPO[ingresar] = Ingresar"
+
+747 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0746", "CAMPO[ingresar] = Ingresar"
+
+748 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0747", "CAMPO[ingresar] = Ingresar"
+
+749 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0748", "CAMPO[ingresar] = Ingresar"
+
+750 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0749", "CAMPO[ingresar] = Ingresar"
+
+751 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0750", "CAMPO[ingresar] = Ingresar"
+
+752 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0751", "CAMPO[ingresar] = Ingresar"
+
+753 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0752", "CAMPO[ingresar] = Ingresar"
+
+754 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0753", "CAMPO[ingresar] = Ingresar"
+
+755 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0754", "CAMPO[ingresar] = Ingresar"
+
+756 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0755", "CAMPO[ingresar] = Ingresar"
+
+757 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0756", "CAMPO[ingresar] = Ingresar"
+
+758 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0757", "CAMPO[ingresar] = Ingresar"
+
+759 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0758", "CAMPO[ingresar] = Ingresar"
+
+760 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0759", "CAMPO[ingresar] = Ingresar"
+
+761 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0760", "CAMPO[ingresar] = Ingresar"
+
+762 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0761", "CAMPO[ingresar] = Ingresar"
+
+763 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0762", "CAMPO[ingresar] = Ingresar"
+
+764 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0763", "CAMPO[ingresar] = Ingresar"
+
+765 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0764", "CAMPO[ingresar] = Ingresar"
+
+766 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0765", "CAMPO[ingresar] = Ingresar"
+
+767 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0766", "CAMPO[ingresar] = Ingresar"
+
+768 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0767", "CAMPO[ingresar] = Ingresar"
+
+769 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0768", "CAMPO[ingresar] = Ingresar"
+
+770 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0769", "CAMPO[ingresar] = Ingresar"
+
+771 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0770", "CAMPO[ingresar] = Ingresar"
+
+772 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0771", "CAMPO[ingresar] = Ingresar"
+
+773 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0772", "CAMPO[ingresar] = Ingresar"
+
+774 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0773", "CAMPO[ingresar] = Ingresar"
+
+775 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0774", "CAMPO[ingresar] = Ingresar"
+
+776 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0775", "CAMPO[ingresar] = Ingresar"
+
+777 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0776", "CAMPO[ingresar] = Ingresar"
+
+778 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0777", "CAMPO[ingresar] = Ingresar"
+
+779 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0778", "CAMPO[ingresar] = Ingresar"
+
+780 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0779", "CAMPO[ingresar] = Ingresar"
+
+781 => Fallido: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0780", "CAMPO[ingresar] = Ingresar"
+
+782 => Exitoso: "CAMPO[codigo] = 4358", "CAMPO[clave] = 0781", "CAMPO[ingresar] = Ingresar"
+
+
+
+TOTAL DE INTENTOS: 782
+INTENTOS EXITOSOS: 1 (782)
+INTENTOS FALLIDOS: 781
+
+Tiempo de Ejecución: 2003.0756 segundos
+
+RESULTADO: Se deben implementar restricciones o politicas de seguridad en cuanto a los ataques de fuerza bruta. Bloquear temporalmente más de 5 intentos (como máximo) de una misma Dirección IP, así como también incorporar códigos captchas para verificar que no sea un robot el que intenta acceder al software.

@@ -1,0 +1,14 @@
+## Archivo de Configuración de Ataque de Fuerza Bruta
+## Última actualización automática: 12/05/2016 04:32:03 PM
+## Usuario: MIGUEL (Evaluador)
+
+url = "http://opendace.uptparia.edu.ve/Politecnico_CEYE/autentificar_est.php"
+archivo = /var/www/sisec/files/brute-force/fuerza-bruta-personalizada.txt
+cadena_invalida = "Acceso Denegado Temporalmente"
+campo_contrasenia = "clave"
+
+[campo]
+codigo = "4301"  
+
+[campo_adicional]
+ingresar = "Ingresar"

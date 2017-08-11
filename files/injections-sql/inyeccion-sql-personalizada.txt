@@ -1,0 +1,11 @@
+﻿FTP: 
+Servidor: ftp.dawebnow.com.ve
+Puerto: 21
+usuario: msalazar@dawebnow.com.ve
+Contraseña: m19u31$@1@z@7
+
+
+modules
+contenido
+parsers
+query

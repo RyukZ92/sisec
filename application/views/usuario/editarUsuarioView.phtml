@@ -1,0 +1,95 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista actualizar los datos de un usuario
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Febrero, 2016
+ * @Version: 1
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * =============================================================================
+ * 
+ */ 
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+include dirname(__FILE__) . "/../helper/mensajes.phtml";
+?>
+<div class="panel panel-default">
+  <div class="panel-heading">Datos Actualizables Usuario</div>
+  <div class="panel-body"><br>
+            <div class="col-lg-8">
+                <form class="form-horizontal" role="form" method="post" id="form">
+                  <div class="form-group">
+                    <label for="nombre" class="col-lg-4 control-label">Nombre Completo</label>
+                    <div class="col-lg-7 ">
+                      <input type="text" class="form-control solo-albabeto-espaniol-con-espacio" id="nombre_completo"
+                             placeholder="Nombre Completo" name="nombre_completo"
+                             value="<?php echo $_usuario[0]["nombre_completo"] ?>"
+                             maxlength="80" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger">Requerido</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="usuario" class="col-lg-4 control-label">Nombre de Usuario</label>
+                    <div class="col-lg-7 ">
+                      <input type="text" class="form-control alfanumerico-sin-espacio" id="usuario"
+                             placeholder="Nombre de Usuario" name="usuario"
+                             value="<?php echo $_usuario[0]["nombre"] ?>"
+                             maxlength="40" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger">Requerido</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="col-lg-4 control-label">Correo Electrónico</label>
+                    <div class="col-lg-7 ">
+                      <input type="text" class="form-control" id="email" 
+                             placeholder="Correo Electrónico" name="email"
+                             value="<?php echo $_usuario[0]["email"] ?>"
+                             maxlength="50" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger">Requerido</label>
+                    </div>  
+                  </div>  
+                  <div class="form-group">
+                    <label for="usuario" class="col-lg-4 control-label">Teléfono de Contacto</label>
+                    <div class="col-lg-7 ">
+                      <input type="text" class="form-control solo-numero-entero" id="telefono"
+                             placeholder="Teléfono de Contacto" name="telefono"
+                             value="<?php echo $_usuario[0]["telefono"] ?>"
+                             maxlength="12" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger">   </label>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email" class="col-lg-4 control-label">Nivel del Usuario</label>
+                    <div class="col-lg-7 ">
+                        <select name="nivel_usuario" class="form-control" id="nivel_usuario">
+                            <option value="">Seleccione el Nivel del Usuario</option>
+                            <option value="Administrador" <?php if ($_usuario[0]["nivel_usuario"] == "Administrador") { echo "selected"; }?>>Administrador</option>
+                            <option value="Evaluador" <?php if ($_usuario[0]["nivel_usuario"] == "Evaluador") { echo "selected"; }?>>Evaluador</option>                      
+                        </select>
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger">Requerido</label>
+                    </div>  
+                  </div>
+                    
+                  <div class="form-group">                      
+                    <div class="col-lg-offset-4 col-lg-8 ">                        
+                      <button type="reset" class="btn btn-default" onClick="history.back();">Cancelar</button>
+                      &nbsp;
+                      &nbsp;
+                      <button type="submit" name="actualizar" class="btn btn-default">Actualizar</button>
+                    </div>
+                  </div>
+                </form>
+            </div>            
+      </div>
+</div>

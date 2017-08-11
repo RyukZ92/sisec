@@ -1,0 +1,49 @@
+
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 03/03/2016
+Hora: 12:15:44 PM
+IP Cliente: 190.206.236.166
+HOST Cliente: http://sirah.no-ip.org
+Navegador: Mozilla/5.0 (Windows NT 10.0; rv:44.0) Gecko/20100101 Firefox/44.0
+ISP: dbeceeca6.dslam-172-17-96-247-449-0027-anz-05.dsl.cantv.net
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: ujakca6b0p9d9eldhoucjdiab5
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 03/03/2016
+Hora: 12:21:45 PM
+IP Cliente: 190.206.236.166
+HOST Cliente: http://sirah.no-ip.org
+Navegador: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36
+ISP: dbeceeca6.dslam-172-17-96-247-449-0027-anz-05.dsl.cantv.net
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: 5rvcmq20bv8tvj7j0uuiapc413
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.
+
+SUBSTRACCIÓN DE COOKIES CON ATAQUE XSS:
+
+Fecha: 03/03/2016
+Hora: 12:21:50 PM
+IP Cliente: 190.206.236.166
+HOST Cliente: http://sirah.no-ip.org
+Navegador: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36
+ISP: dbeceeca6.dslam-172-17-96-247-449-0027-anz-05.dsl.cantv.net
+
+Cookies Substraidas:
+	N° 1 => Nombre: PHPSESSID
+	N° 1 => Valor: 5rvcmq20bv8tvj7j0uuiapc413
+
+Nota: Reemplazar las cookies obtenidas en Mozilla Firefox para secuestrar la sesión.
+Con el Complemento "Cookies Manager+" Para Firefox, se puede hacer esta operación.

@@ -1,0 +1,16 @@
+<?php
+/**
+ * @Descripción: configuración básica del servidor. 
+ * @Autor: Miguel Salazar, 2015-2016.
+ */
+header("Cache-control: private");
+date_default_timezone_set("America/Caracas");#Se define la zona horaria
+
+#define("URLBASE", "http://sisec.no-ip.org/"); # Se define la ubicación URL del servidor base ESTÁTICO
+define('URLBASE', 'http://localhost/sisec/'); # Se define la ubicación URL del servidor base ESTÁTICO
+//define("URLBASE", $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["SERVER_NAME"] . "/"); # DINÁMICO
+
+
+define('RUTARAIZ', $_SERVER['DOCUMENT_ROOT']. '/sisec/'); #Se define la ruta base que tiene el sistema
+
+?>

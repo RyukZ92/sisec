@@ -1,0 +1,67 @@
+<?php 
+
+/**
+ * Tips de ayuda para la preparación o carga de las pruebas
+ */
+
+# Carga de Fuerza Bruta
+$popoverTituloContrasenia = "Contraseñas";
+$popoverContenidoContrasenia = "Archivo de texto plano con las contraseñas que se probarán. Extensiones soportadas: .txt o .log.";
+
+# Carga de Inección SQL
+$popoverTituloSql = "Inyecciones SQL";
+$popoverContenidoSql = "Archivo de texto plano con las inyecciones sql que se probarán. Extensiones soportadas: .txt o .log.";
+
+# Carga de Inyección XSS
+$popoverTituloXss = "Inyecciones XSS";
+$popoverContenidoXss = "Archivo de texto plano con las inyecciones xss que se probarán. Extensiones soportadas: .txt o .log.";
+
+# Preparación de carga de sesiones
+$popoverTituloDiccionario = "Diccionario de Usuarios";
+$popoverContenidoDiccionario = "Archivo de texto plano con los usuarios y contraseñas validos del sistema evaluado. Extensiones soportadas: .txt o .log.";
+
+# Preparación de carga de datos
+$popoverTituloEstres = "Diccionario de Usuarios";
+$popoverContenidoEstres = "Debe ser archivo de texto plano con extensión .txt o .log.";
+
+
+
+#Configuracion generales se la seguridad
+$popoverTituloUrl = "URL Destino";
+$popoverContenidoUrl = "Esta es la dirección url donde se hacen las peticiones o envía los datos del formulario";
+$popoverTituloExito = "Mensaje de Éxito";
+$popoverContenidoExito = "Este es el mensaje o alerta que el sistema indica cuandola operación fue eexitosa";
+$popoverTituloError = "Mensaje de Error";
+$popoverContenidoError = "Este es el mensaje o alerta que el sistema indica cuando se ha ingresado datos invalidos";
+$popoverTituloCampoPrincipal = "Campo Principal";
+$popoverContenidoCampoPrincipal = "Son los nombres de los campos de formulario (en html) que se inetentan vulnerar";
+$popoverTituloCampoAdicional = "Campo Adicional";
+$popoverContenidoCampoAdicional = "Son aquellos campos de tipo hidden, button, submit o otros del formulario, estos poseen valores estáticos y son requeridos para el envío de los datos";
+
+# Configuracion de Fuerza Bruta
+$popoverTituloError= "Mensaje de Error";
+$popoverContenidoError = "Este es el mensaje o alerta que el sistema indica cuando se ha ingresado datos de accesos invalidos";
+$popoverTituloCampoContrasenia = "Nombe del Campo Contraseña";
+$popoverContenidoCampoContrasenia = "Es el nombre que lleva el campo del formulario (en el html) donde se ingresa la contraseña";
+$popoverTituloCampoUsuario = "Campo Usuario";
+$popoverContenidoCampoUsuario = "Nombre del campo usuario utilizado en el formulario, al igual del nombre usuario conocido";
+
+# Configuracion de Inyección SQL
+
+$popoverTituloExito = "Mensaje de Error";
+$popoverContenidoExito = "Este es el mensaje o alerta que el sistema indica cuando se ha ingresado datos de accesos invalidos";
+$popoverTituloCampoContrasenia = "Nombe del Campo Contraseña";
+$popoverContenidoCampoContrasenia = "Es el nombre que lleva el campo del formulario (en el html) donde se ingresa la contraseña";
+$popoverTituloCampoUsuario = "Campo Usuario";
+$popoverContenidoCampoUsuario = "Nombre del campo usuario utilizado en el formulario, al igual del nombre usuario conocido";
+
+# Configuracion de Inyección XSS
+
+$popoverTituloExito = "Mensaje de Error";
+$popoverContenidoExito = "Este es el mensaje o alerta que el sistema indica cuando se ha ingresado datos de accesos invalidos";
+$popoverTituloCampoContrasenia = "Nombe del Campo Contraseña";
+$popoverContenidoCampoContrasenia = "Es el nombre que lleva el campo del formulario (en el html) donde se ingresa la contraseña";
+$popoverTituloCampoUsuario = "Campo Usuario";
+$popoverContenidoCampoUsuario = "Nombre del campo usuario utilizado en el formulario, al igual del nombre usuario conocido";
+
+?>

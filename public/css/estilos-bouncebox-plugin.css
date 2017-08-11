@@ -1,0 +1,44 @@
+
+
+/* The bouncing box */
+
+.box{
+	display: none;
+	background:url('../img/box_bg.jpg') repeat-x center top #fcfcfc;
+	height:160px;
+	padding:2%;
+	margin-top:100px;
+	width:250px;
+	border:1px solid #fcfcfc;
+	color:#494848;
+	text-shadow:1px 1px 0 white;
+	font-family:'Myriad Pro',Arial,Helvetica,sans-serif;
+	border: 1px solid #09638a;
+}
+
+.box p{
+	
+	font-size:10pt;
+	background:url('../img/warning.png') no-repeat 10px center;
+	padding:1%;
+}
+
+.box p b{
+	color:#09638a;
+	font-size:12pt;
+	display:block;
+}
+
+.box{
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+.box img {
+    position: absolute;
+    top:3px;
+    right:3px;
+}
+.box img:hover {
+    cursor: pointer;
+}

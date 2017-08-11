@@ -1,0 +1,36 @@
+input[type="button"].btn-disabled{
+padding: 7px 12px;
+color: #e0e0e0;
+border: 1px solid #e0e0e0;
+background: #f7f7f7;
+cursor:default;
+font-size:12px;
+border-radius:2px;
+}
+input[type="button"].btn-enabled{
+padding: 7px 12px;
+color: #e1e1e1;
+border: 1px solid  #e1e1e1;
+background: #777;
+cursor:pointer;
+font-size:12px;
+border-radius:2px;
+}
+input[type="button"].btn-enabled:hover{
+background: #3381a0;
+color:#fff;
+}
+a.parametro {
+text-decoration:none;
+}
+.paginador {
+margin:auto;
+border:0px solid #999;
+width:90%;
+margin-top:3%;
+}
+.paginador li {
+display:inline; 
+margin-right:05px;
+
+}

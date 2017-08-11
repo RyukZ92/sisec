@@ -1,0 +1,47 @@
+<html lang="es">
+<head>
+	<title>PHPMAILER</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<body>
+<?php
+require_once('class.phpmailer.php'); // Especifique la ruta del archivo class.phpmailer.php
+define('GUSER', 'ryukzero92@gmail.com'); // GMail username
+define('GPWD', 'MigueL92.'); // GMail password
+
+function smtpmailer($to, $from, $from_name, $subject, $body) { 
+global $error;
+$mail = new PHPMailer();  // create a new object
+$mail->IsSMTP(); // enable SMTP
+$mail->SMTPDebug = 0;  // debugging: 1 = errors and messages, 2 = messages only
+$mail->SMTPAuth = true;  // authentication enabled
+$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for GMail
+$mail->Host = 'smtp.gmail.com';
+$mail->Port = 465; 
+$mail->Username = GUSER;  
+$mail->Password = GPWD;           
+$mail->SetFrom($from, $from_name);
+$mail->Subject = $subject;
+$mail->Body = $body;
+$mail->AddAddress($to);
+
+if(!$mail->Send())
+        {
+$error = 'Mail error: '.$mail->ErrorInfo; 
+return false;
+} 
+       else
+       {
+$error = 'Message sent!';
+return true;
+}
+}
+?>
+
+<?php
+$res=smtpmailer(  'miguel__salazar@hotmail.com' , 'ryukzero92@gmail.com' , 'Alcaldia Bolivariana del Municipio Bermudez' , 'Incializando a SIGIEC'  ,  'Su clave y codigo para acceder al Sistema de Gestion de Incidencias Presentadas por los Equipos de Computación:<br>Codigo: 1 Clave: desconocida');
+if($res)
+	echo "Enviado";
+?>
+</body>
+</html>

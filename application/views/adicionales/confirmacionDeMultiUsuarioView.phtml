@@ -1,0 +1,223 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista que muestra la conformación de la creación del diccionario
+ * de usuarios
+ * @Author: Miguel Salazar
+ * @Fecha: Marzo, 2016
+ * @Version: 1.3
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * =============================================================================
+ * 
+ */
+
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+?>
+<div id="dialogo-espera" class="ventana">
+    <img src="<?php echo URLBASE; ?>/public/img/preload.gif" alt="jqeury">
+    <h3>Por favor espere...</h3>
+</div>
+<?php
+if ($notificacion) {
+    echo $notificacion;
+}
+for($i=0; $i<$configMultiUsuarioParte1["total_campos"]; $i++) {
+    foreach ($configMultiUsuarioParte1["campos_$i"] as $llave => $valor) {
+            $datosParte1[$i][$llave] =  $valor;
+    }
+}
+for($i=0; $i<$configMultiUsuarioParte2["total_campos"]; $i++) {
+    foreach ($configMultiUsuarioParte2["campos_$i"] as $llave => $valor) {
+            $datosParte2[$i][$llave] =  $valor;
+    }
+}
+?>
+<div class="panel panel-default">
+    <div class="panel-heading">Datos para la la prueba de fuerza bruta
+    <!--<a style="float:right;" href="<?php echo URLBASE ?>configurar-inyeccion-sql" class="fa fa-edit"> Actualizar Datos</a>-->
+    </div>    
+    <form method="POST">    
+        <table class="table table-bordered">
+            <tr>
+                <th>Cantidad de Usuarios</th>
+                <td>Se crearán un total de: 
+                    <strong>
+                    <?php echo $usuarios = $_SESSION["cantidad"] == 1 
+                        ? $_SESSION["cantidad"] . " usuario"
+                            : $_SESSION["cantidad"] . " usuarios"; ?>
+                    </strong>
+                </td>
+            </tr>
+        </table>   
+        <div class="panel-body center">
+            <button type="button" class="btn btn-danger" onClick="window.location.href='<?php echo URLBASE?>adicionales/cantidad-de-usuarios'">Cancelar</button>
+            &nbsp;
+            &nbsp;
+            <button type="submit" name="confirmar" class="btn btn-danger" id="confirmar">Confirmar</button>
+        </div>        
+    </form>    
+</div>    
+
+
+<!--<form class="pure-form pure-form-aligned" method="POST">
+    <input type="hidden" name="pagina_referencia" value="<?php echo $_POST["pagina_referencia"]; ?>">
+    <input type="hidden" name="id_user" value="<?php echo $_POST["id_user"]; ?>">    
+    <fieldset>
+        <table class="pure-table pure-table-bordered" id="formulario">
+            <thead>
+                <tr>
+                    <th colspan="2">Confirmación de los datos</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>  
+                    <td class="td-right">
+                        <label for="url">URL Destino</label>
+                    </td>
+                    <td>
+                        <?php echo $configMultiUsuarioParte1["url"]; ?>                        
+                    </td>
+                </tr>
+                <tr>     
+                    <td class="td-right">
+                        <label>Mensaje de Éxito</label>
+                    </td>
+                    <td>
+                        <?php echo $configMultiUsuarioParte2["cadena_valida"]; ?>
+                    </td>
+                    
+                </tr>
+            <thead>
+                <tr>
+                    <th colspan="2">Parte 1</th>
+                </tr>
+            </thead>                
+            <?php                                
+                for($i=0; $i<count($datosParte1);$i++):
+            ?>
+                <tr>
+                    <td  class="td-right">
+                        <label>Campos N° <?php echo $i+1; ?></label>
+                    </td>
+                    <td>
+                        <div style="margin-top:1%;">                                    
+                        <?php echo "Nombre = " . $datosParte1[$i]["nombre"]; ?>
+                        </div>
+                        <div style="margin-top:1%;">                                    
+                        <?php echo "Tipo = " . $datosParte1[$i]["tipo"]; ?>
+                        </div>
+                        <div style="margin-top:1%;">                                    
+                        <?php echo "Longitud = " . $datosParte1[$i]["longitud"]; ?>
+                        </div>
+                    </td>
+                </tr>
+                <?php 
+                    endfor;                              
+                 if(count($configMultiUsuarioParte1["campo_adicional"]) > 0):
+                ?>
+                <tr>
+                    <td class="td-right">
+                        <label>Campos Adicionales</label>
+                    </td>
+                    <td>
+                        <?php                           
+                            foreach($configMultiUsuarioParte1["campo_adicional"] as $nombre => $valor):
+                            ?>
+                                <div style="margin-top:1%;">
+                                <?php echo $nombre . " = " . $valor; ?>
+                                </div>
+                            <?php 
+                            endforeach;                            
+                            ?>
+                    </td>
+                </tr>
+                <?php
+                endif;
+                ?>
+                <tr>
+                    <td class='td-right' colspan="2">
+                        <a class="glyphicon glyphicon-edit" href="<?php echo URLBASE . $vista; ?>/configurar-multi-usuarios-parte-1">Editar</a>
+                    </td>                   
+                </tr>
+            <thead>
+                <tr>
+                    <th colspan="2">Parte 2</th>
+                </tr>
+            </thead>                
+            <?php                                
+                for($i=0; $i<count($datosParte2);$i++):
+            ?>
+                <tr>
+                    <td  class="td-right">
+                        <label>Campos N° <?php echo $i+1; ?></label>
+                    </td>
+                    <td>
+                        <div style="margin-top:1%;">                                    
+                        <?php echo "Nombre = " . $datosParte2[$i]["nombre"]; ?>
+                        </div>
+                        <div style="margin-top:1%;">                                    
+                        <?php echo "Tipo = " . $datosParte2[$i]["tipo"]; ?>
+                        </div>
+                        <div style="margin-top:1%;">                                    
+                        <?php echo "Longitud = " . $datosParte2[$i]["longitud"]; ?>
+                        </div>
+                    </td>
+                </tr>
+                <?php 
+                    endfor;                              
+                 if(count($configMultiUsuarioParte2["campo_adicional"]) > 0):
+                ?>
+                <tr>
+                    <td class="td-right">
+                        <label>Campos Adicionales</label>
+                    </td>
+                    <td>
+                        <?php                           
+                            foreach($configMultiUsuarioParte2["campo_adicional"] as $nombre => $valor):
+                            ?>
+                                <div style="margin-top:1%;">
+                                <?php echo $nombre . " = " . $valor; ?>
+                                </div>
+                            <?php 
+                            endforeach;                            
+                            ?>
+                    </td>
+                </tr>
+                <?php
+                endif;
+                ?>                
+                <tr>
+                    <td class='td-right' colspan="2">
+                        <a class="glyphicon glyphicon-edit" href="<?php echo URLBASE . $vista; ?>/configurar-multi-usuarios-parte-2">Editar</a>
+                    </td>                   
+                </tr>-->
+                <!--<tr>          
+                    <td class="td-right">
+                        <label>Cantidad de Usuarios</label>
+                    </td>
+                    <td>
+                        <?php
+                         echo $_SESSION["cantidad"];                                                          
+                        ?>
+                    </td>
+                </tr>
+                 <tr class="tr-center">
+                    <td colspan="2">
+                        <span class="mensaje-confirmacion">¿Está seguro de continuar los datos establecidos?                        
+                    </td> 
+                </tr>
+
+                <tr  class="submit"> 
+                    <td  colspan="2" align="center">
+                        <input type="button" class="btn btn-danger" value="Cancelar" onClick="history.back();">  
+
+                        <input type="submit" class="btn btn-danger" value="Confirmar" name="confirmar" id="confirmar">
+                    </td>
+                </tr>
+            </tbody>
+        </table> 
+    </fieldset>    
+</form>-->

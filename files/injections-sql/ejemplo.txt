@@ -1,0 +1,16 @@
+﻿Ejemplo de archivo de texto plano para inyección SQL personalisada:
+
+En el archivo se colocará las inyecciones de código SQL por sentencias que debe ir con la misma secuencia a los campos configurados previamente del formulario. 
+Ejemplo: Se ha configurado los siguientes parametros según el formulario seleccionado para una inyección, los campos del HTML se llaman "usuario" y "clave", por lo tanto se debe colocar las sentencias de códigos sql en el archivo de texto plano que se desea subir para las pruebas en el siguiente orden:
+
+sentencia_1_codigo_sql_malicioso_1
+sentencia_1_codigo_sql_malicioso_2
+
+sentencia_2_codigo_sql_malisioso_3
+sentencia_2_codigo_sql_malisioso_4
+
+Donde "sentencia_1_codigo_sql_malisioso_1" y "sentencia_1_codigo_sql_malisioso_2" serán la primera sentencia que se ejecute para el "usuario" y "clave" contenga.
+Y el "sentencia_2_codigo_sql_malisioso_3" y "sentencia_2_codigo_sql_malisioso_4" serán la próxima sentencia a ejecutar.
+De esta manera es que probarían las sentencias personalisadas de forma automática.
+
+Es importante señalar que cada sentencia debe ir separa por UN SALTO DE LÍNEA EN BLANCO que muestren como se observa en el ejemplo previo.

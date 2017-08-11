@@ -1,0 +1,148 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    
+}
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+    background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
+}
+.icono-menu {
+    width: 16px;
+    height: 16px;
+    margin-right:5px;
+}
+
+
+#imagen-papelera, #imagen-volver{
+	margin:auto;
+	margin-top:5px;
+	width:42px;
+	height:42px;
+}
+#imagen-papelera{
+	background-image:url(../img/trash.png);
+}
+#imagen-volver{
+	background-image:url(../img/back.png);
+}
+#icono-papelera-y-regresar div#nombre-icono{
+	text-align:center;
+	width:100%;
+	margin-top:1%;
+}
+#icono-papelera-y-regresar div#sub-icono{
+	float:right;
+	text-align:right;
+	margin-right:8%;
+	width:80px;
+	height:70px;
+}
+#icono-papelera-y-regresar div#sub-icono-papelera{
+	float:left;
+	text-align:right;
+	margin-left:8%;
+	width:80px;
+	height:70px;
+}
+#icono-papelera-y-regresar a{
+	text-decoration:none;
+	font-size:12px;
+}
+.notas {
+    margin: 0 auto;
+    padding:2px 2px;
+    width:50px;
+}
+
+    /* Estilo que muestra la capa flotante */
+
+    #flotante
+
+    {
+
+        position: absolute;
+
+        display:none;
+
+        font-family:Arial;
+
+        font-size:1em;
+
+        width:365px;
+
+        border:1px solid #f0f0f0;
+
+        background-color:#fff;
+
+        padding:5px;
+
+    }
+    
+    .text {font-weight:normal;}
+#recuperar-contrasenia {
+        margin:auto;
+        padding:5px 4px;
+        text-align: center;
+    }
+input#username{
+    padding-left:19px;
+    
+    background-image: url('../img/user.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+input#password{
+    padding-left:19px;
+
+    background-image:url('../img/key.png');
+    
+    background-position:left center;
+    background-repeat:no-repeat;
+}
+/* 
+**  Íconos de Ayuda
+**/
+.icono-ayuda {
+    float:right;
+    margin-top:6px;
+    margin-left:3px;
+}
+.icono-ayuda:hover {
+    cursor: help;
+}
+
+.img-danger, .img-success {   
+    position:relative; 
+    top:-1px;
+    padding-right:0.7%;
+}
+a.eliminar {    
+    font-size: 16pt;    
+}
+a.eliminar:hover {
+    color:red;
+    
+    text-decoration: none;
+}

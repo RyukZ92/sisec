@@ -1,0 +1,82 @@
+DETALLES DE LA PRUEBA DE ATAQUE DE FUERZA BRUTA: INICIO DE SESIÓN
+
+
+Fecha y Hora de Creación: 13/05/2016 06:44:15 PM
+Usuario: MIGUEL (Evaluador)
+
+URL Destino del Formulario: http://localhost/sistema/
+Mensaje de Exito: ¡Usuario o Clave Inválidos!
+
+INTENTOS: 
+
+1 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = Archivo", "CAMPO[ingresar] = Ingresar"
+
+2 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = por", "CAMPO[ingresar] = Ingresar"
+
+3 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = defecto", "CAMPO[ingresar] = Ingresar"
+
+4 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = b2312", "CAMPO[ingresar] = Ingresar"
+
+5 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = cdasd", "CAMPO[ingresar] = Ingresar"
+
+6 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 2192", "CAMPO[ingresar] = Ingresar"
+
+7 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 11rfdfas", "CAMPO[ingresar] = Ingresar"
+
+8 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = miguelA1", "CAMPO[ingresar] = Ingresar"
+
+9 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 21011911", "CAMPO[ingresar] = Ingresar"
+
+10 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = asda", "CAMPO[ingresar] = Ingresar"
+
+11 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 123", "CAMPO[ingresar] = Ingresar"
+
+12 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = asd2", "CAMPO[ingresar] = Ingresar"
+
+13 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 9984", "CAMPO[ingresar] = Ingresar"
+
+14 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 9985", "CAMPO[ingresar] = Ingresar"
+
+15 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 21011917", "CAMPO[ingresar] = Ingresar"
+
+16 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 9986", "CAMPO[ingresar] = Ingresar"
+
+17 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = ", "CAMPO[ingresar] = Ingresar"
+
+18 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 9987", "CAMPO[ingresar] = Ingresar"
+
+19 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 9988", "CAMPO[ingresar] = Ingresar"
+
+20 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 9989", "CAMPO[ingresar] = Ingresar"
+
+21 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 1238iu", "CAMPO[ingresar] = Ingresar"
+
+22 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 9990", "CAMPO[ingresar] = Ingresar"
+
+23 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 9991", "CAMPO[ingresar] = Ingresar"
+
+24 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 999tadas2", "CAMPO[ingresar] = Ingresar"
+
+25 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 9993", "CAMPO[ingresar] = Ingresar"
+
+26 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 9994", "CAMPO[ingresar] = Ingresar"
+
+27 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 9995", "CAMPO[ingresar] = Ingresar"
+
+28 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 9996", "CAMPO[ingresar] = Ingresar"
+
+29 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 9997", "CAMPO[ingresar] = Ingresar"
+
+30 => Fallido: "CAMPO[usuario] = elda", "CAMPO[clave] = 9998", "CAMPO[ingresar] = Ingresar"
+
+31 => Exitoso: "CAMPO[usuario] = elda", "CAMPO[clave] = dael1993", "CAMPO[ingresar] = Ingresar"
+
+
+
+TOTAL DE INTENTOS: 31
+INTENTOS EXITOSOS: 1 (31)
+INTENTOS FALLIDOS: 30
+
+Tiempo de Ejecución: 0.697 segundos
+
+RESULTADO: Se deben implementar restricciones o politicas de seguridad en cuanto a los ataques de fuerza bruta. Bloquear temporalmente más de 5 intentos (como máximo) de una misma Dirección IP, así como también incorporar códigos captchas para verificar que no sea un robot el que intenta acceder al software.

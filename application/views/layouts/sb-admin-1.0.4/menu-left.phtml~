@@ -1,0 +1,139 @@
+<?php 
+require dirname(__FILE__) . "/seguridad.php";
+    $estilos = "color:#555; cursor: not-allowed;";
+?>
+
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active">
+                        <a href="<?php echo URLBASE; ?>inicio"><i class="fa fa-fw fa-home"></i> Inicio</a>
+                    </li>
+                    <li>
+                        <a <?php echo $estiloConfig; ?>href="javascript:;" data-toggle="collapse" data-target="#configuracion">
+                            <i class="fa fa-fw fa-cogs"></i> Configuraciones <i class="fa fa-fw fa-caret-down"></i>
+                        </a>
+                        <?php if ($nivelDeUsuario == "Evaluador"): ?>
+                        <ul id="configuracion" class="collapse">
+                            <!--<li>
+                                <a href="<?php echo URLBASE; ?>"><i class="fa fa-fw fa-cog"></i> SISEC</a>
+                            </li>-->
+                            <li>
+                                <a href="<?php echo URLBASE; ?>configurar/evaluacion"><i class="fa fa-fw fa-cog"></i> Pruebas</a>
+                            </li>
+
+                        </ul>
+                        <?php endif; ?>
+                    </li>
+                    <li>
+                        <a <?php echo $estiloUsuario ?> href="javascript:;" data-toggle="collapse" data-target="#usuarios">
+                            <i class="fa fa-fw fa-users"></i> Usuarios <i class="fa fa-fw fa-caret-down"></i>
+                        </a>
+                        <?php if ($nivelDeUsuario == "Administrador"): ?>
+                        <ul id="usuarios" class="collapse">
+                            <li>
+                                <a href="<?php echo URLBASE; ?>usuario/nuevo"><i class="fa fa-fw fa-plus-circle"></i> Nuevo Usuario</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo URLBASE; ?>usuario/listado"><i class="fa fa-fw fa-search"></i> Ver Listado</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo URLBASE; ?>usuario/papelera"><i class="fa fa-fw fa-trash"></i> Papelera</a>
+                            </li>
+                        </ul>
+                        <?php endif; ?>
+                    </li>
+                    <li>
+                        <a <?php echo $estiloEvaluacion ?> href="javascript:;" data-toggle="collapse" data-target="#ciclo">
+                            <i class="fa fa-fw fa-circle-o-notch"></i> Ciclo de Evaluación<i class="fa fa-fw fa-caret-down"></i>
+                        </a>
+                        <?php if ($nivelDeUsuario == "Evaluador"): ?>
+                        <ul id="ciclo" class="collapse">
+                            <li>
+                                <a href="<?php echo URLBASE; ?>evaluacion/nuevo-ciclo"><i class="fa fa-fw fa-plus-circle"></i> Nuevo Ciclo</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo URLBASE; ?>evaluacion/listado"><i class="fa fa-fw fa-search"></i> Ver Listado</a>
+                            </li>
+
+                        </ul>
+                        <?php endif; ?>
+                    </li>
+                    <li>
+                        <a <?php echo $estiloSeguridad ?> href="javascript:;" data-toggle="collapse" data-target="#seguridad">
+                            <i class="fa fa-fw fa-shield"></i> Seguridad <i class="fa fa-fw fa-caret-down"></i>
+                        </a>
+                        <?php if ($nivelDeUsuario == "Evaluador"): ?>
+                        <ul id="seguridad" class="collapse">
+                            <li>
+                                <a href="<?php echo URLBASE; ?>seguridad/fuerza-bruta"><i class="fa fa-fw fa-circle-o"></i> Fuerza Bruta</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo URLBASE; ?>seguridad/inyeccion-sql"><i class="fa fa-fw fa-circle-o"></i> Inyección SQL</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo URLBASE; ?>seguridad/inyeccion-xss"><i class="fa fa-fw fa-circle-o"></i> Inyección XSS</a>
+                            </li>
+                        </ul>
+                        <?php endif; ?>
+                    </li>
+                    <li>
+                        <a <?php echo $estiloRendimiento ?> href="javascript:;" data-toggle="collapse" data-target="#rendimiento">
+                            <i class="fa fa-fw fa-bar-chart-o"></i> Rendimiento <i class="fa fa-fw fa-caret-down"></i>
+                        </a>
+                        <?php if ($nivelDeUsuario == "Evaluador"): ?>
+                        <ul id="rendimiento" class="collapse">
+                            <li>
+                                <a href="<?php echo URLBASE; ?>rendimiento/prueba-de-carga"><i class="fa fa-fw fa-circle-o"></i> Carga de Datos</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo URLBASE; ?>rendimiento/prueba-de-sesion"><i class="fa fa-fw fa-circle-o"></i> Carga de Sesiones</a>
+                            </li>
+                            <!--<li>
+                                <a href="<?php echo URLBASE; ?>"><i class="fa fa-fw fa-circle-o"></i> Prueba Estrés</a>
+                            </li>-->
+                        </ul>
+                        <?php endif; ?>
+                    </li>
+                    <li>
+                        <a <?php echo $estiloExtra ?> href="javascript:;" data-toggle="collapse" data-target="#adicionales">
+                            <i class="fa fa-fw fa-wrench"></i> Herramientas Extras <i class="fa fa-fw fa-caret-down"></i>
+                        </a>
+                        <?php if ($nivelDeUsuario == "Evaluador"): ?>
+                        <ul id="adicionales" class="collapse">
+                            <li>
+                                <a href="<?php echo URLBASE; ?>adicionales/cantidad-de-usuarios"><i class="fa fa-fw fa-file-text-o"></i> Diccionario de Usuarios</a>
+                            </li>
+                        </ul>
+                        <?php endif; ?>
+                    </li>
+                    <li>
+                        <a <?php echo $estiloResultado ?> href="javascript:;" data-toggle="collapse" data-target="#resultados">
+                            <i class="fa fa-fw fa-file-text"></i> Resultados <i class="fa fa-fw fa-caret-down"></i>
+                        </a>
+                        <?php if ($nivelDeUsuario == "Evaluador" and $nivelDeUsuario == "Administrador"): ?>
+                        <ul id="resultados" class="collapse">
+                            <li>
+                                <a href="<?php echo URLBASE; ?>resultado/seguridad"><i class="fa fa-fw fa-search"></i> Ver Listado</a>
+                            </li>
+                            <!--<li>
+                                <a href="<?php echo URLBASE; ?>resultado/rendimiento"><i class="fa fa-fw fa-bar-chart"></i> Rendimiento</a>
+                            </li>-->
+                            <li>
+                                <a href="<?php echo URLBASE; ?>resultado/listado-de-resultados-por-ciclos"><i class="fa fa-fw fa-file-pdf-o"></i> Informe de Calidad</a>
+                            </li>
+                        </ul>
+                        <?php endif; ?>
+                    </li>
+                    <li>
+                        <?php if ($nivelDeUsuario != "Evaluador"): 
+                            $url = URLBASE . 'historial/usuarios';
+                        else: $url = '#';
+                        endif;
+?>
+                        
+                        <a <?php echo $estiloHistorial ?> href="<?php echo $url; ?>"><i class="fa fa-fw fa-history "></i> Historial de Usuarios</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->

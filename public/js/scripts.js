@@ -1,0 +1,393 @@
+/* 
+ * @Descripción: Scrips generales en JS de SISEC
+ * @Autor: Miguel Salazar
+ * @Fecha: Dic, 2015 - Mar, 2016
+ * @Version: 2.0
+ */
+$(document).ready(function() {
+    $("#confirmar").click(function() { 
+//alert('ABC');// al pulsar (.click) el boton 1 (#b1) -->
+        $("#dialogo-espera").dialog({ // muestra la ventana  -->
+            fluid: true,
+
+            show: "scale", // animación de la ventana al aparecer -->
+            hide: "scale", // animación al cerrar la ventana -->
+            resizable: "false", // fija o redimensionable si ponemos este valor a "true" -->
+            position: "center",// posicion de la ventana en la pantalla (left, top, right...) -->
+            modal: "true" // si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
+        });
+            /*setTimeout(function(){
+                    $('#dialogo-espera').dialog('close');                
+            }, 2400);*/
+    });
+    /*
+     * Boostrap Mostrar Tooltip 
+     */
+    $('[data-toggle="tooltip"]').tooltip();
+    /*
+     * Boostrap: Mostrar dialogos de ayuda 
+     */
+    $('[data-toggle="popover"]').popover(); 
+    /*
+     * Redimencionar los alertas al tamaño de los formularios 
+     */
+    $("#alertas").css({"width": $("#formulario").width()})
+    $("#alertas-sesion").css({"width": $("#formulario").width()})
+    /*
+     * Validación de Formularios con JQuery Engine Master
+     */
+    
+    $('_descripcion').val('');
+     /**
+      * Agregar śimbolo de '-' (guión) al número de teléfono de forma dinámica
+      *//*
+     $("#telefono").keyup(function(){
+       
+         var tel = $(this).val();
+       
+         if(tel.length == 4) {
+             (this).val(tel + '-');
+         }            
+         
+     });*/
+             
+        /*$(document).ready(function() {
+            $('.sub-cuerpo').css({"height":$(".vista").height()+20});
+    });*/
+    /*
+     * Funcion para definir el tiempo de vista en las alertas
+     */
+    setTimeout(function() {
+        $("#alertas").fadeOut(2000);
+
+    },4000);
+    /*
+     * Activar campos de tiempo de medición para las pruebas de rendimiento
+     */
+    $('#personalizar').click(function() {
+        //alert(("#personalizar").value());
+        if($('input[type=checkbox]:checked').length == 0) {
+            
+            $('#optimo').prop("disabled", true);
+            $('#optimo').val("");
+            $('#intermedio').prop("disabled", true);
+            $('#intermedio').val("");
+            $('#minimo').prop("disabled", true);
+            $('#minimo').val("");
+        }
+        else {
+            $('#optimo').removeAttr('disabled');
+            $('#intermedio').removeAttr('disabled');
+            $('#minimo').removeAttr('disabled');
+        } 
+            
+    });
+    /**
+     * Desbloquear resultados exitososo de pruebas
+     */
+    $('#btn-bloqueo').click(function(){    
+        if ($(".oculto").css("display") == "none") {            
+            $('.oculto').css('display', 'table-row');
+            $(this).removeClass("fa fa-lock");
+            $(this).addClass("fa fa-unlock");
+            $(this).html(" Ocultar Sentencias con Éxito");
+        } else {
+            $('.oculto').css('display', 'none');
+            $(this).removeClass("fa fa-unlock");
+            $(this).addClass("fa fa-lock");
+            $(this).html(" Mostrar Sentencias con Éxito"); 
+        }
+    });
+    jQuery('.solo-numero-entero').keypress(function(tecla) {
+        if(tecla.charCode > 47 
+                && tecla.charCode < 58 
+                || tecla.charCode == 0
+                || tecla.charCode == 32) 
+                return true;
+            else 
+                return false;
+    });
+    jQuery('.numero-entero-y-punto').keypress(function(tecla) {
+        if(tecla.charCode > 47 
+                && tecla.charCode < 58 
+                || tecla.charCode == 0
+                || tecla.charCode == 32
+                || tecla.charCode == 46) 
+                return true;
+            else 
+                return false;
+    });
+    
+    $('.solo-albabeto-espaniol-con-espacio').keypress(function(tecla) {
+            if((tecla.charCode > 47
+                    && tecla.charCode < 58) 
+                    || (tecla.charCode > 64 
+                    && tecla.charCode < 123) 
+                    || tecla.charCode == 0 
+                    || tecla.charCode == 32) 
+                return true;
+            else 
+                return false;
+            });
+            
+    $('.alfanumerico-sin-espacio').keypress(function(tecla) {
+            if((tecla.charCode > 47 
+                    && tecla.charCode < 58) 
+                    || (tecla.charCode > 64 
+                    && tecla.charCode < 123) 
+                    || tecla.charCode == 0) 
+                return true;
+            else 
+                return false;
+            });
+    $('.solo-letras-con-espacio-y-acentos').keypress(function(e) {
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+       especiales = "8-37-39-46";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }			
+			
+    });
+    /*
+     * Formato de Teléfono de Contacto
+     */
+    $('#telefono').keypress(function(tecla) {
+            if($(this).val().length == 4 && tecla.charCode != 0)
+                $(this).val($(this).val()+"-");
+            else 
+                return true;
+            });
+
+    /*
+     * Agregar Campo 
+     */
+
+    var MaxInputs1  = 10; //Número Maximo de Campos
+    var contenedor1 = $("#contenedor1"); //ID del contenedor
+    var AddButton1  = $("#agregarCampoPrincipal"); //ID del Botón Agregar
+
+    //var x = número de campos existentes en el contenedor
+    var x = $("#contenedor1 div").length; // +1 si se va a empezar con un campo por defecto
+    var FieldCount1 = x-1; //para el seguimiento de los campos
+
+    $(AddButton1).click(function (e) {
+        if(x <= MaxInputs1) //max input box allowed
+        {
+            $('.sub-cuerpo').css({"height":$(".vista").height()+40});            
+            FieldCount1++;
+            //agregar campo
+            $(contenedor1).append('\
+                            <div style="margin-top:1%;">\n\
+                                <input class="campos-config" type="text" name="nombre_campo[]" id="campo_'+ FieldCount1 +'" placeholder="Nombre del Campo N° '+ FieldCount1 +'"/> \n\
+                                <a title="Eliminar" href="#" class="glyphicon glyphicon-remove" id="eliminar-campo"></a>\n\
+                            </div>');
+            x++; //text box increment
+        }
+        return false;
+    });
+
+    $("body").on("click",".eliminar", function(e){ //click en eliminar campo
+        
+        if( x > 1 ) {
+            $('.sub-cuerpo').css({"height":$(".vista").height()-40});
+            $(this).parent('div').remove(); //eliminar el campo
+            x--;
+        }
+        return false;
+    });    
+    /*
+     * Agregar Campo Adicional
+     */
+    var MaxInputs2  = 20; //Número Maximo de Campos
+    var contenedor2 = $("#contenedor2"); //ID del contenedor
+    var AddButton2  = $("#agregarCampoPrincipal2"); //ID del Botón Agregar
+
+    //var x = número de campos existentes en el contenedor
+    var x = $("#contenedor2 div").length; // +1 si se va a empezar con un campo por defecto
+    var FieldCount2 = x; //para el seguimiento de los campos
+
+    $(AddButton2).click(function (e) {
+        
+        if(x <= MaxInputs2) //max input box allowed
+        {
+            $('.sub-cuerpo').css({"height":$(".vista").height()+40});
+            FieldCount2++;
+            //agregar campo
+            out = "<div style='margin-top:1%;'>\n\
+                    <input type='hidden' name='total_campos[]'>\n\
+                    <input style='width:25%;' type='text' name='campo[]' id='campo_1' placeholder='Campo N° "+FieldCount2+"'/> \n\
+                        <select style='width:25%;' name='tipo[]'>\n\
+                            <option value='Números'>Números</option>\n\
+                            <option value='Letras'>Letras</option>\n\
+                            <option value='Letras/Números'>Letras/Números</option>\n\\n\
+                            <option value='Fecha'>Fecha</option>\n\\n\
+                            <option value='Hora'>Hora</option>\n\
+                            <option value='Cualquier Carácter'>Cualquier Carácter</option>\n\
+                        </select>";
+                    out += " <input style='width:25%;' type='number' name='longitud[]' min='1' max='300' value='1'>";
+                    
+                   
+                    out += " <!--select style='width:22.5%;' name='unico[]'>\n\
+                            <option value='S'>Sí</option>\n\
+                            <option value='N'>No</option>\n\
+                        </select>\n-->\
+                        <a title='Eliminar' href='#' class='glyphicon glyphicon-remove' id='eliminar-campo'></a>\n\
+                    </div>";
+            $(contenedor2).append(out);
+            x++; //text box increment
+        }
+        return false;
+    });
+
+    $("body").on("click",".eliminar", function(e){ //click en eliminar campo
+        ///if( x > 1 ) {
+            $('.sub-cuerpo').css({"height":$(".vista").height()});
+            $(this).parent('div').remove(); //eliminar el campo
+            //x--;
+        //}
+        return false;
+    });
+    
+    /*
+     * Agregar Campos Multiples
+     */
+    var MaxInputs  = 20; //Número Maximo de Campos
+    var contenedor = $("#contenedor"); //ID del contenedor
+    var AddButton  = $("#agregarCampo"); //ID del Botón Agregar
+
+    //var x = número de campos existentes en el contenedor
+    var x = $("#contenedor div").length; // +1 si se va a empezar con un campo por defecto
+    var FieldCount = x-1; //para el seguimiento de los campos
+
+    $(AddButton).click(function (e) {
+        
+        if(x <= MaxInputs) //max input box allowed
+        {
+            $('.sub-cuerpo').css({"height":$(".vista").height()+40});
+            FieldCount++;
+            //agregar campo
+            $(contenedor).append('\
+            <div style="margin-top:1%;">\n\
+                <input class="campos-config" type="text" name="nombre_campo_adicional[]" id="campo_adicional'+ FieldCount +'" placeholder="Nombre del Campo N° '+ FieldCount +'"/> \n\
+                <input class="campos-config" type="text" name="valor_campo_adicional[]" id="campo_adicional'+ FieldCount +'" placeholder="Valor del Campo N° '+ FieldCount +'"/> \n\
+                <a title="Eliminar" href="#" class="glyphicon glyphicon-remove" id="eliminar-campo"></a>\n\
+            </div>');
+            x++; //text box increment
+        }
+        return false;
+    });
+
+    $("body").on("click","#eliminar-campo", function(e){ //click en eliminar campo
+        if( x > 1 ) {
+            $('.sub-cuerpo').css({"height":$(".vista").height()});
+            $(this).parent('div').remove(); //eliminar el campo
+            /*x--;*/
+        }
+        return false;
+    });
+    
+    
+    
+   /**
+    * Script que permite seleccionar el módulo a configurar de le evaluación de
+    * manera dinámica
+    */
+$("#tipo_evaluacion").change(function () {
+           $("#tipo_evaluacion option:selected").each(function () {
+            var opc = $(this).val();
+            //alert("RARO");
+            if(opc == "basico" || opc == 0) {
+                $("#tipo_opcion").css("display", "none");
+            } else {
+                $("#tipo_opcion").css("display", "block");
+            }
+            $.ajax({                
+                url: '../application/views/configuracion/evaluacion/ajax/tiposDePruebas.php',
+                type: 'POST',
+                data: {opc:opc},
+                success: function(data) {
+                    $("#opcion").html(data);                    
+                }
+            });         
+        });
+   });
+   $("#continuar").click(function() {          
+        tipo = $("#tipo_evaluacion option:selected").val();
+        opcion = $("#opcion option:selected").val();
+        if (tipo == 0 || tipo.trim() == "" ) {
+            $("#tipo_evaluacion").focus();
+                return false;
+        } else if (opcion == 0) {
+            if (tipo == 0) {
+                $("#opcion").focus();
+                return false;
+            } else
+                return true;
+        } else {
+            return true;
+        }
+   });
+   
+   
+    
+});
+
+function openWindow(box) {
+    var box = $("#" + box);
+   
+    $(box).bounceBox();
+    $(box).bounceBoxToggle();
+}
+function closeWindow(box){
+    var box = $("#" + box);
+    $(box).bounceBoxHide();	
+}
+
+function soloNumeroEntero(e) {
+   key = e.keyCode || e.which;
+   tecla = String.fromCharCode(key).toLowerCase();
+   letras = "1234567890";
+   especiales = "8-37-39-46";
+
+   tecla_especial = false
+   for(var i in especiales){
+        if(key == especiales[i]){
+            tecla_especial = true;
+            break;
+        }
+    }
+
+    if(letras.indexOf(tecla)==-1 && !tecla_especial){
+        return false;
+    }			
+}
+function validarCampoBuscar(campo) {
+    if(document.getElementById(campo).value == 0) {
+        document.getElementById(campo).focus(); 
+        return false;
+    } 
+    else {
+        return true
+    };
+}
+function validarRecuperacionDeContrasenia() {
+    if(document.getElementById('opcion_recuperacion').value == 'email') {
+        document.getElementById('user').disabled = true;
+        $('#user_requerido').html('');
+    } 
+    else {
+        document.getElementById('user').disabled = false;
+        $('#user_requerido').html('Requerido');
+    }
+}

@@ -1,0 +1,104 @@
+<?php
+$nivelDeUsuario = $_SESSION["nivel_usuario"];
+if ($nivelDeUsuario != "Administrador")
+    $estiloUsuario = "style='color:gray; cursor:no-drop; disabled:disabled;'";
+
+if($nivelDeUsuario == "Administrador")
+    $estiloEvaluacion = "style='color:gray; cursor:no-drop; pointer-events:none;'";
+
+if($nivelDeUsuario == "Administrador")
+    $estiloEvaluacion = "style='color:gray; cursor:no-drop; disabled:disabled'";
+
+if($nivelDeUsuario == "Administrador")
+    $estiloSeguridad = "style='color:gray; cursor:no-drop;'";
+
+if($nivelDeUsuario == "Administrador")
+    $estiloRendimiento = "style='color:gray; cursor:no-drop;'";
+
+if($nivelDeUsuario == "Administrador")
+    $estiloPruebas = "style='color:gray; cursor:no-drop;'";
+
+if($nivelDeUsuario != "Administrador")
+    $estiloHistorial = "style='color:gray; cursor:no-drop;'";
+/*
+if($nivelDeUsuario != "Administrador")
+    $estiloConfiguracion = "style='color:gray; cursor:no-drop;'";*/
+?>
+<div id='cssmenu'>
+<ul>
+   <!--<li><a href='#'><span>Inicio</span></a></li>-->
+   <li class='active has-sub'><a disabled href='#' <?php echo $estiloUsuario; ?><span>Gestión de Usuarios</span></a>
+    <?php if ($nivelDeUsuario == "Administrador"): ?>
+    <ul>
+        <li class='has-sub'><a href='<?php echo URLBASE; ?>registrar-usuario'><img src="<?php echo URLBASE; ?>public/img/add.png" class="icono-menu"><span>Registrar</span></a></li>
+         <li class='has-sub'><a href='<?php echo URLBASE; ?>consultar-usuario'><img src="<?php echo URLBASE; ?>public/img/search.png" class="icono-menu"><span>Consultar</span></a></li>
+      </ul>
+    <?php endif; ?>
+   </li> 
+   
+   <li class='active has-sub'><a href='#' <?php echo $estiloEvaluacion; ?>><span>Gestión de Evaluación</span></a>
+    <?php if ($nivelDeUsuario == "Evaluador"): ?>
+    <ul>
+        <li class='has-sub'><a href='<?php echo URLBASE; ?>nueva-evaluacion'><img src="<?php echo URLBASE; ?>public/img/add.png" class="icono-menu"><span>Nueva Evaluación</span></a></li>
+        <li class='has-sub'><a href='<?php echo URLBASE; ?>consultar-evaluaciones'><img src="<?php echo URLBASE; ?>public/img/search.png" class="icono-menu"><span>Consultar</span></a></li>
+    </ul>
+     <?php endif; ?>   
+   </li>
+   
+    <li class='active has-sub'><a href='#' <?php echo $estiloSeguridad; ?>><span>Evaluación de Seguridad</span></a>
+    <?php if ($nivelDeUsuario == "Evaluador"): ?>
+      <ul>
+        <li class='has-sub'><a href='<?php echo URLBASE; ?>cargar-fuerza-bruta'><img src="<?php echo URLBASE; ?>public/img/brutal-force.png" class="icono-menu"><span>Fuerza Bruta</span></a></li>
+        <li class='has-sub'><a href='<?php echo URLBASE; ?>cargar-inyeccion-sql'><img src="<?php echo URLBASE; ?>public/img/injection-sql.png" class="icono-menu"><span>Inyección SQL</span></a></li>
+        <li class='has-sub'><a href='<?php echo URLBASE; ?>cargar-inyeccion-xss'><img src="<?php echo URLBASE; ?>public/img/injection-xss.png" class="icono-menu"><span>Inyección XSS</span></a>
+<ul>
+	<li><a href="#">Descargar Pruebas</a></li>
+	<li><a href="#">Cookies</a></li>
+</ul>
+</li>
+      </ul>
+    <?php endif; ?>   
+    </li>
+  
+   <li class='active has-sub'><a href='#' <?php echo $estiloRendimiento; ?>><span>Evaluación de Rendimiento</span></a>
+    <?php if ($nivelDeUsuario == "Evaluador"): ?> 
+    <ul>
+        <li class='has-sub'><a href='<?php echo URLBASE; ?>preparar-prueba-de-carga'><img src="<?php echo URLBASE; ?>public/img/data_upload.png" class="icono-menu"><span>Carga</span></a></li>
+        <li class='has-sub'><a href='<?php echo URLBASE; ?>preparar-prueba-de-estres'><img src="<?php echo URLBASE; ?>public/img/database.png" class="icono-menu"><span>Volumen</span></a></li>
+        <li class='has-sub'><a href='<?php echo URLBASE; ?>preparar-prueba-de-volumen'><!--<img src="<?php echo URLBASE; ?>public/img/search.png" class="icono-menu">--><span>Estrés</span></a></li>
+    </ul>
+     <?php endif; ?>
+   </li>   
+
+   <li class='active has-sub'><a href='#' <?php echo $estiloPruebas; ?>><span>Reportes de Pruebas</span></a>
+    <?php if ($nivelDeUsuario == "Evaluador"): ?> 
+    <ul>
+        <li class='has-sub'><a href='<?php echo URLBASE; ?>seleccionar-reporte-por-caso'><img src="<?php echo URLBASE; ?>public/img/stock_save-pdf.png" class="icono-menu"><span>Pruebas por Caso</span></a></li>
+        <li class='has-sub'><a href='<?php echo URLBASE; ?>seleccionar-reporte-final'><img src="<?php echo URLBASE; ?>public/img/pdf.png" class="icono-menu"><span>Reporte Final</span></a></li>
+        <li class='has-sub'><a href='<?php echo URLBASE; ?>seleccionar-informe-de-calidad'><img src="<?php echo URLBASE; ?>public/img/Adobe_PDF_file_icon_16x16.png" class="icono-menu"><span>Informe de Calidad</span></a></li>
+    </ul>
+     <?php endif; ?>
+   </li>   
+   
+   <li class='active has-sub'><a href='#' <?php echo $estiloHistorial; ?>><span>Historial de Usuarios</span></a>
+    <?php if ($nivelDeUsuario == "Administrador"): ?>   
+       <ul>      
+        <li class='has-sub'><a href='<?php echo URLBASE; ?>consultar-historial-de-usuario'><img src="<?php echo URLBASE; ?>public/img/search.png" class="icono-menu"><span>Consultar</span></a></li>
+      </ul>
+    <?php endif; ?>
+   </li>
+   <li class='active has-sub'><a href='#' <?php echo $estiloConfiguracion; ?>><span>Configuración</span></a>
+     
+       <ul>
+<?php if ($nivelDeUsuario == "Administrador"): ?>            
+        <li class='has-sub'><a href='<?php echo URLBASE; ?>este-sistema'><img src="<?php echo URLBASE; ?>public/img/gear.png" class="icono-menu"><span>Este Sistema</span></a></li>  
+<?php 
+       endif;
+if ($nivelDeUsuario == "Evaluador"): 
+?>         
+         <li class='has-sub'><a href='<?php echo URLBASE; ?>seleccionar-configuracion-del-sistema-en-evaluacion'><img src="<?php echo URLBASE; ?>public/img/gear.png" class="icono-menu"><span>Sistema en Evaluación</span></a></li>
+      </ul>
+    <?php endif; ?>
+   </li>   
+</ul>
+</div>

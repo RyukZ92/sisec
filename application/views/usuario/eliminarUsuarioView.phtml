@@ -1,0 +1,63 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista para confirmar la eliminación del usuario (solo se envía 
+ * a la papalera)
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Febrero, 2016
+ * @Version: 1
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * =============================================================================
+ * 
+ */ 
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+
+if ($notificacion) {
+    echo $notificacion;
+}
+
+?>
+
+<!--<div class="formulario" align="center">-->
+<form class="pure-form pure-form-aligned" method="POST">
+    <input type="hidden" name="pagina_referencia" value="<?php echo $paginaReferencial; ?>">
+    <input type="hidden" name="id" value="<?php echo $id; ?>">
+    <input type="hidden" name="usuario" value="<?php echo $_usuario[0]["nombre"]; ?>">    
+    <fieldset>
+        <table class="pure-table pure-table-bordered" id="formulario">  
+            <thead>
+                <tr>
+                    <th class="text-danger" colspan="2">Confirmar la Eliminación del Usuario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+          
+                    <td class="td-right">
+                        <label for="email">Usuario</label>
+                    </td>
+                    <td>
+                        <span><?php echo $_usuario[0]["nombre"]; ?></span>
+                    </td>
+                    
+                 </tr>            
+                <tr class="submit">
+                    <td colspan="2">
+                        <span class="text-danger">¿Está seguro que desea eliminar este usuario?<br></span>
+                    </td> 
+                </tr>
+
+                <tr class="submit">  
+
+                    <td  colspan="2">
+                        <input type="button" class="btn btn-danger" value="Cancelar" onClick="history.back();">  
+
+                        <input type="submit" class="btn btn-danger" value="Confirmar" name="confirmar">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset> 
+</form>

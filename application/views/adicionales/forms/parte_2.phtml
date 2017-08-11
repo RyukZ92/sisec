@@ -1,0 +1,127 @@
+<form class="pure-form pure-form-aligned" method="POST" enctype="multipart/form-data" id="formulario">
+    <fieldset>        
+        <table class="pure-table pure-table-bordered">
+
+            <thead>
+                <tr>
+                    <th colspan="2">Parametros para el Registro de Empleado Parte 2</th>
+                </tr>
+            </thead>
+                <tr>  
+                    <td class="td-right">
+                        <label for="url">Cantidad de Usuarios</label>
+                    </td>
+                    <td>
+                        <input type="text" maxlength="5" name="cantidad" value="<?php if(empty($_POST["cantidad"])) {echo $configMultiUsuarioParte2["cantidad"];} else {echo $_POST["cantidad"];} ?>" class="solo-numeros-enteros">
+                        <span class='campo-obligatorio'>*</span>
+                        <a href="#" title="<?php echo $popoverTituloTiempos; ?>" data-toggle="popover" data-placement="right" data-content="<?php echo $popoverContenidoTiempos; ?>"  class="glyphicon glyphicon-question-sign"></a>
+                    </td>
+                </tr>
+                <tr>  
+                    <td class="td-right">
+                        <label for="url">URL Destino</label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="http://localhost/sirah/" maxlength="150" name="url" value="<?php if(empty($_POST["url"])) {echo $configMultiUsuarioParte2["url"];} else {echo $_POST["url"];} ?>" class="solo-albabeto-espaniol-sin-espacio">
+                        <span class='campo-obligatorio'>*</span>
+                        <a href="#" title="<?php echo $popoverTituloTiempos; ?>" data-toggle="popover" data-placement="right" data-content="<?php echo $popoverContenidoTiempos; ?>"  class="glyphicon glyphicon-question-sign"></a>
+                    </td>
+                </tr>
+                <tr>     
+                    <td class="td-right">
+                        <label for="password">Mensaje de Éxito</label>
+                    </td>
+                    <td>
+                        <textarea placeholder="Registro Exitoso" maxlength="150" name="cadena_valida" ><?php if(empty($_POST["cadena_valida"])) {echo $configMultiUsuarioParte2["cadena_valida"];} else {echo $_POST["cadena_valida"];} ?></textarea>
+                        <span class='campo-obligatorio'>*</span>
+                        <a href="#" title="<?php echo $popoverTituloTiempos; ?>" data-toggle="popover" data-placement="right" data-content="<?php echo $popoverContenidoTiempos; ?>"  class="glyphicon glyphicon-question-sign"></a>            
+                    </td>                    
+                </tr>
+                <tr class="tr-center">         
+                    <td colspan="2">
+                        <a onClick="agregarCampoPrincipal();" id="agregarCampoPrincipal2" class="btn btn-info" href="#">Agregar Campo</a>
+                        <a href="#" title="<?php echo $popoverTituloTiempos; ?>" data-toggle="popover" data-placement="right" data-content="<?php echo $popoverContenidoTiempos; ?>"  class="glyphicon glyphicon-question-sign"></a>
+                    </td>
+                </tr>
+                    <tr class="tr-center">
+                        <td colspan="2">
+                            <div style="margin-left:-7%;">
+                                <label class="campo-config-carga">Nombre</label>
+                                <label class="campo-config-carga" style="border: 0px solid #000;">Tipo de Dato</label>
+                                <label class="campo-config-carga" style="border: 0px solid #000;">Longitud</label>
+                                
+                            </div>
+                            <div id="contenedor2">
+                    <?php                                
+                                for($i=0; $i<$configMultiUsuarioParte2["total_campos"]; $i++):
+                                    $campo = $configMultiUsuarioParte2["campos_$i"]["nombre"];
+                                    $tipo = $configMultiUsuarioParte2["campos_$i"]["tipo"];
+                                    $long = $configMultiUsuarioParte2["campos_$i"]["longitud"];                                    
+                    ?>
+                                <div>
+
+                                    <input type='hidden' name='total_campos[]'>                                 
+                                    <input class="campo-config-carga" value="<?php echo $campo; ?>" type="text" name="campo[]" id="campo_1" placeholder="Campo N° 1"/>
+                                    
+                                    <select class="campo-config-carga" name="tipo[]">                                        
+                                        <option value="Números" <?php if ("Números" == $tipo) echo "selected"; ?>>Números</option>
+                                        <option value="Letras" <?php if ("Letras" == $tipo) echo "selected"; ?>>Letras</option>
+                                        <option value="Letras/Números" <?php if ("Letras/Números" == $tipo) echo "selected"; ?>>Letras/Números</option>
+                                        <option value="Fecha" <?php if ("Fecha" == $tipo) echo "selected"; ?>>Fecha</option>
+                                        <option value="Hora" <?php if ("Hora" == $tipo) echo "selected"; ?>>Hora</option>
+                                        <option value="Cualquier Carácter" <?php if ("Cualquier Carácter" == $tipo) echo "selected"; ?>>Cualquier Carácter</option>
+                                    </select>
+                                    
+                                    <input class="campo-config-carga" type="number" min="1" max="300" name="longitud[]" value="<?php if (empty($long)) {echo 1;} else {echo $long;} ?>">
+                                    <a title="Eliminar" href="#" class="glyphicon glyphicon-remove" id="eliminar-campo"></a>
+                                    
+
+                                </div>
+                            <?php 
+                                endfor;                              
+                            ?>   
+                            </div>
+                        </td>
+                    </tr>               
+    
+                </tr>
+                <tr  class="tr-center">         
+                    <td colspan="2">
+                        <a id="agregarCampo" class="btn btn-info" href="#">Agregar Campo Adicional</a>
+                        <a href="#" title="<?php echo $popoverTituloTiempos; ?>" data-toggle="popover" data-placement="right" data-content="<?php echo $popoverContenidoTiempos; ?>"  class="glyphicon glyphicon-question-sign"></a>
+                    </td>
+                </tr>               
+                    
+                
+                <tr class="tr-center">
+                    <td colspan="2">
+
+                        <div id="contenedor">
+                            <div class="added">
+                        <?php
+                            if(count($configMultiUsuarioParte2["campo_adicional"]) > 0):
+                                foreach($configMultiUsuarioParte2["campo_adicional"] as $nombre => $valor):
+                                ?>
+                                    <div style="margin-top:1%;">
+                                    <input class="campos-config" type="text" value="<?php echo $nombre; ?>" name="nombre_campo_adicional[]" id="campo_1" placeholder="Nombre del Campo N° '+ FieldCount +'" /> 
+                                    <input class="campos-config" type="text" value="<?php echo $valor; ?>" name="valor_campo_adicional[]" id="campo_2" placeholder="Valor del Campo N° '+ FieldCount +'"/>
+                                    <a title="Eliminar" href="#" class="glyphicon glyphicon-remove" id="eliminar-campo"></a>
+                                    </div>
+                                <?php 
+                                endforeach;
+                            endif;
+                                ?>
+                            </div>
+                        </div>
+                    </td>
+                </tr>          
+                <tr class="tr-center">
+                    <td  colspan="2" align="center">           
+                        <input type="button" class="btn btn-primary" value="Cancelar" onClick="window.location='<?php echo URLBASE; ?>inicio'">
+                        <input type="submit" class="btn btn-primary" value="Continuar" name="continuar">                    
+                    </td>                   
+                </tr>
+            </tbody>  
+        </table>
+    </fieldset>
+</form>

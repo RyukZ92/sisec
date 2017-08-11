@@ -1,0 +1,65 @@
+<?php
+/**
+ * =================================================
+ * @Descripcion: Vista que permite mostrar los resultados
+ * de la prueba de inyeccion xss
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Febrero, 2016
+ * @Version: 1
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguelangel.bux@gmail.com
+ * ==================================================
+ * 
+ */ 
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+?>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">Resumen de Resultados</div>
+        <table class="table">
+            <tr>
+                <th class="active">Total de Intentos</th>
+                <th class="active">Intentos Exitosos</th>                
+                <th class="active">Intentos Fallidos</th>                
+            </tr>
+            <?php 
+                echo $_SESSION["resultados_de_prueba"];
+            ?>         
+        </table>
+</div>
+
+
+    <div class="col-lg-12 center">
+            <table class="table table-bordered">
+                <tr>
+                    <td>
+                        <a title="Enlace para descarga los resultados de la prueba" href="<?php echo $_SESSION["ruta_de_archivo"]; ?>" download="<?php echo "Resultados de la Prueba de Inyección XSS"; ?>">
+                            Resultados de la prueba
+                            <span href="#" class="glyphicon glyphicon-save"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <a title="Archivo con las subtracciones de sesiones" 
+                           href="<?php echo URLBASE ?>cookies/xss/cookie.log"
+                           download="<?php echo "Cookies Substraidas"; ?>">
+                            Cookies Subtraidas
+                            <span href="#" class="fa fa-list-alt"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <a title="Redirecciona al sistema en evaluación" target="_blanck" href="<?php echo $configSistemaEnEvaluacion["url"]; ?>">
+                            Ir al sistema en evaluación
+                            <span href="#" class="glyphicon glyphicon-globe"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <a title="Salir de esta prueba" href="<?php echo URLBASE . "inicio"; ?>">Salir de la prueba
+                            <span href="#" class="glyphicon glyphicon-remove-circle"></span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+    </div>

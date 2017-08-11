@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+php_value display_errors "On"
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^([a-z-A-Z0-9]+)?$ index.php?vista=$1 [L]
+
+RewriteRule ^([a-z-A-Z]+)/([a-z-A-Z-0-9]+)?$ index.php?vista=$1&opcion=$2 [L]
+RewriteRule ^([a-z-A-Z]+)/([a-z-A-Z]+)/([0-9]+)?$ index.php?vista=$1&opcion=$2&id=$3 [L]
+RewriteRule ^([a-z-A-Z]+)/([a-z-A-Z]+)/pagina/([0-9]+)?$ index.php?vista=$1&opcion=$2&pagina=$3 [L]
+RewriteRule ^([a-z-A-Z]+)/([a-z-A-Z]+)/([0-9]+)/([0-9]+)?$ index.php?vista=$1&opcion=$2&id=$3&pagina=$4 [L]
+
+</IfModule>

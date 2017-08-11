@@ -1,0 +1,107 @@
+#cssmenu-top,
+#cssmenu-top ul,
+#cssmenu-top ul li,
+#cssmenu-top ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  font-family: Helvetica, sans-serif;
+}
+#cssmenu-top {
+  width: auto;
+  height: 59px;
+  padding-bottom: 4px;
+}
+#cssmenu-top.align-right {
+  float: right;
+}
+#cssmenu-top.align-right ul li {
+  float: right;
+  margin-right: 0;
+  margin-left: 4px;
+}
+#cssmenu-top.align-right ul li:first-child,
+#cssmenu-top.align-right ul li:first-child > a {
+  border-bottom-right-radius: 3px;
+}
+#cssmenu-top #bg-one,
+#cssmenu-top #bg-two,
+#cssmenu-top #bg-three,
+#cssmenu-top #bg-four {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /*border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;*/
+}
+#cssmenu-top #bg-one {
+  height: 10px;
+  background: #0f71ba;
+}
+#cssmenu-top #bg-two {
+  height: 59px;
+  z-index: 2;
+  background: url('../img/bg.png');
+}
+#cssmenu-top #bg-three {
+  bottom: 4px;
+  height: 55px;
+  z-index: 3;
+  background: #222222;
+  background: -moz-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #222222));
+  background: -webkit-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -o-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -ms-linear-gradient(top, #555555 0%, #222222 100%);
+  background: linear-gradient(to bottom, #555555 0%, #222222 100%);
+}
+#cssmenu-top #bg-four {
+  bottom: 4px;
+  height: 55px;
+  z-index: 4;
+  background: url('../img/bg.png');
+}
+#cssmenu-top ul {
+  height: 59px;
+}
+#cssmenu-top ul li {
+  float: left;
+  margin-right: 4px;
+  z-index: 5;
+}
+#cssmenu-top ul li a {
+  padding: 24px 30px 14px 30px;
+  margin-bottom: 4px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #eeeeee;
+  font-size: 100%;
+  text-decoration: none;
+}
+#cssmenu-top ul li:first-child,
+#cssmenu-top ul li:first-child > a {
+  border-bottom-left-radius: 3px;
+}
+#cssmenu-top ul li:hover,
+#cssmenu-top ul li.active {
+  background: #0f71ba;
+  background: -moz-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3fa4f0), color-stop(100%, #0f71ba));
+  background: -webkit-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -o-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -ms-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: linear-gradient(to bottom, #3fa4f0 0%, #0f71ba 100%);
+}
+#cssmenu-top ul li a:hover,
+#cssmenu-top ul li.active > a {
+  background: url('../img/bg.png');
+  color: #ffffff;
+}
+#cssmenu-top .active {
+	width:20%; 
+	text-align: center;
+}

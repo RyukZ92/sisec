@@ -1,0 +1,132 @@
+<div id='box-archivo-sql' class='box'>
+    <img class='icono-cerrar-dialogo'onClick="return closeWindow('box-archivo-sql');" src='<?php echo URLBASE; ?>public/img/close.png' title='Cerrar'>
+    <p><b>Códigos SQL</b>Se ajunta un archivo de texto plano (.txt o  .log) que contenga las Sentencias de Código SQL para ser ejecutadas en los campos que han sido configurados previantes.
+    <br>
+    <a href="#" data-modal-id="popup1">Más detalles aquí</a>
+    </p>
+</div>
+<style>
+
+.modal-box {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  width: 50%;
+  background: white;
+  border-bottom: 1px solid #aaa;
+  border-radius: 4px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-clip: padding-box;
+}
+@media (min-width: 32em) {
+
+.modal-box { width: 40%; }
+}
+
+.modal-box header,
+.modal-box .modal-header {
+  padding: 1.25em 1.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-box header h3,
+.modal-box header h4,
+.modal-box .modal-header h3,
+.modal-box .modal-header h4 { margin: 0; }
+
+.modal-box .modal-body { padding: 2em 1.5em; }
+.modal-body {height: 500px;}
+.modal-box footer,
+.modal-box .modal-footer {
+  padding: 1em;
+  border-top: 1px solid #ddd;
+  background: rgba(0, 0, 0, 0.02);
+  text-align: right;
+}
+
+.modal-overlay {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+a.close {
+  line-height: 1;
+  font-size: 1.5em;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  text-decoration: none;
+  color: #bbb;
+}
+
+a.close:hover {
+  color: #222;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  transition: color 1s ease;
+}
+</style>
+
+
+<div id="popup1" class="modal-box">
+  <header> <a href="#" class="js-modal-close close">×</a>
+    <h4><b>Inyección SQL:</b> <br>Formato de Archivo de Texto Plano Personalizado</h4>
+  </header>
+  <div class="modal-body">
+      <p>
+          En el archivo se colocará las inyecciones de código SQL en secuencia a los campos configurados previamente del formulario que se intenta conseguir fallos de seguridad. Cada sencuencia debe ir separada por un salto de línea en blanco.
+          <BR>Ejemplo: Se ha configurado los siguientes parámetros para una inyección, estos son establecidos con los nombres de "usuario" y "clave", por lo tanto se debe colocar los códigos sql en el siguiente orden:<br>
+          <br>
+          <img src="application/views/inyeccionSql/ayuda/ejemplo/ejemplo.png">
+          <br>
+          <br>
+          <a href="application/views/inyeccionSql/ayuda/ejemplo/ejemplo.txt" download="Inyección SQL, Plantilla de Ejemplo">
+              Plantilla de Ejemplo 
+            <img src="public/img/down.png">
+          </a>
+      </p>
+  </div>
+  <footer> <a href="#" class="btn btn-small js-modal-close">Cerrar</a> </footer>
+</div>
+<!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
+<script>
+$(function(){
+
+var appendthis =  ("<div class='modal-overlay js-modal-close'></div>");
+
+	$('a[data-modal-id]').click(function(e) {
+		e.preventDefault();
+    $("body").append(appendthis);
+    $(".modal-overlay").fadeTo(500, 0.7);
+    //$(".js-modalbox").fadeIn(500);
+		var modalBox = $(this).attr('data-modal-id');
+		$('#'+modalBox).fadeIn($(this).data());
+	});  
+  
+  
+$(".js-modal-close, .modal-overlay").click(function() {
+    $(".modal-box, .modal-overlay").fadeOut(500, function() {
+        $(".modal-overlay").remove();
+    });
+ 
+});
+ 
+$(window).resize(function() {
+    $(".modal-box").css({
+        top: ($(window).height() - $(".modal-box").outerHeight()) / 2,
+        left: ($(window).width() - $(".modal-box").outerWidth()) / 2
+    });
+});
+ 
+$(window).resize();
+ 
+});
+</script>

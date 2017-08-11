@@ -1,0 +1,146 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09/06/2015, 06:54:02 PM
+    Author     : Miguel Salazar
+*/
+* {
+    margin:0;
+    padding:0;
+}
+html {
+    height: 100%;
+}
+#body {
+    background-image:URL(../../../../../public/img/bg.gif);    
+    height: 100%; 
+}
+#cabecera { 
+    width: 100%;
+    height: auto;
+}
+
+.cuerpo {    
+    margin:auto;
+    width: 80%;
+    min-width: 480px;
+    max-width: 1280px;    
+    height:auto;    
+    border-radius: 0px;
+    box-shadow:0 0px 01px rgba(0,0,0, .7) inset,0 0px 01px rgba(0,0,0, .7);
+    background: #f7f7f7;
+    background: linear-gradient(#fff 0%, #fff 100%);
+    border: 0px solid #000; 
+    padding: 0 0 2% 0;
+}
+.cuerpo:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+#vista {
+    float:right;
+    width: 80%;
+    height: auto;
+    border: 0px solid #000;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    
+}
+#sub-vista {
+    margin:auto;
+    width: 90%;
+    
+}
+
+#vista-sesion {
+    margin:auto;
+    text-align: center;
+    border: 0px solid #000;    
+    height:100%;
+    
+}
+.tema-sistema {    
+    margin:auto;
+    width: 100%;
+    height: 100%;
+    
+    font-size: 110%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    font-weight: bold;
+    text-align: left;
+    padding-left:0.5%;
+    margin-bottom: 4%;
+    box-shadow: 0 0px 0px #777;
+    border-bottom-style: solid;
+    border-bottom-color: #999;
+    border-bottom-width: 0.5px;
+}
+.tema-sistema span {
+    font-weight: normal;
+    font-size: 90%;
+}
+.sub-cuerpo {
+    clear: both;
+    margin:auto;   
+    width:100%;   
+    display: block;
+    border: 0px solid #000;
+    padding-bottom: 1.5%;
+}
+
+#pie-de-pagina {
+    
+    bottom: 0;
+    margin: auto;
+     width: 80%;
+     min-width: 480px;
+     
+    height: 60px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    color: #f9f9f9;
+    text-align: center;
+    box-shadow:0 0px 00px rgba(0,0,0, .7) inset,0 0px 01px rgba(0,0,0, .7);
+    text-align: center; 
+    bottom: 0px;   
+    padding-top: 1.5%;
+    background: #0f71ba;   
+    background: -moz-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3fa4f0), color-stop(100%, #0f71ba));
+    background: -webkit-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+    background: -o-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+    background: -ms-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+    background: linear-gradient(to bottom, #3fa4f0 0%, #0f71ba 100%);
+}
+#pie-de-pagina div {
+    margin:auto;    
+}
+
+input[type='checkbox'], input[type='radio'] {
+    position:relative;
+    top:-3px;
+}
+tbody tr:hover {
+    background: #f7f7f7;
+    color: #000;
+}
+#titulo-sistema {
+    background: #f0f0f0;
+    margin:auto;
+    width:100%;
+    height: 5px;    
+}
+#left {
+width:20%;
+float:left;
+}
+#busqueda {
+    margin:auto;
+    width:60%;
+}

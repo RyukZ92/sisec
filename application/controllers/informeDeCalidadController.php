@@ -1,0 +1,277 @@
+<?php
+/**
+ * HTML2PDF Librairy - example
+ *
+ * HTML => PDF convertor
+ * distributed under the LGPL License
+ *
+ * @author      Laurent MINGUET <webmaster@html2pdf.fr>
+ *
+ * isset($_GET['vuehtml']) is not mandatory
+ * it allow to display the result in the HTML format
+ *
+ * =============================================================================
+ * @Descripcion: Controlador procesar el informe de calidad en formato pdf
+ * @Author: Miguel Salazar
+ * @Fecha: Abril, 2016
+ * @Version: 1.0
+ * @Licencia: BSD
+ * @E-Mail: miguel__salazar@hotmail.com
+ * =============================================================================
+ * 
+ */
+
+require_once "application/models/crud/CrudModel.php";
+require_once "librarys/Helper/Helper.php";
+$sistemaEvaluado = parse_ini_file("config/config.basica-del-sistema-en-evaluacion.ini", true);
+
+$nombreDelProducto = $sistemaEvaluado["nombre"];
+$versionDelProducto = $sistemaEvaluado["version"];
+
+
+$objCrud = new Crud();
+$tablas = "ciclo_evaluacion ce JOIN usuario u ON u.id = id_usuario";
+$datos = array("nombre_producto","version_producto", "url_producto",
+		"u.nombre", "nombre_completo", "descripcion",
+               "ce.fecha_creacion", "ce.hora_creacion",
+               "ce.fecha_cierre", "ce.hora_cierre"
+         );
+$_ciclo = $objCrud->consultar($tablas ,$datos ,"ce.id = '" . $_GET['id'] . "'");
+$nombreDelProducto = $_ciclo[0]["nombre_producto"];
+$versionDelProducto = $_ciclo[0]["version_producto"];
+$urlDelProducto = $_ciclo[0]["version_producto"];
+
+$usuario = $_ciclo[0]["nombre"];
+$nombreCompleto = $_ciclo[0]["nombre_completo"];
+$descripcion = $_ciclo[0]["descripcion"];
+$fechaYHoraDeCreacion = Helper::convertirFechaDdMmAaaa($_ciclo[0]["fecha_creacion"]) 
+                      . " " . Helper::convertirHoraA12H($_ciclo[0]["hora_creacion"]);
+$fechaYHoraDeCierre = Helper::convertirFechaDdMmAaaa($_ciclo[0]["fecha_cierre"]) 
+                      . " " . Helper::convertirHoraA12H($_ciclo[0]["hora_cierre"]);
+
+/**
+ * Obteniendo el resultado de la prueba de fuerza bruta
+ */
+$tablas = "prueba p JOIN resultado_seguridad rs ON id_prueba = p.id";
+$datos = array("count(*) as exitosos", "intentos_totales as intentos");
+$condicion = "tipo = 'Fuerza Bruta'"
+            //. "AND intentos_exitosos > 0 "
+            . "AND id_ciclo_evaluacion = '" . $_GET['id'] . "'";
+$_fuerzaBruta = $objCrud->consultar($tablas, $datos, $condicion);
+/**
+ * Obteniendo el resultado de la prueba de inyección sql
+ */
+$tablas = "prueba p JOIN resultado_seguridad rs ON id_prueba = p.id";
+$datos = array("count(*) as exitosos", "intentos_totales as intentos");
+$condicion = "tipo = 'Inyección SQL'"
+            //. "AND intentos_exitosos > 0 "
+            . "AND id_ciclo_evaluacion = '" . $_GET['id'] . "'";
+$_inyeccionSQl = $objCrud->consultar($tablas, $datos, $condicion);
+/**
+ * Obteniendo el resultado de la prueba de inyección xss
+ */
+$tablas = "prueba p JOIN resultado_seguridad rs ON id_prueba = p.id";
+$datos = array("count(*) as exitosos", "intentos_totales as intentos");
+$condicion = "tipo = 'Inyección XSS'"
+            //. "AND intentos_exitosos > 0 "
+            . "AND id_ciclo_evaluacion = '" . $_GET['id'] . "'";
+$_inyeccionXSS = $objCrud->consultar($tablas, $datos, $condicion);
+
+
+
+if($_fuerzaBruta[0]["intentos"] != NULL) {
+    $fuerza = 0;
+    if ($_fuerzaBruta[0]["exitosos"] > 0) {
+        $fuerzaBruta = 0;
+        $resultFuerzaBruta = "Vulnerable";
+        $recomendaciones[] = "Se deben implementar restricciones o politicas de "
+                . "seguridad en cuanto a los ataques de fuerza bruta. "
+                . "Bloquear temporalmente más de 5 intentos (como máximo) de una misma Dirección IP, "
+                . "así como también incorporar códigos captchas para verificar que no sea un robot el que intenta acceder al software.";
+    } else {
+        $fuerzaBruta = 25;
+        $resultFuerzaBruta = "No se hayaron vulnerabilidades";
+        $recomendaciones[] = "En la prueba de fuerza bruta no se hallaron conindencia pero se le aconseja incorporar protección contra robots, "
+                   . "es decir, inluir código de verificación de humanos (captchas) para eviar simultaneas peticiones en el inicio de sesión";
+    }
+} else {
+    $fuerza = 1;
+    $resultFuerzaBruta = "<span class='texto-rojo'>Prueba no realizada</span>";
+}
+
+if($_inyeccionSQl[0]["intentos"] != NULL) {
+    $sql = 0;
+    if ($_inyeccionSQl[0]["exitosos"] > 0) {
+        $inyeccionSQL = 0;
+        $resultInyeccionSQL= "Vulnerable";
+        $recomendacionesSQL = 1;
+    } else {
+        $inyeccionSQL = 25;
+        $resultInyeccionSQL = "No se hayaron vulnerabilidades";
+    }
+} else {
+    $sql = 1;
+    $resultInyeccionSQL = "<span class='texto-rojo'>Prueba no realizada</span>";
+}
+
+if($_inyeccionXSS[0]["intentos"] != NULL) {
+     $xss = 0;
+    if ($_inyeccionXSS[0]["exitosos"] > 0) {
+        $inyeccionXSS = 0;
+        $resultInyeccionXSS = "Vulnerable";
+        $recomendacionesXSS = 1;
+    } else {
+        $inyeccionXSS = 50;
+        $resultInyeccionXSS = "No se hayaron vulnerabilidades";
+    }
+} else {
+    $xss = 1;
+    $resultInyeccionXSS = "<span class='texto-rojo'>Prueba no realizada</span>";
+}
+$porcentajeSeguridad = $fuerzaBruta + $inyeccionSQL + $inyeccionXSS;
+
+if($recomendacionesSQL or $recomendacionesXSS) {
+    $recomendaciones[] = "Incorporar filtraciones en las entradas de datos para evitar las inyecciones SQL o XSS, "
+            . "por ejemplo: el uso de la librería <a target='_blank' href='http://www.phpclasses.org/package/2189-PHP-Filter-out-unwanted-PHP-Javascript-HTML-tags-.html'>"
+            . "InputFilter</a> brinda métodos que permiten escapar los campos de códigos maliciosos que pueda dañar a la aplicación. "
+            . "Si no, hacerlo de forma manual y utilizar funciones especiales del PHP, como lo son: "
+            . "<ul>"
+            . "<li><b>htmlspecialchars():</b> Escapa caracteres en código HTML.</li>"
+            . "<li><b>addslashes() o stripslashes():</b> Escapa las comillas simples y dobles.</li>"
+            . "<li><b>strip_tags():</b>  Elimina las etiquetas HTML y PHP de un string.</li>"
+            . "<li><b>trim():</b> Elimina los espacios en blanco del inicio y el final de un string.</li>"
+            . "</ul>";
+} else {
+    $recomendaciones[] = "Según la evaluación de seguridad, su sistema evita los ataques de inyección sql y xss, "
+            . "de igual forma se le recomienda mantener el sistema actualizado con las nuevas tencologías en relación "
+            . "a la seguridad web para continuar con un software que resguarde los datos de forma integra y segura.";
+}
+if ($_fuerzaBruta[0]["exitosos"] > 5) {
+    $observSeguridad .= "<li><p>"
+                      . "El producto software $nombreDelProducto es $porcentajeSeguridad% seguro de acuerdo a las pruebas realizadas."
+                      . "</p></li>";
+    $observSeguridad .= "<li><p>"
+                     . " Permite realizar "
+                     . " simulanteas peticiones (más de cinco \"5\") de forma deliverada, es decir, "
+                     . "no toma medidads para bloquear definitivamente o temporalmente los ataques continuos al software."
+                     . "</p></li>";
+} else {
+    if ($fuerza and $sql and $xss) {
+        $observSeguridad = "<li><p>No se realizó ninguna prueba de seguridad</p></li>";
+    } else {
+        $observSeguridad = "<li><p>"
+                      . "El producto software $nombreDelProducto es $porcentajeSeguridad% seguro de acuerdo a las pruebas realizadas."
+                      . "</p></li>";
+    }
+}
+
+
+/**
+ * Obteniendo el resultado de la prueba carga de atos
+ */
+$tablas = "prueba p JOIN resultado_carga_de_datos r ON id_prueba = p.id";
+$datos = array("count(*) as exitosos", "cargas_totales", "tiempo_de_la_prueba",
+               "tiempo_optimo", "tiempo_intermedio", "tiempo_minimo");
+$condicion = "tipo = 'Carga de Datos'"
+           . "AND id_ciclo_evaluacion = '" . $_GET['id'] . "'";
+$_cargaDeDatos = $objCrud->consultar($tablas, $datos, $condicion);
+/**
+ * Obteniendo el resultado de la prueba carga de atos
+ */
+$tablas = "prueba p JOIN resultado_carga_de_sesiones r ON id_prueba = p.id";
+$datos = array("count(*) as exitosos", "sesiones_totales", "tiempo_de_ejecucion",
+               "sesiones_exitosas", "sesiones_fallidas");
+$condicion = "tipo = 'Carga de Sesiones'"
+           . "AND id_ciclo_evaluacion = '" . $_GET['id'] . "'";
+$_cargaDeSesiones = $objCrud->consultar($tablas, $datos, $condicion);
+
+if ($_cargaDeDatos[0]["cargas_totales"] != NULL) {
+    if ($_cargaDeDatos[0]["tiempo_de_ejecucion"] <= ($_cargaDeDatos[0]["tiempo_optimo"] * $_cargaDeDatos[0]["cargas_totales"])) {
+        $resultCargaDeDatos = "Óptimo";
+        $observCarga[] = "El software es muy <strong>potente</strong> en relación a los tiempos de medición utilizados para la prueba.";
+        $recomendaciones[] = "EL software resultó muy eficiente para la subida de datos, de igual forma se recomienda tener actualizado "
+                . "los planes del servicio de alojamiento, es decir, tener un servicio de honsting potente en relación a la novedades tecnológicas "
+                . "para que el software pueda brindar "
+                . "resultados como lo hace hasta el momento.";
+    } else if ($_cargaDeDatos[0]["tiempo_de_ejecucion"] > ($_cargaDeDatos[0]["tiempo_optimo"] * $_cargaDeDatos[0]["cargas_totales"]) 
+               && $_tiempoDeEjecucion <= ($this->$_cargaDeDatos[0]["tiempo_intermedio"] * $_cargaDeDatos[0]["cargas_totales"])
+              ) {
+        $resultCargaDeDatos = "Intermedio";
+        $observCarga[] = "El software es <strong>muy bueno</strong> en relación a los tiempos de medición utilizados para la prueba.";
+        $recomendaciones[] = "A pesar de que el software tiene buena carga de datos es recomendable que se verifique si "
+                . "el hosting de alojamiento del mismo es de buen rendimiento en trasnmisición de datos, si no es así "
+                . "cambiarlo o aumentar el plan de sevicio a un con mayor capacidad, de tal menera de potenciar la subida de datos del sistema "
+                . "y manteniendo un desempeño favorable en su uso.";
+     } else if ($_tiempoDeEjecucion > ($_cargaDeDatos[0]["tiempo_intermedio"] * $_cargaDeDatos[0]["cargas_totales"])
+                && $_tiempoDeEjecucion <= ($_cargaDeDatos[0]["tiempo_minimo"] * $_cargaDeDatos[0]["cargas_totales"])) {
+        $resultCargaDeDatos = "Mínimo";
+        $observCarga[] = "El software es <strong>aceptable</strong> relación a los tiempos de medición utilizados para la prueba.";
+        $recomendaciones[] = "La carga de datos del software es aceptable, "
+                . "pero se recomienda que revise y actualice la condificación del mismo, "
+                . "ejemplo: utilizar programación orientada a objetos y conexiones de base de datos PDO.<br>"
+                . "También asegurese de poseer un internet rápido cuando realice esta prueba y que el hosting "
+                . "donde se aloja el sistema sea de una buena banda de transmisión de datos.";
+     } else { 
+        $resultCargaDeDatos = "Bajo";
+        $observCarga[] = "El software es <strong>pésimo</strong> en relación a los tiempos de medición utilizados para la prueba.";
+                $recomendaciones[] = "Para la prueba de carga de datos y de acuerdo a los criterios evaluados "
+                        . "el software a presentado deficiente desempeño para la realización del mismo. "
+                        . "Por este motivo se debe asegurar tener una conexión a internet rápida para realizar la prueba, "
+                        . "pero si se cumple con esta premisa entonces "
+                        . "debe cambiar el proveedor de hosting o mejorar su paquete de servios para optimizar la banda de trasmición de datos.<br> "
+                        . "Si en tal caso considera que posee estos intems correctamente, entonces debe revisar la progrmación y codificación "
+                        . "utilizada en el software.";
+     }
+} else {
+    $cargaDeDatos = 1;
+    $resultCargaDeDatos = "<span class='texto-rojo'>Prueba no realizada</span>";
+}
+if ($_cargaDeSesiones[0]["sesiones_totales"] != NULL) {
+    if ($_cargaDeSesiones[0]["sesiones_exitosas"] == $_cargaDeSesiones[0]["sesiones_totales"]) {
+        $resultCargaDeSesiones = "Prueba realiza sin problemas para los inicios de sesiones simultaneas";
+        $observCarga[] = "El software no tiene inconveniente para realizar inicios de sesiones.";
+    } else {
+        if ($_cargaDeSesiones[0]["sesiones_fallidas"] > 1) {
+            $errorSesion = "Se encontraron ".$_cargaDeSesiones[0]["sesiones_fallidas"] . " intentos de inicios de sesiones con problemas";
+        } else {
+            $errorSesion = "Se encontró ". $_cargaDeSesiones[0]["sesiones_fallidas"] . " intento de inicio de sesión con problema";
+        }
+        $resultCargaDeSesiones = $errorSesion;
+        $observCarga[] = "Se debe revisar la codificación que permite realizar el inicios de sesiones a los usuarios.";
+        #$recomendaciones[] = "";
+    }
+} else {
+    $cargaDeSesiones = 1;
+    $resultCargaDeSesiones = "<span class='texto-rojo'>Prueba no realizada</span>";
+}
+if ($_estres[0]["totales"] != NULL) {
+    $resultEstres = "";
+} else {
+    $estres = 1;
+    $resultEstres = "<span class='texto-rojo'>Prueba no realizada</span>";
+}
+
+ob_start();
+#print_r($_cargaDeDatos);
+
+    include dirname(__FILE__) . "/../views/resultado/informeDeCalidadView.phtml";
+    $contenido = ob_get_clean();
+    
+    $salida = "Informe-de-Calidad_".date('d-m-Y')."_".date('h-i-s-a').".pdf";
+    
+ob_clean();
+try {
+    require_once "librarys/html2pdf-4.4.0/html2pdf.class.php";
+    $html2pdf = new HTML2PDF('P', 'Legal', 'es', true, 'UTF-8', 10);
+    $html2pdf->setDefaultFont('Arial');    
+    $html2pdf->pdf->SetAuthor('Miguel Salazar');
+    $html2pdf->pdf->SetTitle('Informe de Calidad');
+    $html2pdf->pdf->SetSubject('Reporte Final');
+    $html2pdf->pdf->SetDisplayMode('fullpage');
+    $html2pdf->writeHTML($contenido, isset($_GET['vuehtml']));
+    $html2pdf->Output($salida);
+}
+catch(HTML2PDF_exception $e) {
+    echo $e;
+    exit;
+}

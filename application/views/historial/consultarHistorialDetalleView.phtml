@@ -1,0 +1,76 @@
+<?php
+
+for ($i=0; $i<$totalHistorial; $i++):
+?>
+<style>
+	th {
+		font-weight: bold;
+	}
+	tr {
+		text-align: left;
+	}
+	#modal1Title {
+		font-weight: bold;
+		font-size:150%;
+		margin-bottom: 1.5%;
+	}
+</style>
+<div class="remodal" data-remodal-id="<?php echo $modal[$i] ?>" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+  <button data-remodal-action="close" class="remodal-close" aria-label="Cerrar" title="Cerrar"></button>
+  <div>
+    <label id="modalTitle">Detalle del Historial</label>
+    <p id="modal1Desc">
+    <div class="table-responsive">
+		            <table class="table table-condensed table-striped">
+                                
+	                        <tr>
+	                           <th>Fecha</th> 
+	                           <td><?php echo $fecha[$i]; ?></td>
+	                        </tr>
+
+	                        <tr>
+	                           <th>Hora</th> 
+	                           <td><?php echo $hora[$i]; ?></td>
+	                        </tr>
+                                
+	                        <tr>
+	                           <th>Usuario</th> 
+	                           <td><?php echo $usuario[$i]; ?></td>
+	                        </tr>	                   
+	                        
+	                        <tr>
+	                           <th>IP Cliente</th> 
+	                           <td><?php echo $ipCliente[$i]; ?></td>
+	                        </tr>
+
+	                        <tr>
+	                           <th>ISP</th> 
+	                           <td><?php echo $isp[$i]; ?></td>
+	                        </tr>
+                                
+	                        <tr>
+	                           <th>Actividad</th> 
+	                           <td><?php echo $accion[$i]; ?></td>
+	                        </tr>
+
+	                        <tr>
+	                           <th>Navegador Web</th> 
+	                           <td><?php echo $navegador[$i]; ?></td>
+	                        </tr>
+
+	                        <tr>
+	                           <th>Sistema Operativo</th> 
+	                           <td><?php echo $so[$i]; ?></td>
+	                        </tr>
+
+
+
+                     </table>
+    </div>
+  </div>
+  <!--z<button data-remodal-action="cancel" class="remodal-cancel">Cancel</button><
+  <button data-remodal-action="confirm" class="remodal-confirm">OK</button>-->
+</div>
+<?php
+endfor;
+?>

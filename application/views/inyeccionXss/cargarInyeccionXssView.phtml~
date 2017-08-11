@@ -1,0 +1,70 @@
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+?>
+<div class="tema"><?php echo $tema; ?></div>
+<?php
+if ($notificacion) {
+    echo $notificacion;
+}
+?>
+
+<form class="pure-form pure-form-aligned" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="MAX_FILE_SIZE" value="512">
+    <fieldset>        
+        <table class="pure-table pure-table-bordered" id="formulario">
+            <thead>
+                <tr>
+                    <th colspan="2">Datos para la Fuerza Bruta</th>
+                </tr>
+            </thead>
+            <tbody>
+        <?php 
+        //foreach ($configXSS["campo"] as $llave => $valor):                
+        ?>
+                <tr>  
+                    <td align="center">
+                        <label for="name">Códigos XSS</label>
+                    </td>
+                    <td>
+                        <input type="file"  name="codigos_xss">
+                        <img  title="¿Qué es esto?" onClick="return openWindow('box-archivo-sql');" id="<?php echo $llave; ?>" class="icono-ayuda" src="<?php echo URLBASE . "public/img/ayuda-2.png"; ?>">                        
+                    </td>
+                    
+                </tr>
+        <?php 
+        //endforeach;
+        ?>            
+                <tr>
+                    <td  colspan="2" align="center">
+                        <input type="button" class="btn btn-primary" value="Cancelar" onClick="window.location='<?php echo URLBASE; ?>inicio'">
+                        <input type="submit" class="btn btn-primary" value="Continuar" name="continuar">
+                    </td>                   
+                </tr>
+            </tbody>  
+        </table>
+    </fieldset>
+</form>
+
+<script type="text/javascript" src="<?php echo URLBASE; ?>public/js/bouncebox-plugin/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="<?php echo URLBASE; ?>public/js/bouncebox-plugin/jquery.bouncebox.1.0.js"></script>
+<table class="pure-table" style="margin:1% auto; text-align: center;">
+    <tr>
+        <td><a href="files/tests-results" >Pruebas <img style="position: relative; top:-1px;" src="<?php URLBASE;?>public/img/down.png"></a></td>
+        <td><a href="<?php echo "#"; ?>">Cookies <img style="position: relative; top:-1px;" src="<?php URLBASE;?>public/img/cookie.png"></a></td>
+        <td><a target="_blanck" href="<?php echo $configSistemaEnEvaluacion["url"]; ?>">Ir al sistema <img style="position: relative; top:-1px;" src="<?php URLBASE;?>public/img/globe.png"></a></td>
+        <td><a href="<?php echo URLBASE . "inicio"; ?>">Cerrar <img style="position: relative; top:-1px;" src="<?php URLBASE;?>public/img/delete_16.png"></a></td>
+    </tr>
+</table>
+<!-- 
+Mensaje de Ayuda
+-->
+
+<?php
+    include dirname (__FILE__) . '/ayuda/ayuda.html';
+?>

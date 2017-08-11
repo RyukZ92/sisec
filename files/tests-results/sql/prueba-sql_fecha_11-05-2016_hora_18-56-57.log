@@ -1,0 +1,106 @@
+DETALLES DE LA PRUEBA DE INYECCIÓN SQL: INICIO DE SESIÓN
+
+
+Fecha y Hora de Creación: 11/05/2016 06:56:55 PM
+Usuario: RYUKZ (Administrador)
+
+URL Destino del Formulario: http://localhost/siscormab/InicioSesionController2.php
+Mensaje de Respuesta Invalido: Usuario O Contraseña Incorrecta
+
+INTENTOS: 
+
+1 => Fallido: [nombre=m1' or 1=1 ORDER BY estatus DESC; -- ][clave=' or 1=1 -- ][]
+
+2 => Fallido: [nombre=or 1=1 -- ][clave=or 1=1 #][]
+
+3 => Fallido: [nombre=' OR '1'='1][clave=' OR '1'='1 ][]
+
+4 => Fallido: [nombre=' OR '1'='1 ][clave=m2' OR '1'='1 ][]
+
+5 => Fallido: [nombre=AND usuario is TRUE; -- ][clave=AND usuario is TRUE; -- ][]
+
+6 => Fallido: [nombre=' OR usuario LIKE 'e%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][]
+
+7 => Fallido: [nombre=' OR usuario LIKE 'a%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][]
+
+8 => Fallido: [nombre=' OR usuario LIKE 'i%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][]
+
+9 => Fallido: [nombre=' OR usuario LIKE 'o%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][]
+
+10 => Fallido: [nombre=' OR usuario LIKE 'u%'; --  ][clave=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][]
+
+11 => Fallido: [nombre=][clave=' or 1=1;][]
+
+12 => Fallido: [nombre=][clave= ' or ''='][]
+
+13 => Fallido: [nombre= ][clave= ' or ' '='][]
+
+14 => Fallido: [nombre= ][clave= ' or true--][]
+
+15 => Fallido: [nombre= ][clave= " or true-- ][]
+
+16 => Fallido: [nombre= ][clave= " or ""="][]
+
+17 => Fallido: [nombre= ][clave= " or 1-- ][]
+
+18 => Fallido: [nombre= ][clave=' or 'x'='x][]
+
+19 => Fallido: [nombre=][clave=' or 0=0 -- ][]
+
+20 => Fallido: [nombre=][clave=" or 0=0 -- ][]
+
+21 => Fallido: [nombre=][clave=or 0=0 -- ][]
+
+22 => Fallido: [nombre=' or 0=0 # ][clave=][]
+
+23 => Fallido: [nombre=" or 0=0 # ][clave=][]
+
+24 => Fallido: [nombre=or 0=0 # ][clave=][]
+
+25 => Fallido: [nombre=" or "x"="x][clave=][]
+
+26 => Fallido: [nombre=') or ('x'='x][clave=' or 1=1-- ][]
+
+27 => Fallido: [nombre=][clave=or 1=1-- ][]
+
+28 => Fallido: [nombre=][clave=' or a=a--][]
+
+29 => Fallido: [nombre=][clave=hi" or "a"="a][]
+
+30 => Fallido: [nombre=][clave=hi' or 1=1 --][]
+
+31 => Fallido: [nombre=][clave=and 1=1--][]
+
+32 => Fallido: [nombre=][clave=' or 'one'='one][]
+
+33 => Fallido: [nombre=][clave=' or 'one'='one--][]
+
+34 => Fallido: [nombre=][clave=admin' --][]
+
+35 => Fallido: [nombre=][clave=or 1=1--][]
+
+36 => Fallido: [nombre=][clave=' or '1'='1][]
+
+37 => Fallido: [nombre=][clave=' or 0=0 --][]
+
+38 => Fallido: [nombre=][clave=' or 0=0 #][]
+
+39 => Fallido: [nombre=][clave=or 0=0 #][]
+
+40 => Fallido: [nombre=][clave=' or 'x'='x][]
+
+41 => Fallido: [nombre=][clave=' or a=a--][]
+
+42 => Fallido: [nombre=][clave=hi" or "a"="a][]
+
+43 => Fallido: [nombre=][clave='or' 1=1'][]
+
+44 => Fallido: []
+
+
+
+TOTAL DE INTENTOS: 44
+INTENTOS EXITOSOS: 0 ()
+INTENTOS FALLIDOS: 44
+
+Tiempo de Ejecución: 2.4129 segundos

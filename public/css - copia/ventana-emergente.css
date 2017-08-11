@@ -1,0 +1,18 @@
+.ventana{
+    display:none;
+    color:#808080;
+    line-height:22px;
+    font-size:14px;
+    margin:auto;
+    margin-top:1%;
+    margin-bottom:1%;
+    padding:1%;
+    border-radius: 2px;
+
+}
+#dialogo-espera img{
+    margin-top:10%;
+}
+.ui-dialog-titlebar	{
+    display:none;
+}

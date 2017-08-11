@@ -1,0 +1,352 @@
+30/10/2014
+Autores (Sección I30):
+
+Miguel Salazar
+V-21.011.917
+Yelitza Martínez
+V-16.842.421
+Carlos Longart
+V-22.922.544
+Estephanie Martínez
+V-
+
+		
+		ASIGNACIÓN NÚMERO 1.
+
+0 - Creación de la base de datos.
+
+	CREATE DATABASE bd_asignacion1;
+	USE bd_asignacion1;
+
+1 - Inicio de la creación de las tablas.
+
+	CREATE TABLE IF NOT EXISTS constancia (
+	  id int(10) NOT NULL AUTO_INCREMENT,
+	  dni_persona int(8) NOT NULL,
+	  tipo varchar(18),
+	  fecha_imp date NOT NULL,
+	  PRIMARY KEY (id),
+	  KEY dni_persona (dni_persona)
+	);
+
+	CREATE TABLE IF NOT EXISTS direccion (
+	  id int(3) NOT NULL AUTO_INCREMENT,
+	  direccion varchar(60) NOT NULL,
+	  sector varchar(50) NOT NULL,
+	  numero_casa int(6) NOT NULL,
+	  cod_postal int(6) NOT NULL,
+	  id_parroquia int(3) NOT NULL,
+	  id_rep_familia int(3) NOT NULL,
+	  PRIMARY KEY (id),
+	  KEY id_parroquia (id_parroquia),
+	  KEY id_jefe_familia (id_rep_familia)
+	);
+
+	CREATE TABLE IF NOT EXISTS estado (
+	  id int(2) NOT NULL AUTO_INCREMENT,
+	  nombre_estado varchar(50),
+	  PRIMARY KEY (id)
+	);
+
+	CREATE TABLE IF NOT EXISTS familia_rep (
+	  id int(3) NOT NULL AUTO_INCREMENT,
+	  dni_rep int(8) NOT NULL,
+	  PRIMARY KEY (id),
+	  UNIQUE KEY dni_rep_2 (dni_rep)
+	);
+
+	CREATE TABLE IF NOT EXISTS historial (
+	  id int(10) NOT NULL AUTO_INCREMENT,
+	  accion varchar(100) NOT NULL,
+	  fecha date NOT NULL,
+	  hora time NOT NULL,
+	  id_usuario int(2) NOT NULL,
+	  PRIMARY KEY (id),
+	  KEY id_usuario (id_usuario)
+	);
+
+	CREATE TABLE IF NOT EXISTS municipio (
+	  id int(3) NOT NULL AUTO_INCREMENT,
+	  nombre_municipio varchar(50) NOT NULL,
+	  estado_id int(2) NOT NULL,
+	  PRIMARY KEY (id),
+	  KEY fk_municipio_estado1 (estado_id)
+	);
+
+	CREATE TABLE IF NOT EXISTS parroquia (
+	  id int(4) NOT NULL AUTO_INCREMENT,
+	  nombre_parroquia varchar(50) NOT NULL,
+	  municipio_id int(3) NOT NULL,
+	  PRIMARY KEY (id),
+	  KEY fk_parroquia_municipio1 (municipio_id)
+	);
+
+	CREATE TABLE IF NOT EXISTS persona (
+	  id int(3) NOT NULL AUTO_INCREMENT,
+	  tipo_dni varchar(1) NOT NULL,
+	  dni int(8) NOT NULL,
+	  id_rep int(3) NOT NULL,
+	  nombre varchar(50) NOT NULL,
+	  apellido varchar(50) NOT NULL,
+	  fecha_nac date NOT NULL,
+	  estado_civil varchar(15) NOT NULL,
+	  situacion_conyugal varchar(15) NOT NULL,
+	  sexo varchar(1) NOT NULL, 
+	  parentesco varchar(20) NOT NULL,
+	  nivel_instruccion varchar(20) NOT NULL,
+	  ano_residencia int(4) NOT NULL,
+	  telefono varchar(12) NOT NULL,
+	  email varchar(50) NOT NULL,
+	  empleo varchar(2) NOT NULL,
+	  empleo_nombre varchar(30) NOT NULL,
+	  profesion varchar(30) NOT NULL,
+	  habilidad_trabajo varchar(40) NOT NULL,
+	  enfermedad varchar(30) NOT NULL,
+	  p_discapacidad varchar(2) NOT NULL,
+	  discapacidad varchar(30) NOT NULL,
+	  sub_habitacional varchar(2) NOT NULL,
+	  inst_sub_hab varchar(30) NOT NULL,
+	  solicitud_v varchar(2) NOT NULL,
+	  inst_solicitud_v varchar(50) NOT NULL,
+	  seguro_social varchar(2) NOT NULL,
+	  fallecido int(1)  DEFAULT '1' NOT NULL,
+	  a_seguro_social varchar(50) NOT NULL,
+	  PRIMARY KEY (id),
+	  UNIQUE KEY dni (dni),
+	  KEY dni_rep (id_rep)
+	);
+
+	CREATE TABLE IF NOT EXISTS proyecto (
+	  id int(5) NOT NULL AUTO_INCREMENT,
+	  titulo varchar(100) NOT NULL,
+	  tipo varchar(20) NOT NULL,
+	  presupuesto_estimado varchar(10) ,
+	  presupuesto_aprobado varchar(10) ,
+	  fecha_inicial_estimada date NOT NULL,
+	  fecha_final_estimada date NOT NULL,
+	  fecha_inicio date NOT NULL,
+	  fecha_final date NOT NULL,
+	  resumen varchar(255) NOT NULL,
+	  estatus varchar(15)  DEFAULT 'En espera',
+	  autor_voceria int(2) NOT NULL,
+	  PRIMARY KEY (id),
+	  UNIQUE KEY titulo (titulo),
+	  KEY autor_voceria (autor_voceria)
+	);
+
+	CREATE TABLE IF NOT EXISTS usuario (
+	  id int(2) NOT NULL AUTO_INCREMENT,
+	  nombre_usuario varchar(20) NOT NULL,
+	  clave varchar(40) NOT NULL,
+	  nivel_usuario varchar(15) NOT NULL,
+	  fecha_creacion date NOT NULL,
+	  estatus int(1)  DEFAULT '1',
+	  dni_vocero int(8) NOT NULL,
+	  PRIMARY KEY (id),
+	  UNIQUE KEY nombre_usuario (nombre_usuario),
+	  KEY id_vocero (dni_vocero)
+	);
+
+	CREATE TABLE IF NOT EXISTS vivienda (
+	  id int(3) NOT NULL AUTO_INCREMENT,
+	  tipo_vivienda varchar(20) NOT NULL,
+	  ocupacion_vivienda varchar(20) NOT NULL,
+	  uso_vivienda varchar(30) NOT NULL,
+	  tipo_techo varchar(20) NOT NULL,
+	  tipo_paredes varchar(20) NOT NULL,
+	  tipo_piso varchar(20) NOT NULL,
+	  nivel_vivienda varchar(20) NOT NULL,
+	  propiedad_vivienda varchar(20) NOT NULL,
+	  bano varchar(2) NOT NULL,
+	  cant_bano int(2) NOT NULL,
+	  dormitorio varchar(2) NOT NULL,
+	  cant_dormitorio int(2) NOT NULL,
+	  cocina varchar(2) NOT NULL,
+	  cant_cocina int(2) NOT NULL,
+	  nevera varchar(2) NOT NULL,
+	  cant_nevera int(2) NOT NULL,
+	  aguas_blancas varchar(2) NOT NULL,
+	  gas varchar(2) NOT NULL,
+	  electricidad varchar(2) NOT NULL,
+	  tv_radio varchar(2) NOT NULL,
+	  observacion varchar(200) NOT NULL,
+	  id_rep_familia int(3) NOT NULL,
+	  PRIMARY KEY (id),
+	  KEY id_rep_familia (id_rep_familia)
+	);
+
+	CREATE TABLE IF NOT EXISTS voceria (
+	  id int(2) NOT NULL AUTO_INCREMENT,
+	  nombre varchar(40) NOT NULL,
+	  funcion varchar(200) NOT NULL,
+	  estatus int(1)  DEFAULT '1',
+	  PRIMARY KEY (id),
+	  UNIQUE KEY nombre (nombre)
+	);
+
+	CREATE TABLE IF NOT EXISTS vocero (
+	  id int(2) NOT NULL AUTO_INCREMENT,
+	  dni_vocero int(8) NOT NULL,
+	  tipo_miembro varchar(17) NOT NULL,
+	  telefono_vocero varchar(12) NOT NULL,
+	  fecha_vigencia date NOT NULL,
+	  firmante int(1)  DEFAULT '0' NOT NULL,
+	  estatus int(1) DEFAULT '1' NOT NULL,
+	  id_voceria int(2) NOT NULL,
+	  PRIMARY KEY (id),
+	  UNIQUE KEY dni_vocero (dni_vocero),
+	  KEY id_voceria (id_voceria)
+	);
+
+	ALTER TABLE constancia
+	  ADD CONSTRAINT constancia_ibfk_1 FOREIGN KEY (dni_persona) REFERENCES persona (dni) ON DELETE CASCADE ON UPDATE CASCADE;
+
+	ALTER TABLE direccion
+	  ADD CONSTRAINT direccion_ibfk_1 FOREIGN KEY (id_parroquia) REFERENCES parroquia (id) ON DELETE CASCADE ON UPDATE CASCADE,
+	  ADD CONSTRAINT direccion_ibfk_3 FOREIGN KEY (id_rep_familia) REFERENCES familia_rep (id) ON DELETE CASCADE ON UPDATE CASCADE;
+
+	ALTER TABLE historial
+	  ADD CONSTRAINT historial_ibfk_1 FOREIGN KEY (id_usuario) REFERENCES usuario (id) ON DELETE CASCADE ON UPDATE CASCADE;
+
+	ALTER TABLE municipio
+	  ADD CONSTRAINT fk_municipio_estado1 FOREIGN KEY (estado_id) REFERENCES estado (id) ON DELETE CASCADE ON UPDATE CASCADE;
+
+	ALTER TABLE parroquia
+	  ADD CONSTRAINT fk_parroquia_municipio1 FOREIGN KEY (municipio_id) REFERENCES municipio (id) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+	ALTER TABLE persona
+	  ADD CONSTRAINT persona_ibfk_1 FOREIGN KEY (id_rep) REFERENCES familia_rep (id) ON DELETE CASCADE ON UPDATE CASCADE;
+
+	ALTER TABLE proyecto
+	  ADD CONSTRAINT proyecto_ibfk_1 FOREIGN KEY (autor_voceria) REFERENCES voceria (id) ON DELETE CASCADE ON UPDATE CASCADE;
+
+	ALTER TABLE usuario
+	  ADD CONSTRAINT usuario_ibfk_1 FOREIGN KEY (dni_vocero) REFERENCES vocero (dni_vocero) ON DELETE CASCADE ON UPDATE CASCADE;
+
+	ALTER TABLE vivienda
+	  ADD CONSTRAINT vivienda_ibfk_1 FOREIGN KEY (id_rep_familia) REFERENCES familia_rep (id) ON DELETE CASCADE ON UPDATE CASCADE;
+
+	ALTER TABLE vocero
+	  ADD CONSTRAINT vocero_ibfk_1 FOREIGN KEY (id_voceria) REFERENCES voceria (id) ON DELETE CASCADE ON UPDATE CASCADE,
+	  ADD CONSTRAINT vocero_ibfk_2 FOREIGN KEY (dni_vocero) REFERENCES persona (dni) ON DELETE CASCADE ON UPDATE CASCADE;
+	  
+1 - Final o cieere de la creación de las tablas.
+
+2 - Inicio de insersión de los registros en cada de tabla de la base de datos.
+
+	INSERT INTO estado (id,nombre_estado) VALUES
+	('1','Dtto. Capital'),
+	('2','Anzoategui'),
+	('3','Bolivar'),
+	('4','Carabobo'),
+	('5','Sucre'),
+	('6','Merida');
+
+	INSERT INTO municipio (id, nombre_municipio, estado_id) VALUES
+	('1','Libertador','1'),
+	('2','Arismendi','5'),
+	('3','Benitez','5'),
+	('4','Bermúdez','5'),
+	('5','Cajigal','5'),
+	('6','Mariño','5');
+	
+	INSERT INTO parroquia (id,nombre_parroquia,municipio_id) VALUES	
+	('1','Santa Catalina','4'),
+	('2','Santa Rosa','4'),
+	('3','Santa Teresa','4'),
+	('4','Bolivar','4'),
+	('5','Macarapana','4');
+		
+	INSERT INTO familia_rep (id,dni_rep) VALUES
+	('1','3807715'),
+	('2','5875961'),
+	('3','10881600'),
+	('4','11442751'),
+	('5','24841294');	
+
+	INSERT INTO persona	(id,tipo_dni,dni,id_rep,nombre,apellido,fecha_nac,estado_civil,situacion_conyugal,sexo,parentesco,nivel_instruccion,ano_residencia,telefono,email,empleo,empleo_nombre,profesion,habilidad_trabajo,enfermedad,p_discapacidad,discapacidad,sub_habitacional,inst_sub_hab,solicitud_v,inst_solicitud_v,seguro_social,fallecido,a_seguro_social) VALUES
+	(1, 'V', 3807715, 1, 'Agustín', 'Bastardo', '1958-08-28', 'Casado', 'Unido', 'M', '', 'Bachiller', 1992, '0294-3328482', 'agustinrbastardo@hotmail.com', 'Si', 'Comerciante', 'Comerciante', '', '', 'No', '', 'No', '', 'No', '', 'No', 'No', ''),
+	(2, 'V', 6827358, 1, 'Carmen', 'Mendez', '1958-07-15', '', '', 'F', 'Esposo(a)', 'Universitario', 1992, '', '', 'No', '', 'Ama De Casa', '', '', 'No', '', '', '', '', '', '', 'No', ''),
+	(3, 'V', 10877022, 2, 'Yudetzi', 'Medina', '1972-11-06', '', '', 'F', 'Esposo(a)', 'Universitario', 1972, '', '', 'No', '', 'Enfermera', 'Enfermeria', 'No', '', 'No', '', '', '', '', '', 'No', ''),
+	(4, 'V', 22924532, 2, 'Rogelio', 'Medina', '1992-10-18', '', '', 'M', 'Hijo(a)', 'Bachiller', 1992, '', '', 'No', '', 'Estudiante', 'Mentir', 'No', '', 'No', '', '', '', '', '', 'No', ''),
+	(5, 'V', 26646905, 2, 'Jesus', 'Medina', '1995-05-17', '', '', 'M', 'Hijo(a)', 'Básica', 1995, '', '', 'No', '', 'Estudiante', 'Doctorado en soldaduras', 'No', '', 'No', '', '', '', '', '', 'No', ''),
+	(6, 'V', 5875961, 2, 'Luis', 'Gonzalez', '1960-12-26', 'Casado', 'Unido', 'M', '', 'Básica', 2010, '0294-3324257', '', 'Si', 'Obrero', '', '', 'No', 'No', '', 'No', '', 'No', '', 'No', 'No', ''),
+	(7, 'V', 10881600, 3, 'Aleida ', 'Venales ', '1967-12-21', 'Soltero', 'Separado', 'F', '', 'Básica', 1990, '0294-3318514', 'aleidaveneles@gmail.com', 'Si', 'Vendedora', 'Ama De Casa', '', '', 'No', '', 'No', '', 'No', '', 'No', 'No', ''),
+	(8, 'V', 25835631, 3, 'Francisco', 'Alcantara', '1997-04-15', '', '', 'M', 'Hijo(a)', 'Bachiller', 1997, '', 'francisco_alcantara15@hotmail.com', 'No', '', '', '', '', 'No', '', '', '', '', '', '', 'No', ''),
+	(9, 'V', 11442751, 4, 'Mary Josefina', 'Castillo Rodríguez', '1972-03-06', 'Divorciado', 'Unido', 'F', '', 'Bachiller', 2003, '0294-3318514', '', 'Si', 'Peluquera', 'Ama De Casa', '', '', 'No', '', 'No', '', 'No', '', 'No', 'No', ''),
+	(10, 'V', 21011917, 4, 'Miguel Angel', 'Salazar Castillo', '1992-04-28', '', '', 'M', 'Hijo(a)', 'Universitario', 2003, '0294-3318514', 'miguel__salazar@hotmail.com', 'No', '', 'Estudiante', 'Computadora', '', 'No', '', '', '', '', '', '', 'No', ''),
+	(11, 'V', 24841291, 5, 'Cristhian', 'Salazar', '1970-09-25', 'Soltero', 'Separado', 'M', '', 'Básica', 2002, '', '', 'Si', 'Dad', '', '', '', 'Si', '', 'No', '', 'Si', 'PDVSA', 'No', 'No', 'Seguro Social'),
+	(12, 'V', 24841294, 5, 'Daniel José', 'Salazar Castillo', '1995-04-11', 'Soltero', '', 'M', 'Hijo(a)', 'Bachiller', 2002, '', '', 'No', '', 'Estudiante', '', '', '', '', '', '', '', '', '', 'No', '');
+	
+	INSERT INTO vivienda (id, tipo_vivienda, ocupacion_vivienda, uso_vivienda, tipo_techo, tipo_paredes, tipo_piso, nivel_vivienda, propiedad_vivienda, bano, cant_bano, dormitorio, cant_dormitorio, cocina, cant_cocina, nevera, cant_nevera, aguas_blancas, gas, electricidad, tv_radio, observacion, id_rep_familia) VALUES
+	(1, 'Casa', 'De uso permanente', 'Residencial', 'Zinc/Acerolit', 'Bloque frisado', 'Cemento', 'Un nivel', 'Propia', 'Si', 1, 'Si', 3, 'Si', 1, 'Si', 2, 'Si', 'Si', 'Si', 'Si', '', 1),
+	(2, 'Casa', 'De uso permanente', 'Residencial', 'Platabanda', 'Bloque frisado', 'Cemento', 'Un nivel', 'Propia', 'No', 0, 'Si', 3, 'Si', 1, 'Si', 1, 'No', 'No', 'No', 'Si', 'Ninguna observación', 2),
+	(3, 'Casa', 'De uso permanente', 'Residencial', 'Zinc', 'Bloque frisado', 'Cemento', 'Un nivel', 'Propia', 'Si', 1, 'Si', 3, 'Si', 1, 'Si', 1, 'Si', 'Si', 'Si', 'Si', ':D', 3),
+	(4, 'Casa', 'De uso permanente', 'Residencial', 'Asbesto', 'Bloque frisado', 'Cemento', 'Un nivel', 'Propia', 'Si', 2, 'Si', 3, 'Si', 1, 'Si', 2, 'Si', 'Si', 'Si', 'Si', 'El agua sigue sucia.', 4),
+	(5, 'Rancho', 'De uso permanente', 'Residencial', 'Zinc', 'Zinc', 'Tierra', 'Un nivel', 'Propia', 'Si', 1, 'Si', 1, 'Si', 1, 'Si', 1, 'Si', 'Si', 'No', 'Si', 'Personas de muy bajos recursos que necesitan casa nueva', 5);
+	
+	INSERT INTO direccion (id, direccion, sector, numero_casa, cod_postal, id_parroquia, id_rep_familia) VALUES
+	('1','4ta calle de charallave', 'la poza', '1','6150','1','2'),
+	('2','Charallave, Cuarta Callle', 'La Poza', '3','6150','1','1'),
+	('3','Charallave, Calle Cuatro', 'La Poza', '0','6150','1','3'),
+	('4','Charallave, 4ta Calle', 'Punta Brava', '0','6150','1','5'),
+	('5','Charallave, Calle Cuatro', 'La Poza', '4','6150','1','4');
+	
+	INSERT INTO voceria (id, nombre, funcion) VALUES
+	('1', 'COMITE DE SEGURIDAD Y DENFENZA', 'Comité de seguridad y denfenza de la comunidad'),
+	('2', 'COMITE DE CONTRALORIA SOCIAL', 'Encargado de las viviendas que se desarrolas en la comunidad'),
+	('3', 'COMITE DE COMUNICACION E INFORMACION', 'Comité encarado de infomrar y comunidad a toda la comunida de los sucesos y novedades realiacionado con los mismos.'),
+	('4', 'COMISION ELECTORAL PERMANENTE', 'Encargado de realizar los procesos electorales y legales que se presenten en el consejo comunal.'),
+	('5', 'UNIDAD ADMINISTRATIVA Y FINANCIERA', 'Se encarga de la aministración y finanzas de la comunidad');	
+	
+	INSERT INTO vocero (id, dni_vocero, tipo_miembro, telefono_vocero, fecha_vigencia,id_voceria) VALUES
+	('1', '10881600', 'Vocero principal', '0426-2234565', '2014-10-14','1'),
+	('2', '21011917', 'Vocero suplente', '0412-1234324', '2013-10-14','4'),
+	('3', '11442751', 'Vocero principal', '0424-2203410', '2014-10-14','4'),
+	('4', '26646905', 'Vocero suplente', '0294-3324257', '2014-10-14','2'),
+	('5', '3807715', 'Vocero principal', '0294-1231231', '2014-10-14','5'),
+	('6', '24841294', 'Vocero principal', '0416-3163109', '2014-10-14','3');
+	
+	INSERT INTO usuario (id, nombre_usuario, clave, nivel_usuario, fecha_creacion, dni_vocero) VALUES
+	('1', 'Agustin',MD5('miClave1'), 'Administrador', '2014-10-30','3807715'),
+	('2', 'Mary',MD5('miClave2'), 'Operador', '2014-10-30','11442751'),
+	('3', 'Miguel',MD5('miClave3'), 'Operador', '2014-10-30','21011917'),
+	('4', 'Aleida',MD5('miClave4'), 'Operador', '2014-10-30','10881600'),
+	('5', 'Jesus',MD5('miClave5'), 'Operador', '2014-10-30','26646905');
+	
+	INSERT INTO proyecto (id, titulo, tipo, presupuesto_estimado, presupuesto_aprobado, fecha_inicial_estimada, fecha_final_estimada, fecha_inicio, fecha_final, resumen, estatus, autor_voceria) VALUES
+	('1', 'Mi proyecto1', 'Seguridad y defenza', '15000', '15000', '2014-03-28', '2014-10-30', '2014-05-13', '0000-00-00', 'Proyecto resumen de proyecto 1','En ejecucuión','1'),
+	('2', 'MI proyecto2', 'Sociotecnológico', '60030', '55000', '2014-1-02', '2014-10-03', '2014-10-20', '2014-10-21', 'Proyecto que da dolor de cabeza', 'Finalizado','3'),
+	('3', 'Mi proyecto3', 'Deportivo', '114101', '55000', '2014-9-18', '2014-10-31', '0000-00-00', '0000-00-00', 'Mi resumen de proyecto 3', 'Aprobado','2'),
+	('4', 'Mi proyecto4', 'Salud', '1023114', '', '2014-10-15', '2014-11-15', '2014-10-25', '2014-10-30', 'Mi resumen de proyecto 4', 'Finalizado','5'),
+	('5', 'Mi proyecto5', 'Sociointegrador', '50500', '', '2014-10-02', '2014-10-03', '0000-00-00', '0000-00-00', 'Sensibilizar a las personas para trabajar unidos', 'En espera','1');		
+	
+	INSERT INTO constancia (id, dni_persona, tipo, fecha_imp) VALUES
+	(1, 21011917, 'Residencia', '2014-08-26'),
+	(2, 21011917, 'Bajos recursos', '2014-01-28'),
+	(3, 21011917, 'Buena conducta', '2014-10-12'),
+	(4, 11442751, 'Residencia', '2014-05-27'),
+	(5, 24841294, 'Bajos recursos', '2014-09-28');
+
+	INSERT INTO historial (id, accion, fecha, hora, id_usuario) VALUES
+	(1, 'Inició sesión', '2014-10-15', '15:58:12', 4),
+	(2, 'Inició sesión', '2014-10-15', '01:55:20', 3),
+	(3, 'Inició sesión', '2014-01-01', '01:57:34', 1),
+	(4, 'Inició sesión', '2014-10-18', '02:00:28', 5),
+	(5, 'Insertó un dato', '2014-05-26', '02:07:37', 1),
+	(6, 'Inició sesión', '2014-03-16', '02:08:37', 2);
+	
+2 - Final o cierre de insersión de los registros en cada de tabla de la base de datos.
+
+3 - Consulta que muestra los datos de más de una tabla relacionada.
+
+	SELECT persona.tipo_dni, persona.dni, persona.nombre, persona.apellido, direccion.sector, direccion.direccion, direccion.numero_casa, parroquia.nombre_parroquia, municipio.nombre_municipio, estado.nombre_estado
+	FROM persona, familia_rep, direccion, parroquia, municipio, estado
+	WHERE persona.dni = '11442751'
+	AND id_rep = familia_rep.id
+	AND familia_rep.id = id_rep_familia
+	AND direccion.id_parroquia = parroquia.id
+	AND municipio_id = municipio.id
+	AND estado_id = estado.id;
+	
+	

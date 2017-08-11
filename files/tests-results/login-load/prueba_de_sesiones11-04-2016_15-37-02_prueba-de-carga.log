@@ -1,0 +1,15 @@
+DETALLES DE LA PRUEBA DE CARGA DE SESIONES
+
+
+Fecha y Hora de Creación: 11-04-2016 03:37:02 PM
+Usuario:  (Evaluador)
+
+URL de inicio de sesión: http://localhost/sirah/
+Total de usuarios para la prueba: 100
+
+RESULTADO: 
+Total de usuarios con sesión exitosa: 100
+Total de usuarios con sesión sin éxito: 0
+
+Todos los usuarios iniciaron una sesión correctamente.
+Resumen Final: El sistema es capaz de soportar la carga simultánea de 100 sesiones.

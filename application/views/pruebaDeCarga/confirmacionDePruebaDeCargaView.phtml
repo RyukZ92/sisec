@@ -1,0 +1,296 @@
+<?php
+/**
+ * =================================================
+ * @Descripcion: Vista que permite confirmar la
+ * prueba de carga de datos
+ * @Author: Miguel Salazar
+ * @Fecha: Marzo, 2016
+ * @Version: 1.2
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguelangel.bux@gmail.com
+ * ==================================================
+ * 
+ */ 
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+?>
+
+<div id="dialogo-espera" class="ventana">
+    <img src="<?php echo URLBASE; ?>/public/img/preload.gif" alt="jqeury">
+    <h3>Por favor espere...</h3>
+</div>
+<?php
+if ($notificacion) {
+    echo $notificacion;
+}
+for($i=0; $i<$configPruebaDeCarga["total_campos"]; $i++) {
+    foreach ($configPruebaDeCarga["campos_$i"] as $llave => $valor) {
+            $datos[$i][$llave] =  $valor;
+    }
+}
+?>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Datos para la la prueba de carga de datos
+    <a class='pull-right' href="<?php echo URLBASE ?>configurar/prueba-de-carga" class="fa fa-edit"> Actualizar Datos</a></div>
+    <form method="POST">    
+        <table class="table table-bordered">
+            <tr>
+                <th>URL Destino</th>
+                <td><?php echo $configPruebaDeCarga["url"]; ?> </td>
+            </tr>
+            <tr>
+                <th>Mensaje de Éxito</th>
+                <td><?php echo $configPruebaDeCarga["cadena_valida"]; ?> </td>
+            </tr>
+            
+            <?php                                
+                for($i=0; $i<count($datos);$i++):
+            ?>
+                <tr>
+                    <td  class="td-right">
+                        <label>Campos N° <?php echo $i+1; ?></label>
+                    </td>
+                    <td>
+                        <div style="margin-top:1%;">                                    
+                        <?php echo "Nombre = " . $datos[$i]["nombre"]; ?>
+                        </div>
+                        <div style="margin-top:1%;">                                    
+                        <?php echo "Tipo = " . $datos[$i]["tipo"]; ?>
+                        </div>
+                        <div style="margin-top:1%;">                                    
+                        <?php echo "Longitud = " . $datos[$i]["longitud"]; ?>
+                        </div>
+                    </td>
+                </tr>
+                <?php 
+                    endfor; 
+                ?>
+                
+            <tr>
+                <th>Campos Adicionales</th>
+                <td>
+                    <?php                           
+                    foreach($configPruebaDeCarga["campo_adicional"] as $nombre => $valor):
+                    ?>
+                        <div style="margin-top:1%;">
+                        <?php echo $nombre . " = " . $valor; ?>
+                        </div>
+                    <?php 
+                    endforeach;                            
+                    ?>
+
+                </td>
+            </tr>
+            <tr>
+                <td class="active" colspan="2">Datos establecidos para la prueba</td>       
+            </tr>
+            <tr>
+                <th>Cargas Definidas</th>
+                <td>
+                    <?php
+                         echo $_SESSION["cantidad"];                                                          
+                    ?>
+                </td>
+            </tr>
+<?php
+                if (empty($_SESSION["tiempos_personalizados"])):
+                ?>
+                <tr>          
+                    <td class="td-right">
+                        <label >Tiempos de Medición</label>
+                    </td>
+                    <td>
+                        <?php
+                         echo "<b>Tiempos no personalizados.<BR>El sistema establecerá los tiempos por defecto:</b>";     
+               
+                         echo "<BR>Tiempo Óptimo: 1 seg. <br>";
+                         echo "Tiempo Intermedio: 2 segs. <br>";
+                         echo "Tiempo Mínimo: 3 segs.";
+                        
+                        ?>
+                    </td>
+                </tr>
+                <?php
+                else:
+                ?>
+                <tr>          
+                    <td class="td-right">
+                        <label for="email">Tiempos de Medición</label>
+                    </td>
+                    <td>
+                        <?php
+                         echo "<b >Tiempos personalizados:</b><BR>";  
+                         echo "Tiempo Óptimo: " . $_SESSION["optimo"] . " segs. <br>";
+                         echo "Tiempo Intermedio: " . $_SESSION["intermedio"] . " segs. <br>";
+                         echo "Tiempo Mínimo: " . $_SESSION["minimo"] . " segs.";
+                        ?>
+                    </td>
+                </tr> 
+                <?php 
+                endif;
+                ?>
+                <tr class="tr tr-bordered center">
+                    <td colspan="2">
+                        <span class="text-warning bg-warning">
+                            <span class="fa fa-warning"></span>
+                            ¿Está seguro que desea realizar esta prueba?
+                            <br>
+                            Se le notifica que esta prueba se realiza sólo una vez por cada ciclo de evaluaión
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        <div class="panel-body center">
+            <button type="button" class="btn btn-default" onClick="window.location.href='<?php echo URLBASE?>rendimiento/prueba-de-carga'">Cancelar</button>
+            &nbsp;
+            &nbsp;
+            <button type="submit" name="confirmar" class="btn btn-default" id="confirmar">Confirmar</button>
+        </div>
+    </form>
+</div>
+
+
+<!--<div class="formulario" align="center">-->
+<!--
+<form class="pure-form pure-form-aligned" method="POST">
+    <input type="hidden" name="pagina_referencia" value="<?php echo $_POST["pagina_referencia"]; ?>">
+    <input type="hidden" name="id_user" value="<?php echo $_POST["id_user"]; ?>">    
+    <fieldset>
+        <table class="pure-table pure-table-bordered" id="formulario">
+            <thead>
+                <tr>
+                    <th colspan="2">Datos para la Prueba de Carga Datos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>  
+                    <td class="td-right">
+                        <label for="url">URL Destino</label>
+                    </td>
+                    <td>
+                        <?php echo $configPruebaDeCarga["url"]; ?>                        
+                    </td>
+                </tr>
+                <tr>     
+                    <td class="td-right">
+                        <label>Mensaje de Éxito</label>
+                    </td>
+                    <td>
+                        <?php echo $configPruebaDeCarga["cadena_valida"]; ?>
+                    </td>
+                    
+                </tr>
+            <?php                                
+                for($i=0; $i<count($datos);$i++):
+            ?>
+                <tr>
+                    <td  class="td-right">
+                        <label>Campos N° <?php echo $i+1; ?></label>
+                    </td>
+                    <td>
+                        <div style="margin-top:1%;">                                    
+                        <?php echo "Nombre = " . $datos[$i]["nombre"]; ?>
+                        </div>
+                        <div style="margin-top:1%;">                                    
+                        <?php echo "Tipo = " . $datos[$i]["tipo"]; ?>
+                        </div>
+                        <div style="margin-top:1%;">                                    
+                        <?php echo "Longitud = " . $datos[$i]["longitud"]; ?>
+                        </div>
+                    </td>
+                </tr>
+                <?php 
+                    endfor;                              
+                 if(count($configPruebaDeCarga["campo_adicional"]) > 0):
+                ?>
+                <tr>
+                    <td class="td-right">
+                        <label>Campos Adicionales</label>
+                    </td>
+                    <td>
+                        <?php                           
+                            foreach($configPruebaDeCarga["campo_adicional"] as $nombre => $valor):
+                            ?>
+                                <div style="margin-top:1%;">
+                                <?php echo $nombre . " = " . $valor; ?>
+                                </div>
+                            <?php 
+                            endforeach;                            
+                            ?>
+                    </td>
+                </tr>
+                <?php
+                endif;
+                ?>
+                <tr>
+                    <td class='td-right' colspan="2">
+                        <a class="glyphicon glyphicon-edit" href="<?php echo URLBASE; ?>configurar-prueba-de-carga">Editar</a>
+                    </td>                   
+                </tr>
+            </tbody>  
+            <thead>
+                <tr>
+                    <th class='mensaje-advertencia' colspan="2">Confirmacón de la Prueba</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>          
+                    <td class="td-right">
+                        <label for="email">Cantidad de Cargas</label>
+                    </td>
+                    <td>
+                        <?php
+                         echo $_SESSION["cantidad"];                                                          
+                        ?>
+                    </td>
+                </tr>
+                <?php
+                if (empty($_SESSION["tiempos_personalizados"])):
+                ?>
+                <tr>          
+                    <td class="td-right">
+                        <label >Tiempos de Medición</label>
+                    </td>
+                    <td>
+                        <?php
+                         echo "<span>Tiempos no personalizados<br>El sistema establecerá los tiempos por defecto</span>";                                                          
+                        ?>
+                    </td>
+                </tr>
+                <?php
+                else:
+                ?>
+                <tr>          
+                    <td class="td-right">
+                        <label for="email">Tiempos de Medición</label>
+                    </td>
+                    <td>
+                        <?php
+                         echo "Tiempo Óptimo: " . $_SESSION["optimo"] . " segs. <br>";
+                         echo "Tiempo Intermedio: " . $_SESSION["intermedio"] . " segs. <br>";
+                         echo "Tiempo Mínimo: " . $_SESSION["minimo"] . " segs.";
+                        ?>
+                    </td>
+                </tr> 
+                <?php 
+                endif;
+                ?>
+                 <tr class="tr-center">
+                    <td colspan="2">
+                        <span class="mensaje-confirmacion">¿Está seguro que desea realizar esta prueba?
+                        <BR>Se le notifica que esta prueba se realiza sólo una vez por cada ciclo de evaluaión</span>
+                    </td> 
+                </tr>
+
+                <tr  class="submit"> 
+                    <td  colspan="2" align="center">
+                        <input type="button" class="btn btn-danger" value="Cancelar" onClick="history.back();">  
+
+                        <input type="submit" class="btn btn-danger" value="Confirmar" name="confirmar" id="confirmar">
+                    </td>
+                </tr>
+            </tbody>
+        </table> 
+    </fieldset>    
+</form>-->

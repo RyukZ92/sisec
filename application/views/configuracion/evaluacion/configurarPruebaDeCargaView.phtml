@@ -1,0 +1,139 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista que permite configurar los datos de la prueba de carga
+ * o el sistema evaluado
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Marzo, 2016
+ * @Version: 1.0
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * ============================================================================
+ * 
+ */
+
+include dirname(__FILE__) . "/../../navegacion/navegacionView.phtml";
+if ($notificacion) {
+    echo $notificacion;
+}
+?>
+<form class="pure-form pure-form-aligned" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="MAX_FILE_SIZE" value="512">
+    <fieldset>
+        
+        <table class="pure-table pure-table-bordered" id="formulario">
+
+            <thead>
+                <tr>
+                    <th colspan="2">Configuración de la Prueba de Carga de Datos</th>
+                </tr>
+            </thead>
+                <tr>  
+                    <td class="td-right">
+                        <label for="url">URL Destino</label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="http://localhost/sirah/" maxlength="150" name="url" value="<?php if(empty($_POST["url"])) {echo $configPruebaDeCarga["url"];} else {echo $_POST["url"];} ?>" class="solo-albabeto-espaniol-sin-espacio">
+                        <span class='campo-obligatorio'>*</span>
+                        <a href="#" title="<?php echo $popoverTituloTiempos; ?>" data-toggle="popover" data-placement="right" data-content="<?php echo $popoverContenidoTiempos; ?>"  class="glyphicon glyphicon-question-sign"></a>
+                    </td>
+                </tr>
+                <tr>     
+                    <td class="td-right">
+                        <label for="password">Mensaje de Éxito</label>
+                    </td>
+                    <td>
+                        <textarea placeholder="Registro Exitoso" maxlength="150" name="cadena_valida" ><?php if(empty($_POST["cadena_valida"])) {echo $configPruebaDeCarga["cadena_valida"];} else {echo $_POST["cadena_valida"];} ?></textarea>
+                        <span class='campo-obligatorio'>*</span>
+                        <img  title="¿Qué es esto?" onClick="return openWindow('box-valido');" id="<?php echo $llave; ?>" class="icono-ayuda" src="<?php echo URLBASE . "public/img/ayuda-2.png"; ?>">                        
+                    </td>                    
+                </tr>
+                <tr class="tr-center">         
+                    <td colspan="2">
+                        <a onClick="agregarCampoPrincipal();" id="agregarCampoPrincipal2" class="btn btn-info" href="#">Agregar Campo</a>
+                        <img  title="¿Qué es esto?" onClick="return openWindow('box-agregar-campo');" class="icono-ayuda" src="<?php echo URLBASE . "public/img/ayuda-2.png"; ?>">                        
+                    </td>
+                </tr>
+                    <tr class="tr-center">
+                        <td colspan="2">
+                            <div style="margin-left:-7%;">
+                                <label class="campo-config-carga">Nombre</label>
+                                <label class="campo-config-carga" style="border: 0px solid #000;">Tipo de Dato</label>
+                                <label class="campo-config-carga" style="border: 0px solid #000;">Longitud</label>
+                                
+                            </div>
+                            <div id="contenedor2">
+                    <?php                                
+                                for($i=0; $i<$configPruebaDeCarga["total_campos"]; $i++):
+                                    $campo = $configPruebaDeCarga["campos_$i"]["nombre"];
+                                    $tipo = $configPruebaDeCarga["campos_$i"]["tipo"];
+                                    $long = $configPruebaDeCarga["campos_$i"]["longitud"];                                    
+                    ?>
+                                <div>
+
+                                    <input type='hidden' name='total_campos[]'>                                 
+                                    <input class="campo-config-carga" value="<?php echo $campo; ?>" type="text" name="campo[]" id="campo_1" placeholder="Campo N° 1"/>
+                                    
+                                    <select class="campo-config-carga" name="tipo[]">                                        
+                                        <option value="Números" <?php if ("Números" == $tipo) echo "selected"; ?>>Números</option>
+                                        <option value="Letras" <?php if ("Letras" == $tipo) echo "selected"; ?>>Letras</option>
+                                        <option value="Letras/Números" <?php if ("Letras/Números" == $tipo) echo "selected"; ?>>Letras/Números</option>
+                                        <option value="Fecha" <?php if ("Fecha" == $tipo) echo "selected"; ?>>Fecha</option>
+                                        <option value="Hora" <?php if ("Hora" == $tipo) echo "selected"; ?>>Hora</option>
+                                        <option value="Cualquier Carácter" <?php if ("Cualquier Carácter" == $tipo) echo "selected"; ?>>Cualquier Carácter</option>
+                                    </select>
+                                    
+                                    <input class="campo-config-carga" type="number" min="1" max="300" name="longitud[]" value="<?php if (empty($long)) {echo 1;} else {echo $long;} ?>">
+                                    <a title="Eliminar" href="#" class="glyphicon glyphicon-remove" id="eliminar-campo"></a>
+                                    
+
+                                </div>
+                            <?php 
+                                endfor;                              
+                            ?>   
+                            </div>
+                        </td>
+                    </tr>               
+    
+                </tr>
+                <tr  class="tr-center">         
+                    <td colspan="2">
+                        <a id="agregarCampo" class="btn btn-info" href="#">Agregar Campo Adicional</a>
+                        <img  title="¿Qué es esto?" onClick="return openWindow('box-agregar-campo-adicional');" id="<?php echo $llave; ?>" class="icono-ayuda" src="<?php echo URLBASE . "public/img/ayuda-2.png"; ?>">                        
+                    </td>
+                </tr>               
+                    
+                
+                <tr class="tr-center">
+                    <td colspan="2">
+
+                        <div id="contenedor">
+                            <div class="added">
+                        <?php
+                            if(count($configPruebaDeCarga["campo_adicional"]) > 0):
+                                foreach($configPruebaDeCarga["campo_adicional"] as $nombre => $valor):
+                                ?>
+                                    <div style="margin-top:1%;">
+                                    <input class="campos-config" type="text" value="<?php echo $nombre; ?>" name="nombre_campo_adicional[]" id="campo_1" placeholder="Nombre del Campo N° '+ FieldCount +'" /> 
+                                    <input class="campos-config" type="text" value="<?php echo $valor; ?>" name="valor_campo_adicional[]" id="campo_2" placeholder="Valor del Campo N° '+ FieldCount +'"/>
+                                    <a title="Eliminar" href="#" class="glyphicon glyphicon-remove" id="eliminar-campo"></a>
+                                    </div>
+                                <?php 
+                                endforeach;
+                            endif;
+                                ?>
+                            </div>
+                        </div>
+                    </td>
+                </tr>          
+                <tr class="tr-center">
+                    <td  colspan="2" align="center">           
+                        <input type="button" class="btn btn-primary" value="Cancelar" 
+                               onClick="window.location='<?php echo URLBASE; ?>configurar/evaluacion'"">
+                        <input type="submit" class="btn btn-primary" value="Guardar" name="guardar">                    
+                    </td>                   
+                </tr>
+            </tbody>  
+        </table>
+    </fieldset>
+</form>

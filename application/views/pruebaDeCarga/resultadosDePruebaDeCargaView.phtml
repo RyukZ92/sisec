@@ -1,0 +1,51 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista que permite mostrar los resultados
+ * de la prueba de carga de datos
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Febrero, 2016
+ * @Version: 1
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguelangel.bux@gmail.com
+ * =============================================================================
+ * 
+ */ 
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+?>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Resumen de Resultados</div>
+
+        <?php 
+            echo $_SESSION["resultados_de_prueba"];
+        ?>         
+ 
+</div>
+        
+
+    <div class="col-lg-12 center">
+            <table class="table table-bordered">
+                <tr>
+                    <td>
+                        <a title="Enlace para descarga los resultados de la prueba" 
+                           href="<?php echo $_SESSION["ruta_de_archivo"]; ?>" download="<?php echo "Resultados de la Prueba de Carga de Datos.log"; ?>">
+                            Resultados de la prueba
+                            <span href="#" class="glyphicon glyphicon-save"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <a title="Redirecciona al sistema en evaluación" target="_blanck" href="<?php echo $configSistemaEnEvaluacion["url"]; ?>">
+                            Ir al sistema en evaluación
+                            <span href="#" class="glyphicon glyphicon-globe"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <a title="Salir de esta prueba" href="<?php echo URLBASE . "inicio"; ?>">Salir de la prueba
+                            <span href="#" class="glyphicon glyphicon-remove-circle"></span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+    </div>

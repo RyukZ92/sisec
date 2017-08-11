@@ -1,0 +1,65 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista para las opciones de recuperaciónde contraseña
+ * @Author: Miguel Salazar
+ * @Fecha: Dic, 2015 - Abril, 2016
+ * @Version: 1.2
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguel__salazar@hotmail.com
+ * =============================================================================
+ * 
+ */
+
+include dirname(__FILE__) . "/../navegacion/navegacionView.phtml";
+
+if ($notificacion) {
+    echo $notificacion;
+}
+?>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Datos para la Recuperación de Contraseña</div>
+  <div class="panel-body"><br>
+            <div class="col-lg-8">
+                <form class="form-horizontal" role="form" method="post" id="form">
+                  <div class="form-group">
+                    <label for="contrasenia" class="col-lg-4 control-label">Opción de Recuperación</label>
+                    <div class="col-lg-7">
+                        <select class="form-control" id="opcion_recuperacion" name="opcion_recuperacion" 
+                            onClick="validarRecuperacionDeContrasenia();">
+                            <option value="0">Seleccione</option>
+                            <option value="pregunta" <?php if ($_POST["opcion_recuperacion"] == "pregunta") { echo "selected"; }?>>Pregunta y Respuesta Secreta</option>
+                            <option value="email" <?php if ($_POST["opcion_recuperacion"] == "email") { echo "selected"; }?>>Correo Electrónico</option>                            
+                        </select>
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger">Requerido</label>
+                    </div>                   
+                  </div>
+
+                  <div class="form-group">
+                    <label for="usuario" class="col-lg-4 control-label">Usuario</label>
+                    <div class="col-lg-7 ">
+                      <input type="text" class="form-control" id="user" 
+                             placeholder="Usuario" name="usuario"
+                             value="<?php echo $_POST["usuario"] ?>"
+                             maxlength="50" autocomplete="off">
+                    </div>
+                    <div class="col-lg-1 ">
+                      <label for="usuario" class="control-label text-danger" id="user_requerido">Requerido</label>
+                    </div>  
+                  </div>  
+                    
+                  <div class="form-group">                      
+                    <div class="col-lg-offset-4 col-lg-8 ">                        
+                      <button type="reset" class="btn btn-default" onClick="window.location='<?php echo URLBASE; ?>'">Cancelar</button>
+                      &nbsp;
+                      &nbsp;
+                      <button type="submit" name="enviar" class="btn btn-default">Continuar</button>
+                    </div>
+                  </div>
+                </form>
+            </div>            
+      </div>
+</div>

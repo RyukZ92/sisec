@@ -1,0 +1,32 @@
+DETALLES DE LA PRUEBA DE ATAQUE DE FUERZA BRUTA: INICIO DE SESIÓN
+
+
+Fecha y Hora de Creación: 19/05/2016 05:37:03 PM
+Usuario: RYUKZ (Administrador)
+
+URL Destino del Formulario: http://opendace.uptparia.edu.ve/Politecnico_CEYE/autenticar_est.php
+Mensaje de Exito: Acceso Denegado Temporalmente
+
+INTENTOS: 
+
+1 => Fallido: "CAMPO[codigo] = 955", "CAMPO[clave] = Archivo", "CAMPO[ingresar] = Ingresar"
+
+2 => Fallido: "CAMPO[codigo] = 955", "CAMPO[clave] = por", "CAMPO[ingresar] = Ingresar"
+
+3 => Fallido: "CAMPO[codigo] = 955", "CAMPO[clave] = defecto", "CAMPO[ingresar] = Ingresar"
+
+4 => Fallido: "CAMPO[codigo] = 955", "CAMPO[clave] = b2312", "CAMPO[ingresar] = Ingresar"
+
+5 => Fallido: "CAMPO[codigo] = 955", "CAMPO[clave] = cdasd", "CAMPO[ingresar] = Ingresar"
+
+6 => Exitoso: "CAMPO[codigo] = 955", "CAMPO[clave] = 2192", "CAMPO[ingresar] = Ingresar"
+
+
+
+TOTAL DE INTENTOS: 6
+INTENTOS EXITOSOS: 1 (6)
+INTENTOS FALLIDOS: 5
+
+Tiempo de Ejecución: 9.9563 segundos
+
+RESULTADO: Se deben implementar restricciones o politicas de seguridad en cuanto a los ataques de fuerza bruta. Bloquear temporalmente más de 5 intentos (como máximo) de una misma Dirección IP, así como también incorporar códigos captchas para verificar que no sea un robot el que intenta acceder al software.

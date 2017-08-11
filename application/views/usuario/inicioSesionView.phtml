@@ -1,0 +1,63 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista de inicio de sesión de usuario
+ * @Author: Miguel Salazar
+ * @Fecha: Marzo, 2016
+ * @Version: 2.0
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguelangel.bux@gmail.com
+ * =============================================================================
+ * 
+ */ 
+
+?> 
+
+        <div id="login-form">
+
+        <h1>Inicio de Sesión</h1>
+
+        <fieldset>
+
+            <form method="post">
+                
+                <input type="text" name="usuario" value="Usuario" 
+                       autocomplete="off"
+                       onBlur="if(this.value=='')this.value='Usuario'" 
+                       onFocus="if(this.value=='Usuario')this.value='' "> <!-- JS because of IE support; better: placeholder="Email" -->
+
+                <input type="password" name="contrasenia" value="Contraseña" onBlur="if(this.value=='')this.value='Contraseña'" onFocus="if(this.value=='Contraseña')this.value='' "> <!-- JS because of IE support; better: placeholder="Password" -->
+
+<?php if ($activarCaptcha): ?>
+
+                    <img src="<?php echo $urlCaptcha; ?>" id="img-captcha" />
+                    <img src="public/img/refresh.png" id="btn-captcha" onClick="document.getElementById('img-captcha').src='<?php echo $urlCaptcha; ?>?'+Math.random();">
+
+
+                    <input <?php echo $disabled; ?> placeholder="Código de Verificación" type="text" name="captcha" autocomplete="off" />                        
+
+<?php endif; ?>           
+                
+                <input type="submit" name="entrar" value="Ingresar">
+
+                
+                
+                
+                <footer class="clearfix">
+
+                    <p><span class="info">?</span><a href="<?php echo URLBASE; ?>recuperar-contrasenia">Olvidé mi contraseña</a></p>
+
+                </footer>
+
+            </form>
+
+        </fieldset>
+
+    </div> 
+        
+        <!-- end login-form -->
+  <?php 
+if ($notificacion) {
+	echo $notificacion;
+}
+?>

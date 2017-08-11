@@ -1,0 +1,33 @@
+<?php
+/**
+ * =============================================================================
+ * @Descripcion: Vista para mostrar el panel de navegación del usuario
+ * @Author: Miguel Salazar
+ * @Fecha: Marzo, 2016
+ * @Version: 1.0
+ * @Licencia: Libre uso GNU-GPL 
+ * @E-Mail: miguelangel.bux@gmail.com
+ * =============================================================================
+ * 
+ */ 
+?>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h2 style="margin-top:2%;" class="page-header">
+            <small><?php echo $tema["vista"]; ?></small>
+        </h2>
+        <ol class="breadcrumb">
+            <li class="active">
+                <a title="Ir al Inicio" href="<?php echo  URLBASE ?>inicio"> <i class="fa fa-home"></i> Inicio </a>
+            </li>
+            <li class="active">
+                <i class="fa fa-<?php echo $tema["icono"]; ?>"></i> <?php echo $tema["actual"]; ?>
+            </li>   
+        
+            <a title="Ir a la página anterior" href="javascript:;" onClick="history.back();">                    
+               <img class="btn-volver" src="<?php echo  URLBASE ?>public/img/Button_Back.png">
+            </a>
+        </ol>
+    </div>            
+</div>

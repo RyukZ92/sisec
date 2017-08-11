@@ -1,0 +1,69 @@
+<?php
+
+/**
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+if ($params['total'] > 1):
+?>
+    <div class='paginador'>
+        <ul class="pagination"> 
+            <?php   if($params['anterior']):	
+                        $anterior = $urlActual . "/pagina/" . $params['anterior'];
+            ?> 
+                        <li>
+
+                            <a href="<?php echo $anterior ?>">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>    
+            <?php   else: ?>
+                        <li class='disabled' >
+                            <span aria-hidden="true">&laquo;</span>
+            <?php   endif; ?>
+            </li>
+
+            <?php   
+            $limite = 5;
+                    for ($pag = 1; $pag <= $params['total']; $pag++):  
+
+                        if ($params['actual'] == $pag):
+            ?>
+            <li  class="active">
+                <a href="<?php echo $pag; ?>"><?php echo $pag; ?></a>
+            </li>
+            <?php       else:              
+
+            ?>
+
+                            <li>
+                                <a href="<?php echo $urlActual . "/pagina/" . $pag; ?>"><?php echo $pag; ?></a>
+                            </li>
+
+            <?php       
+                        endif;
+                    endfor; 
+            ?>
+            <?php   if($params['siguiente']):
+                        $siguiente = $urlActual . "/pagina/" . $params['siguiente'];
+            ?>
+                        <li>
+
+                            <a href="<?php echo $siguiente ?>">                                
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+            <?php   else: ?>
+                        <li class='disabled' >
+                            <span aria-hidden="true">&raquo;</span>
+            <?php   endif; ?>
+                        </li>
+            </li>
+        </ul>
+    </div>
+<?php
+endif;
+?>
+
